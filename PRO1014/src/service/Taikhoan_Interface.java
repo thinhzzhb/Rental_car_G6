@@ -17,7 +17,7 @@ public interface Taikhoan_Interface {
 
     public List<TaiKhoan> getUser(String User, String pass);
 
-    String addTK(TaiKhoan tk);
+    TaiKhoan addTK(TaiKhoan tk);
 
     String update(int id, TaiKhoan tk);
 

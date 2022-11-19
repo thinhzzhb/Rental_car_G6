@@ -19,7 +19,7 @@ import java.util.ArrayList;
  */
 public class TaiKhoanRespository {
 
-    public List<TaiKhoan> getUser(String user, String pass) {
+    public TaiKhoan getUser(String user, String pass) {
         String query = "SELECT [idTK],[username],[password],[vaiTro],[tinhtrang]"
                 + " FROM [dbo].[TaiKhoan] "
                 + "WHERE [username] =  ? "
@@ -27,15 +27,13 @@ public class TaiKhoanRespository {
         try {
             Connection con = DBConnection.getConnection();
             PreparedStatement ps = con.prepareStatement(query);
-            ps.setString(2, user);
-            ps.setString(3, pass);
+            ps.setString(1, user);
+            ps.setString(2, pass);
             ResultSet rs = ps.executeQuery();
-            List<TaiKhoan> listtk = new ArrayList<>();
             while (rs.next()) {
-                TaiKhoan tk = new TaiKhoan(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getInt(4),rs.getInt(5));
-                listtk.add(tk);
+               return new TaiKhoan(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getInt(4),rs.getInt(5));
+                
             }
-            return listtk;
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -59,5 +57,39 @@ public class TaiKhoanRespository {
             e.printStackTrace();
         }
         return null;
+    }
+    public TaiKhoan add(TaiKhoan t ) {
+        String query = "INSERT INTO TaiKhoan "
+                + "(username,[password],vaiTro,tinhtrang) "
+                + "VALUES (?, ?, ?, ?)";
+        try {
+            Connection con = DBConnection.getConnection();
+            PreparedStatement ps = con.prepareStatement(query);
+            ps.setString(1, t.getUserName());
+            ps.setString(2, t.getPass());
+            ps.setInt(3, t.getVaiTro());
+            ps.setInt(4, t.getTinhTrang());
+            ps.execute();
+            return t;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+     public boolean checkExists(String user) {
+         int count = 0;
+        String query = "select COUNT(*)[C] "
+                + "from TaiKhoan where username = ?";
+        try {
+            Connection con = DBConnection.getConnection();
+            PreparedStatement ps = con.prepareStatement(query);
+            count = ps.executeUpdate();
+            while (count > 1 ) {
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 }

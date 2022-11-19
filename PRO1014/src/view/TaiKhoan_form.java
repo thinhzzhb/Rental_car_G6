@@ -4,6 +4,7 @@
  */
 package view;
 
+import javax.swing.ImageIcon;
 import javax.swing.table.DefaultTableModel;
 import model.TaiKhoan;
 import service.Impl.TaiKhoan_Implement;
@@ -19,6 +20,7 @@ public class TaiKhoan_form extends javax.swing.JPanel {
      */
     private DefaultTableModel _dtm;
     private TaiKhoan_Implement tkSer;
+    private boolean isHidden = true;
 
     public TaiKhoan_form() {
         initComponents();
@@ -46,18 +48,20 @@ public class TaiKhoan_form extends javax.swing.JPanel {
         jLabel20 = new javax.swing.JLabel();
         lblMaTK = new javax.swing.JLabel();
         txtUser = new javax.swing.JTextField();
-        txtChucvu = new javax.swing.JTextField();
-        txtMatKhau = new javax.swing.JTextField();
         cbbTinhTrang = new javax.swing.JComboBox<>();
         btnThem = new javax.swing.JButton();
         btnSua = new javax.swing.JButton();
         btnClear = new javax.swing.JButton();
         btnDisable = new javax.swing.JButton();
+        txtMatKhau = new javax.swing.JPasswordField();
+        cbbChucVu = new javax.swing.JComboBox<>();
         jPanel11 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblTK = new javax.swing.JTable();
         btnSearchtk = new javax.swing.JButton();
         txtSearchTK = new javax.swing.JTextField();
+
+        jTabbedPane1.setBackground(new java.awt.Color(51, 51, 255));
 
         jPanel1.setBackground(new java.awt.Color(51, 153, 255));
 
@@ -86,10 +90,8 @@ public class TaiKhoan_form extends javax.swing.JPanel {
 
         txtUser.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
 
-        txtChucvu.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-
         cbbTinhTrang.setBackground(new java.awt.Color(153, 0, 255));
-        cbbTinhTrang.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbbTinhTrang.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Vô Hiệu Hóa", "Đang hoạt động" }));
 
         btnThem.setBackground(new java.awt.Color(51, 255, 204));
         btnThem.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
@@ -116,6 +118,8 @@ public class TaiKhoan_form extends javax.swing.JPanel {
         btnDisable.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\lock.png")); // NOI18N
         btnDisable.setText("Vô hiệu hóa");
 
+        cbbChucVu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
@@ -135,15 +139,13 @@ public class TaiKhoan_form extends javax.swing.JPanel {
                     .addGroup(jPanel12Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtChucvu, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel12Layout.createSequentialGroup()
-                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel14)
-                                    .addComponent(jLabel15))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtUser, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblMaTK, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel15))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtUser, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
+                            .addComponent(lblMaTK, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cbbChucVu, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel12Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -151,10 +153,10 @@ public class TaiKhoan_form extends javax.swing.JPanel {
                             .addComponent(jLabel20)
                             .addComponent(jLabel16))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtMatKhau, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
-                            .addComponent(cbbTinhTrang, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap())
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbbTinhTrang, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtMatKhau, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(42, 42, 42))
                     .addGroup(jPanel12Layout.createSequentialGroup()
                         .addGap(27, 27, 27)
                         .addComponent(btnDisable)
@@ -176,22 +178,22 @@ public class TaiKhoan_form extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel17)
-                            .addComponent(txtChucvu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(cbbChucVu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel12Layout.createSequentialGroup()
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel16)
-                            .addComponent(txtMatKhau, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(txtMatKhau, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel16))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel20)
-                            .addComponent(cbbTinhTrang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(41, 41, 41)
+                            .addComponent(cbbTinhTrang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel20))))
+                .addGap(50, 50, 50)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnThem)
                     .addComponent(btnSua)
                     .addComponent(btnClear)
                     .addComponent(btnDisable, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         jPanel11.setBackground(new java.awt.Color(102, 255, 255));
@@ -212,6 +214,11 @@ public class TaiKhoan_form extends javax.swing.JPanel {
                 "Id", "Tên Đăng nhập", "Mật khẩu", "Vai trò", "Tình trạng"
             }
         ));
+        tblTK.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblTKMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tblTK);
 
         btnSearchtk.setBackground(new java.awt.Color(51, 255, 204));
@@ -241,7 +248,7 @@ public class TaiKhoan_form extends javax.swing.JPanel {
                     .addComponent(txtSearchTK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSearchtk, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 264, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -279,9 +286,21 @@ public class TaiKhoan_form extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    
     private void btnThemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnThemActionPerformed
+
+    private void tblTKMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblTKMouseClicked
+        // TODO add your handling code here:
+        int selectRow = tblTK.getSelectedRow();
+        lblMaTK.setText(tblTK.getValueAt(selectRow, 0).toString());
+        txtUser.setText(tblTK.getValueAt(selectRow, 1).toString());
+        txtMatKhau.setText(tblTK.getValueAt(selectRow, 2).toString());
+        cbbChucVu.setSelectedItem(tblTK.getValueAt(selectRow, 3).toString());
+        cbbTinhTrang.setSelectedItem(tblTK.getValueAt(selectRow, 4));
+    }//GEN-LAST:event_tblTKMouseClicked
 
     private void loadtb() {
         _dtm.setRowCount(0);
@@ -291,8 +310,7 @@ public class TaiKhoan_form extends javax.swing.JPanel {
                 tk.getUserName(),
                 tk.getPass(),
                 tk.getVaiTro() == 0 ? "Nhân viên" : "Khách hàng",
-                tk.getTinhTrang() == 1 ?"Đang hoạt động" : "Vô hiệu hóa",
-            };
+                tk.getTinhTrang() == 1 ? "Đang hoạt động" : "Vô hiệu hóa",};
             _dtm.addRow(row);
         }
     }
@@ -303,6 +321,7 @@ public class TaiKhoan_form extends javax.swing.JPanel {
     private javax.swing.JButton btnSearchtk;
     private javax.swing.JButton btnSua;
     private javax.swing.JButton btnThem;
+    private javax.swing.JComboBox<String> cbbChucVu;
     private javax.swing.JComboBox<String> cbbTinhTrang;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -316,8 +335,7 @@ public class TaiKhoan_form extends javax.swing.JPanel {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel lblMaTK;
     private javax.swing.JTable tblTK;
-    private javax.swing.JTextField txtChucvu;
-    private javax.swing.JTextField txtMatKhau;
+    private javax.swing.JPasswordField txtMatKhau;
     private javax.swing.JTextField txtSearchTK;
     private javax.swing.JTextField txtUser;
     // End of variables declaration//GEN-END:variables
