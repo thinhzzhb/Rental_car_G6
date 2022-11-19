@@ -32,7 +32,7 @@ public class KhuyenMai_Form extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         txtKhuyenmai = new javax.swing.JTextField();
         txtChuongtrinh = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         cbbkhuyenmai = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
@@ -54,20 +54,35 @@ public class KhuyenMai_Form extends javax.swing.JPanel {
         txtSearch = new javax.swing.JTextField();
         btnTIm = new javax.swing.JButton();
 
+        jTabbedPane1.setBackground(new java.awt.Color(0, 204, 255));
+
+        jPanel1.setBackground(new java.awt.Color(51, 204, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(997, 698));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel2.setBackground(new java.awt.Color(102, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel1.setText("Tạo chương trình khuyến mãi");
 
-        jLabel2.setText("Tạo mã Khuyến mãi");
+        txtKhuyenmai.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
 
+        txtChuongtrinh.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+
+        jLabel28.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel28.setText("Tạo mã Khuyến mãi");
+
+        jLabel3.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel3.setText("Hình thức giảm giá");
 
+        cbbkhuyenmai.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         cbbkhuyenmai.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        jLabel4.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel4.setText("Mức giảm");
+
+        txtMucGiam.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -91,12 +106,12 @@ public class KhuyenMai_Form extends javax.swing.JPanel {
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(cbbkhuyenmai, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtChuongtrinh, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 39, Short.MAX_VALUE))))
+                        .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(10, 10, 10)
-                    .addComponent(jLabel2)
-                    .addContainerGap(332, Short.MAX_VALUE)))
+                    .addComponent(jLabel28)
+                    .addContainerGap(311, Short.MAX_VALUE)))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,22 +130,26 @@ public class KhuyenMai_Form extends javax.swing.JPanel {
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtMucGiam, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 16, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(10, 10, 10)
-                    .addComponent(jLabel2)
-                    .addContainerGap(240, Short.MAX_VALUE)))
+                    .addComponent(jLabel28)
+                    .addContainerGap(239, Short.MAX_VALUE)))
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 270));
 
+        jPanel3.setBackground(new java.awt.Color(102, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thời gian Khuyến mãi", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
+        jLabel5.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel5.setText("Thời gian bắt đầu");
 
+        jLabel6.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel6.setText("Thời gian kết thúc");
 
+        jLabel7.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel7.setText("Mô tả");
 
         txtMota.setColumns(20);
@@ -154,7 +173,7 @@ public class KhuyenMai_Form extends javax.swing.JPanel {
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(txtBatdau1, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(txtBatdau, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -170,23 +189,39 @@ public class KhuyenMai_Form extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 0, 320, 250));
 
+        btnTao.setBackground(new java.awt.Color(51, 255, 204));
+        btnTao.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnTao.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\add.png")); // NOI18N
         btnTao.setText("Tạo");
         jPanel1.add(btnTao, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 250, -1, -1));
 
+        btnSuaDoi.setBackground(new java.awt.Color(51, 255, 204));
+        btnSuaDoi.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnSuaDoi.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\edit_property_24px.png")); // NOI18N
         btnSuaDoi.setText("Sửa đổi");
-        jPanel1.add(btnSuaDoi, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, -1, -1));
+        jPanel1.add(btnSuaDoi, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 250, -1, -1));
 
+        btnXoa.setBackground(new java.awt.Color(51, 255, 204));
+        btnXoa.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnXoa.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\delete.png")); // NOI18N
         btnXoa.setText("Xóa");
-        jPanel1.add(btnXoa, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 250, -1, -1));
+        btnXoa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnXoaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnXoa, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 250, -1, -1));
 
+        jPanel4.setBackground(new java.awt.Color(102, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Danh sách Khuyến mãi", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
+        jTable1.setBackground(new java.awt.Color(51, 255, 204));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -200,6 +235,11 @@ public class KhuyenMai_Form extends javax.swing.JPanel {
         ));
         jScrollPane2.setViewportView(jTable1);
 
+        txtSearch.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+
+        btnTIm.setBackground(new java.awt.Color(51, 255, 204));
+        btnTIm.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnTIm.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\search.png")); // NOI18N
         btnTIm.setText("Tìm ");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -212,8 +252,8 @@ public class KhuyenMai_Form extends javax.swing.JPanel {
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnTIm, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(btnTIm)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
         );
@@ -224,7 +264,7 @@ public class KhuyenMai_Form extends javax.swing.JPanel {
                     .addComponent(btnTIm)
                     .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 283, 780, 220));
@@ -245,6 +285,10 @@ public class KhuyenMai_Form extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnXoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnXoaActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSuaDoi;
@@ -253,7 +297,7 @@ public class KhuyenMai_Form extends javax.swing.JPanel {
     private javax.swing.JButton btnXoa;
     private javax.swing.JComboBox<String> cbbkhuyenmai;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

@@ -48,8 +48,12 @@ public class KhachHangForm extends javax.swing.JPanel {
         jLabel11 = new javax.swing.JLabel();
         txtSoCCCD = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(51, 204, 255));
+
+        jPanel6.setBackground(new java.awt.Color(51, 204, 255));
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Danh sách nhân viên", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
+        tblkhachhang.setBackground(new java.awt.Color(0, 255, 204));
         tblkhachhang.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -76,31 +80,61 @@ public class KhachHangForm extends javax.swing.JPanel {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE))
         );
 
+        btnTao1.setBackground(new java.awt.Color(51, 255, 204));
+        btnTao1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnTao1.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\add.png")); // NOI18N
         btnTao1.setText("Tạo");
 
+        btnSua1.setBackground(new java.awt.Color(51, 255, 204));
+        btnSua1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnSua1.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\edit_property_24px.png")); // NOI18N
         btnSua1.setText("Sửa");
 
+        btnClearNv1.setBackground(new java.awt.Color(51, 255, 204));
+        btnClearNv1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnClearNv1.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\clear.png")); // NOI18N
         btnClearNv1.setText("Làm mới");
 
+        btnSearch1.setBackground(new java.awt.Color(51, 255, 204));
+        btnSearch1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnSearch1.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\search.png")); // NOI18N
         btnSearch1.setText("Tìm kiếm");
 
+        jPanel5.setBackground(new java.awt.Color(153, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thông tin khách hàng", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
+        jLabel6.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel6.setText("Mã khách");
 
+        jLabel7.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel7.setText("Tên khách");
 
+        jLabel8.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel8.setText("Địa chỉ");
 
+        jLabel9.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel9.setText("Số điện thoại");
 
+        jLabel10.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel10.setText("Giới tính");
 
+        lblMaKH.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         lblMaKH.setText("_");
 
+        txtTenKh.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+
+        txtSoDTKH.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+
+        txtDiaChiKH.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+
+        cbbGioiTinhKH.setBackground(new java.awt.Color(51, 51, 255));
+        cbbGioiTinhKH.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         cbbGioiTinhKH.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        jLabel11.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel11.setText("Số CCCD");
+
+        txtSoCCCD.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -189,7 +223,7 @@ public class KhachHangForm extends javax.swing.JPanel {
                         .addComponent(btnSearch1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txtSearchKH, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(121, Short.MAX_VALUE))
+                        .addContainerGap(27, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)

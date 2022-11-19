@@ -48,22 +48,34 @@ public class NhanVien_form extends javax.swing.JPanel {
         btnSearch = new javax.swing.JButton();
         txtSearch = new javax.swing.JTextField();
 
+        jPanel1.setBackground(new java.awt.Color(102, 204, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(800, 632));
 
+        jPanel8.setBackground(new java.awt.Color(153, 255, 255));
         jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thông tin nhân viên", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
+        jLabel21.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel21.setText("Mã nhân viên");
 
+        jLabel22.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel22.setText("Tên nhân viên");
 
+        jLabel23.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel23.setText("Địa chỉ");
 
+        jLabel24.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel24.setText("Số điện thoại");
 
+        jLabel25.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel25.setText("Giới tính");
 
+        lblMaNv4.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         lblMaNv4.setText("_");
 
+        txtTenNV4.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+
+        cbbGioiTinh4.setBackground(new java.awt.Color(153, 0, 153));
+        cbbGioiTinh4.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         cbbGioiTinh4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
@@ -127,8 +139,10 @@ public class NhanVien_form extends javax.swing.JPanel {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
+        jPanel4.setBackground(new java.awt.Color(102, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Danh sách nhân viên", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
+        tblNhanVien.setBackground(new java.awt.Color(0, 255, 204));
         tblNhanVien.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -155,12 +169,29 @@ public class NhanVien_form extends javax.swing.JPanel {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        btnTao.setBackground(new java.awt.Color(51, 255, 204));
+        btnTao.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnTao.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\add.png")); // NOI18N
         btnTao.setText("Tạo");
 
+        btnSua.setBackground(new java.awt.Color(51, 255, 204));
+        btnSua.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnSua.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\edit_property_24px.png")); // NOI18N
         btnSua.setText("Sửa");
+        btnSua.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSuaActionPerformed(evt);
+            }
+        });
 
+        btnClearNv.setBackground(new java.awt.Color(51, 255, 204));
+        btnClearNv.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnClearNv.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\clear.png")); // NOI18N
         btnClearNv.setText("Làm mới");
 
+        btnSearch.setBackground(new java.awt.Color(51, 255, 204));
+        btnSearch.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnSearch.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\search.png")); // NOI18N
         btnSearch.setText("Tìm kiếm");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -172,17 +203,17 @@ public class NhanVien_form extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(btnTao, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(btnSua, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(34, 34, 34)
-                        .addComponent(btnClearNv, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(62, 62, 62)
+                        .addGap(23, 23, 23)
+                        .addComponent(btnTao)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnSua, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnClearNv)
+                        .addGap(44, 44, 44)
                         .addComponent(btnSearch)
                         .addGap(18, 18, 18)
                         .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 99, Short.MAX_VALUE))
+                        .addGap(0, 38, Short.MAX_VALUE))
                     .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -220,6 +251,10 @@ public class NhanVien_form extends javax.swing.JPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSuaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

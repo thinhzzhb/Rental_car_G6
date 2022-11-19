@@ -68,37 +68,62 @@ public class Xe_Form extends javax.swing.JPanel {
         btnSearch1 = new javax.swing.JButton();
         txtSearch1 = new javax.swing.JTextField();
 
+        jPanel14.setBackground(new java.awt.Color(51, 153, 255));
+
+        jPanel12.setBackground(new java.awt.Color(102, 255, 255));
         jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Quản lý xe", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
+        jLabel14.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel14.setText("Mã xe");
 
+        jLabel15.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel15.setText("Tên Hãng");
 
+        jLabel16.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel16.setText("Màu sắc");
 
+        jLabel17.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel17.setText("Tên xe");
 
+        jLabel18.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel18.setText("Biển số");
 
+        jLabel19.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel19.setText("Tình trạng");
 
+        jLabel20.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel20.setText("Số ghế");
 
+        jLabel21.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel21.setText("Tiêu hao nhiên liệu/ km");
 
         lblMaXe.setBackground(new java.awt.Color(255, 255, 255));
+        lblMaXe.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         lblMaXe.setText("_");
         lblMaXe.setEnabled(false);
 
+        cbbTenHang.setBackground(new java.awt.Color(255, 255, 153));
+        cbbTenHang.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         cbbTenHang.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        cbbMauSac.setBackground(new java.awt.Color(255, 255, 153));
+        cbbMauSac.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         cbbMauSac.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        txtSoGhe.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+
+        txtTenXe.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         txtTenXe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTenXeActionPerformed(evt);
             }
         });
+
+        txtBienSo.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+
+        txtTinhTrang.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+
+        txtTieuHao.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -131,7 +156,7 @@ public class Xe_Form extends javax.swing.JPanel {
                             .addComponent(cbbTenHang, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cbbMauSac, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtSoGhe, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 230, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 222, Short.MAX_VALUE)))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txtBienSo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
@@ -170,6 +195,7 @@ public class Xe_Form extends javax.swing.JPanel {
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
+        jPanel11.setBackground(new java.awt.Color(102, 255, 255));
         jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thông tin xe", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
         tblXe.setBackground(new java.awt.Color(51, 255, 204));
@@ -190,6 +216,7 @@ public class Xe_Form extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblXe);
 
         btnSearch.setBackground(new java.awt.Color(51, 255, 204));
+        btnSearch.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnSearch.setIcon(new javax.swing.ImageIcon("D:\\Pro1014\\PRO1014\\PRO1014\\image\\search_26px.png")); // NOI18N
         btnSearch.setText("Tìm kiếm");
 
@@ -262,11 +289,14 @@ public class Xe_Form extends javax.swing.JPanel {
                     .addComponent(btnClear)
                     .addComponent(btnSua)
                     .addComponent(btnThem))
-                .addContainerGap(106, Short.MAX_VALUE))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Thông tin xe", jPanel14);
 
+        pnlHangXe.setBackground(new java.awt.Color(51, 153, 255));
+
+        jPanel13.setBackground(new java.awt.Color(102, 255, 255));
         jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Hãng xe", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
         jLabel22.setText("Mã Hãng");
@@ -320,6 +350,7 @@ public class Xe_Form extends javax.swing.JPanel {
         btnClear1.setIcon(new javax.swing.ImageIcon("D:\\Pro1014\\PRO1014\\PRO1014\\image\\clear.png")); // NOI18N
         btnClear1.setText("Làm mới");
 
+        jPanel15.setBackground(new java.awt.Color(102, 255, 255));
         jPanel15.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Danh sách", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
         tblXe1.setBackground(new java.awt.Color(51, 255, 204));

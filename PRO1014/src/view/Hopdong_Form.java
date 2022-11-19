@@ -58,30 +58,57 @@ public class Hopdong_Form extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         tblHoaDon = new javax.swing.JTable();
 
+        jPanel1.setBackground(new java.awt.Color(102, 204, 255));
+
+        jPanel3.setBackground(new java.awt.Color(153, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tìm & lọc hợp đồng", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 14))); // NOI18N
 
+        cbbMaKhach.setBackground(new java.awt.Color(0, 204, 204));
+        cbbMaKhach.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         cbbMaKhach.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        cbbMaNV.setBackground(new java.awt.Color(0, 204, 204));
+        cbbMaNV.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         cbbMaNV.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        cbbTenXe.setBackground(new java.awt.Color(0, 204, 204));
+        cbbTenXe.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         cbbTenXe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        cbbTienCoc.setBackground(new java.awt.Color(0, 204, 204));
+        cbbTienCoc.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         cbbTienCoc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        cbbThang.setBackground(new java.awt.Color(0, 204, 204));
+        cbbThang.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         cbbThang.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        cbbNam.setBackground(new java.awt.Color(0, 204, 204));
+        cbbNam.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         cbbNam.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        jLabel5.setBackground(new java.awt.Color(0, 204, 204));
+        jLabel5.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel5.setText("TÌm theo mã khách");
 
+        jLabel6.setBackground(new java.awt.Color(0, 204, 204));
+        jLabel6.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel6.setText("Tìm theo mã nv");
 
+        jLabel7.setBackground(new java.awt.Color(0, 204, 204));
+        jLabel7.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel7.setText("Lọc theo giá cọc");
 
+        jLabel8.setBackground(new java.awt.Color(0, 204, 204));
+        jLabel8.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel8.setText("Lọc theo tháng");
 
+        jLabel9.setBackground(new java.awt.Color(0, 204, 204));
+        jLabel9.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel9.setText("Lọc theo năm");
 
+        jLabel10.setBackground(new java.awt.Color(0, 204, 204));
+        jLabel10.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel10.setText("Tìm theo tên xe");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -143,8 +170,10 @@ public class Hopdong_Form extends javax.swing.JPanel {
                 .addGap(23, 23, 23))
         );
 
+        jPanel4.setBackground(new java.awt.Color(102, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Danh sách hợp đồng", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 14))); // NOI18N
 
+        tblHopDong.setBackground(new java.awt.Color(51, 255, 204));
         tblHopDong.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -198,22 +227,41 @@ public class Hopdong_Form extends javax.swing.JPanel {
 
         jTabbedPane1.addTab("Hợp đồng", jPanel1);
 
+        jPanel2.setBackground(new java.awt.Color(102, 204, 255));
+
+        jPanel5.setBackground(new java.awt.Color(102, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "TÌm kiếm hóa đơn", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
+        jLabel1.setBackground(new java.awt.Color(255, 255, 153));
+        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel1.setText("Trạng thái thanh toán");
 
+        jLabel2.setBackground(new java.awt.Color(255, 255, 153));
+        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel2.setText("Giá tiền");
 
+        jLabel3.setBackground(new java.awt.Color(255, 255, 153));
+        jLabel3.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel3.setText("Tháng");
 
+        jLabel4.setBackground(new java.awt.Color(255, 255, 153));
+        jLabel4.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel4.setText("Năm");
 
+        cbbTrangThai.setBackground(new java.awt.Color(255, 255, 153));
+        cbbTrangThai.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         cbbTrangThai.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        cbbGiaTien.setBackground(new java.awt.Color(255, 255, 153));
+        cbbGiaTien.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         cbbGiaTien.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        cbbThangHd.setBackground(new java.awt.Color(255, 255, 153));
+        cbbThangHd.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         cbbThangHd.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        cbbNamHD.setBackground(new java.awt.Color(255, 255, 153));
+        cbbNamHD.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         cbbNamHD.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -222,7 +270,7 @@ public class Hopdong_Form extends javax.swing.JPanel {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
@@ -232,12 +280,12 @@ public class Hopdong_Form extends javax.swing.JPanel {
                             .addComponent(jLabel3)
                             .addComponent(jLabel2)
                             .addComponent(jLabel4))
-                        .addGap(92, 92, 92)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(cbbGiaTien, 0, 296, Short.MAX_VALUE)
-                            .addComponent(cbbThangHd, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cbbNamHD, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbbGiaTien, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cbbThangHd, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cbbNamHD, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(279, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -261,8 +309,10 @@ public class Hopdong_Form extends javax.swing.JPanel {
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
+        jPanel6.setBackground(new java.awt.Color(51, 204, 255));
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Danh sách hóa đơn", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 14))); // NOI18N
 
+        tblHoaDon.setBackground(new java.awt.Color(51, 255, 204));
         tblHoaDon.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -311,7 +361,7 @@ public class Hopdong_Form extends javax.swing.JPanel {
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(86, Short.MAX_VALUE))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Hóa đơn", jPanel2);
