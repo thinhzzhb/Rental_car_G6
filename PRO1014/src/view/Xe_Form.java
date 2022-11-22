@@ -4,17 +4,39 @@
  */
 package view;
 
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import model.HangXe;
+import service.HangXeService;
+import service.Impl.HangXeServiceImpl;
+
 /**
  *
  * @author Admin
  */
 public class Xe_Form extends javax.swing.JPanel {
 
-    /**
-     * Creates new form Xe_Form
-     */
+    private DefaultTableModel dtm = new DefaultTableModel();
+    private List<HangXe> listhx = new ArrayList<>();
+    private HangXeService hangXeService = new HangXeServiceImpl();
+
     public Xe_Form() {
         initComponents();
+        tblXe1.setModel(dtm);
+        String[] header = {"id Hãng xe", "Mã hãng xe", "Tên hãng xe"};
+        dtm.setColumnIdentifiers(header);
+        listhx = hangXeService.getAll();
+        showDataTb(listhx);
+
+    }
+
+    private void showDataTb(List<HangXe> lists) {
+        dtm.setRowCount(0);
+        for (HangXe x : lists) {
+            dtm.addRow(x.toDataRow());
+        }
     }
 
     /**
@@ -113,11 +135,6 @@ public class Xe_Form extends javax.swing.JPanel {
         txtSoGhe.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
 
         txtTenXe.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        txtTenXe.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtTenXeActionPerformed(evt);
-            }
-        });
 
         txtBienSo.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
 
@@ -217,7 +234,6 @@ public class Xe_Form extends javax.swing.JPanel {
 
         btnSearch.setBackground(new java.awt.Color(51, 255, 204));
         btnSearch.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        btnSearch.setIcon(new javax.swing.ImageIcon("D:\\Pro1014\\PRO1014\\PRO1014\\image\\search_26px.png")); // NOI18N
         btnSearch.setText("Tìm kiếm");
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
@@ -247,15 +263,12 @@ public class Xe_Form extends javax.swing.JPanel {
         );
 
         btnThem.setBackground(new java.awt.Color(51, 255, 204));
-        btnThem.setIcon(new javax.swing.ImageIcon("D:\\Pro1014\\PRO1014\\PRO1014\\image\\add.png")); // NOI18N
         btnThem.setText("Thêm");
 
         btnSua.setBackground(new java.awt.Color(102, 255, 204));
-        btnSua.setIcon(new javax.swing.ImageIcon("D:\\Pro1014\\PRO1014\\PRO1014\\image\\edit_property_24px.png")); // NOI18N
         btnSua.setText("Sửa");
 
         btnClear.setBackground(new java.awt.Color(51, 255, 204));
-        btnClear.setIcon(new javax.swing.ImageIcon("D:\\Pro1014\\PRO1014\\PRO1014\\image\\clear.png")); // NOI18N
         btnClear.setText("Làm mới");
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
@@ -339,16 +352,28 @@ public class Xe_Form extends javax.swing.JPanel {
         );
 
         btnThem1.setBackground(new java.awt.Color(51, 255, 204));
-        btnThem1.setIcon(new javax.swing.ImageIcon("D:\\Pro1014\\PRO1014\\PRO1014\\image\\add.png")); // NOI18N
         btnThem1.setText("Thêm");
+        btnThem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnThem1ActionPerformed(evt);
+            }
+        });
 
         btnSua1.setBackground(new java.awt.Color(102, 255, 204));
-        btnSua1.setIcon(new javax.swing.ImageIcon("D:\\Pro1014\\PRO1014\\PRO1014\\image\\edit_property_24px.png")); // NOI18N
         btnSua1.setText("Sửa");
+        btnSua1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSua1ActionPerformed(evt);
+            }
+        });
 
         btnClear1.setBackground(new java.awt.Color(51, 255, 204));
-        btnClear1.setIcon(new javax.swing.ImageIcon("D:\\Pro1014\\PRO1014\\PRO1014\\image\\clear.png")); // NOI18N
         btnClear1.setText("Làm mới");
+        btnClear1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClear1ActionPerformed(evt);
+            }
+        });
 
         jPanel15.setBackground(new java.awt.Color(102, 255, 255));
         jPanel15.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Danh sách", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
@@ -368,10 +393,14 @@ public class Xe_Form extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tblXe1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblXe1MouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(tblXe1);
 
         btnSearch1.setBackground(new java.awt.Color(51, 255, 204));
-        btnSearch1.setIcon(new javax.swing.ImageIcon("D:\\Pro1014\\PRO1014\\PRO1014\\image\\search_26px.png")); // NOI18N
         btnSearch1.setText("Tìm kiếm");
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
@@ -452,9 +481,43 @@ public class Xe_Form extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtTenXeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTenXeActionPerformed
+    private void tblXe1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblXe1MouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtTenXeActionPerformed
+        int row = tblXe1.getSelectedRow();
+        fill(row);
+    }//GEN-LAST:event_tblXe1MouseClicked
+
+    private void btnThem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThem1ActionPerformed
+        // TODO add your handling code here:
+        String maHangXe = hangXeService.ZenMa();
+        String tenHangXe = txtTenHang.getText();
+        HangXe hx = new HangXe(maHangXe, tenHangXe);
+        JOptionPane.showMessageDialog(this, hangXeService.add(hx));
+        listhx = hangXeService.getAll();
+        showDataTb(listhx);
+    }//GEN-LAST:event_btnThem1ActionPerformed
+
+    private void btnClear1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClear1ActionPerformed
+        // TODO add your handling code here:
+       txtTenHang.setText("");
+       lblMaHang.setText("");
+       txtSearch1.setText("");
+    }//GEN-LAST:event_btnClear1ActionPerformed
+
+    private void btnSua1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSua1ActionPerformed
+        // TODO add your handling code here:
+         String maHangXe = hangXeService.ZenMa();
+        String tenHangXe = txtTenHang.getText();
+        HangXe hx = new HangXe(maHangXe, tenHangXe);
+        JOptionPane.showMessageDialog(this,hangXeService.update(hx, tenHangXe));
+        listhx = hangXeService.getAll();
+        showDataTb(listhx);
+    }//GEN-LAST:event_btnSua1ActionPerformed
+    private void fill(int i) {
+        HangXe hx = listhx.get(i);
+        lblMaHang.setText(hx.getMaHangXe());
+        txtTenHang.setText(hx.getTenHangXe());
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
