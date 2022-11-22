@@ -31,6 +31,14 @@ public class NhanVien {
         this.GioiTinh = GioiTinh;
     }
 
+    public NhanVien(String MaNv, String TenNv, String DiaChi, String Sdt, boolean GioiTinh) {
+        this.MaNv = MaNv;
+        this.TenNv = TenNv;
+        this.DiaChi = DiaChi;
+        this.Sdt = Sdt;
+        this.GioiTinh = GioiTinh;
+    }
+
     public NhanVien(String TenNv) {
         this.TenNv = TenNv;
     }
@@ -91,4 +99,7 @@ public class NhanVien {
         this.GioiTinh = GioiTinh;
     }
 
+    public Object[] toDataRow() {
+        return new Object[]{MaNv, TenNv, GioiTinh == true ? "Nam" : "Nu", Sdt, DiaChi};
+    }
 }

@@ -4,17 +4,34 @@
  */
 package view;
 
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import model.NhanVien;
+import service.Impl.NhanVienServiceImpl;
+import service.NhanVienService;
+
 /**
  *
  * @author Admin
  */
 public class NhanVien_form extends javax.swing.JPanel {
 
+    private DefaultTableModel dtm = new DefaultTableModel();
+    private List<NhanVien> listnv = new ArrayList<>();
+    private NhanVienService nhanVienService = new NhanVienServiceImpl();
+
     /**
      * Creates new form NhanVien_form
      */
     public NhanVien_form() {
         initComponents();
+        tblNhanVien.setModel(dtm);
+        String[] headers = {"Ma Nhan Vien", "Ten Nhan Vien", "Gioi Tinh", "So Dien Thoai", "Dia Chi"};
+        dtm.setColumnIdentifiers(headers);
+        listnv = nhanVienService.getAll();
+        showDatatb(listnv);
     }
 
     /**
@@ -26,6 +43,7 @@ public class NhanVien_form extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
@@ -34,11 +52,12 @@ public class NhanVien_form extends javax.swing.JPanel {
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
-        lblMaNv4 = new javax.swing.JLabel();
         txtTenNV4 = new javax.swing.JTextField();
         txtSoDT4 = new javax.swing.JTextField();
         txtDiaChi4 = new javax.swing.JTextField();
-        cbbGioiTinh4 = new javax.swing.JComboBox<>();
+        radioNam = new javax.swing.JRadioButton();
+        RadioNu = new javax.swing.JRadioButton();
+        lblMaNv = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblNhanVien = new javax.swing.JTable();
@@ -69,14 +88,18 @@ public class NhanVien_form extends javax.swing.JPanel {
         jLabel25.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel25.setText("Giới tính");
 
-        lblMaNv4.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        lblMaNv4.setText("_");
-
         txtTenNV4.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
 
-        cbbGioiTinh4.setBackground(new java.awt.Color(153, 0, 153));
-        cbbGioiTinh4.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        cbbGioiTinh4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        buttonGroup1.add(radioNam);
+        radioNam.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        radioNam.setText("Nam");
+
+        buttonGroup1.add(RadioNu);
+        RadioNu.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        RadioNu.setText("Nu");
+
+        lblMaNv.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblMaNv.setText("_");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -87,16 +110,25 @@ public class NhanVien_form extends javax.swing.JPanel {
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addComponent(jLabel21)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblMaNv4, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel22)
                             .addComponent(jLabel25))
-                        .addGap(18, 18, 18)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cbbGioiTinh4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtTenNV4))))
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(radioNam)
+                                .addGap(18, 18, 18)
+                                .addComponent(RadioNu)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtTenNV4, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
+                                    .addGroup(jPanel8Layout.createSequentialGroup()
+                                        .addComponent(lblMaNv, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))))))
                 .addGap(45, 45, 45)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel24)
@@ -123,19 +155,21 @@ public class NhanVien_form extends javax.swing.JPanel {
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel21)
-                            .addComponent(lblMaNv4, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(lblMaNv))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 21, Short.MAX_VALUE)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel22)
                             .addComponent(txtTenNV4, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                         .addComponent(jLabel25)
                         .addGap(24, 24, 24))
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(cbbGioiTinh4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(radioNam)
+                            .addComponent(RadioNu))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
@@ -154,6 +188,11 @@ public class NhanVien_form extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tblNhanVien.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblNhanVienMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tblNhanVien);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -171,12 +210,15 @@ public class NhanVien_form extends javax.swing.JPanel {
 
         btnTao.setBackground(new java.awt.Color(51, 255, 204));
         btnTao.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        btnTao.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\add.png")); // NOI18N
         btnTao.setText("Tạo");
+        btnTao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTaoActionPerformed(evt);
+            }
+        });
 
         btnSua.setBackground(new java.awt.Color(51, 255, 204));
         btnSua.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        btnSua.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\edit_property_24px.png")); // NOI18N
         btnSua.setText("Sửa");
         btnSua.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -186,13 +228,21 @@ public class NhanVien_form extends javax.swing.JPanel {
 
         btnClearNv.setBackground(new java.awt.Color(51, 255, 204));
         btnClearNv.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        btnClearNv.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\clear.png")); // NOI18N
         btnClearNv.setText("Làm mới");
+        btnClearNv.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClearNvActionPerformed(evt);
+            }
+        });
 
         btnSearch.setBackground(new java.awt.Color(51, 255, 204));
         btnSearch.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        btnSearch.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\search.png")); // NOI18N
         btnSearch.setText("Tìm kiếm");
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -221,7 +271,7 @@ public class NhanVien_form extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnTao)
@@ -229,7 +279,7 @@ public class NhanVien_form extends javax.swing.JPanel {
                     .addComponent(btnClearNv)
                     .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -251,18 +301,84 @@ public class NhanVien_form extends javax.swing.JPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    private void fill(int i) {
+        NhanVien nv = listnv.get(i);
+        lblMaNv.setText(nv.getMaNv());
+        txtTenNV4.setText(nv.getTenNv());
+        txtDiaChi4.setText(nv.getDiaChi());
+        txtSoDT4.setText(nv.getSdt());
+        if (nv.isGioiTinh()) {
+            radioNam.setSelected(true);
+        } else {
+            RadioNu.setSelected(true);
+        }
+    }
     private void btnSuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuaActionPerformed
         // TODO add your handling code here:
+        String manv = nhanVienService.ZenMa();
+        String tennv = txtTenNV4.getText();
+        String diachi = txtDiaChi4.getText();
+        String sdt = txtSoDT4.getText();
+        boolean gt = radioNam.isSelected();
+        NhanVien nv = new NhanVien(manv, tennv, diachi, sdt, gt);
+        JOptionPane.showMessageDialog(this, nhanVienService.Sua(nv, tennv));
+        listnv = nhanVienService.getAll();
+        showDatatb(listnv);
     }//GEN-LAST:event_btnSuaActionPerformed
 
+    private void btnTaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTaoActionPerformed
+        // TODO add your handling code here:
+        String manv = nhanVienService.ZenMa();
+        String tennv = txtTenNV4.getText();
+        String diachi = txtDiaChi4.getText();
+        String sdt = txtSoDT4.getText();
+        boolean gt = radioNam.isSelected();
+        NhanVien nv = new NhanVien(manv, tennv, diachi, sdt, gt);
+        JOptionPane.showMessageDialog(this, nhanVienService.Them(nv));
+        listnv = nhanVienService.getAll();
+        showDatatb(listnv);
+    }//GEN-LAST:event_btnTaoActionPerformed
+
+    private void btnClearNvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearNvActionPerformed
+        // TODO add your handling code here:
+//        NhanVien nv = listnv.get(tblNhanVien.getSelectedRow());
+//        JOptionPane.showMessageDialog(this, nhanVienService.Xoa(nv.getTenNv()));
+//        listnv = nhanVienService.getAll();
+//        showDatatb(listnv);
+        lblMaNv.setText("");
+        txtTenNV4.setText("");
+        txtDiaChi4.setText("");
+        txtSearch.setText("");
+        txtSoDT4.setText("");
+        buttonGroup1.clearSelection();
+    }//GEN-LAST:event_btnClearNvActionPerformed
+
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+        // TODO add your handling code here:
+        String Tennv = txtSearch.getText();
+        List<NhanVien> listSearch = nhanVienService.listSearch(listnv, Tennv);
+        showDatatb(listSearch);
+    }//GEN-LAST:event_btnSearchActionPerformed
+
+    private void tblNhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblNhanVienMouseClicked
+        // TODO add your handling code here:
+        int row = tblNhanVien.getSelectedRow();
+        fill(row);
+    }//GEN-LAST:event_tblNhanVienMouseClicked
+    private void showDatatb(List<NhanVien> lists) {
+        dtm.setRowCount(0);
+        for (NhanVien x : lists) {
+            dtm.addRow(x.toDataRow());
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton RadioNu;
     private javax.swing.JButton btnClearNv;
     private javax.swing.JButton btnSearch;
     private javax.swing.JButton btnSua;
     private javax.swing.JButton btnTao;
-    private javax.swing.JComboBox<String> cbbGioiTinh4;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
@@ -273,7 +389,8 @@ public class NhanVien_form extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JLabel lblMaNv4;
+    private javax.swing.JLabel lblMaNv;
+    private javax.swing.JRadioButton radioNam;
     private javax.swing.JTable tblNhanVien;
     private javax.swing.JTextField txtDiaChi4;
     private javax.swing.JTextField txtSearch;
