@@ -44,14 +44,14 @@ public class HoaDonThanhToanIMPL implements HoaDonThanhToanService {
         }
     }
     @Override
-    public List<HoaDonThanhToan> findByIDHD(List<HoaDonThanhToan> listHD, int idHD) {
-        List<HoaDonThanhToan> findByIDHD = new ArrayList<>();
-        for (HoaDonThanhToan x : listHD) {
-            if (x.getIdHd().contains(idHD)) {
-                findByIDHD.add(x);
+    public List<HoaDonThanhToan> findByIDHDTT(List<HoaDonThanhToan> listHDTT, int idHDTT) {
+        List<HoaDonThanhToan> findByIDHDTT = new ArrayList<>();
+        for (HoaDonThanhToan x : listHDTT) {
+            if (x.getIdHdtt() == idHDTT) {
+                findByIDHDTT.add(x);
             }
         }
-        return findByIDHD;
+        return findByIDHDTT;
     }
 
     @Override

@@ -17,7 +17,7 @@ public interface HoaDonThanhToanService {
 
     //HoaDonThanhToan findByIDHD(int id);
     
-    List<HoaDonThanhToan> findByIDHD(List<HoaDonThanhToan> listHD, int id);
+    List<HoaDonThanhToan> findByIDHDTT(List<HoaDonThanhToan> listHDTT, int idHDTT);
 
     String add(HoaDonThanhToan hdtt);
 

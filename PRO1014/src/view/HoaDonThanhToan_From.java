@@ -424,7 +424,7 @@ public class HoaDonThanhToan_From extends javax.swing.JFrame {
     private void btnSearchtkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchtkActionPerformed
         String idHDTTStr = txtSearch.getText();
         int idHDTT = Integer.parseInt(idHDTTStr);
-        List<HoaDonThanhToan> listSearch = hdTTSer.findByIDHD(listHDTT, idHDTT);
+        List<HoaDonThanhToan> listSearch = hdTTSer.findByIDHDTT(listHDTT, idHDTT);
         loadtb(listSearch);
     }//GEN-LAST:event_btnSearchtkActionPerformed
 
