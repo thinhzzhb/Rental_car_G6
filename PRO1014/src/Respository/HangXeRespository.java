@@ -37,4 +37,40 @@ public class HangXeRespository {
         }
         return null;
     }
+
+    public boolean add(HangXe hx) {
+        int check = 0;
+        String query = "INSERT INTO [dbo].[HangXe]\n"
+                + "           ([maHangXe]\n"
+                + "           ,[tenHangXe])\n"
+                + "     VALUES\n"
+                + "           (?,?)";
+        try ( Connection con = DBConnection.getConnection();  PreparedStatement ps = con.prepareStatement(query);) {
+
+            ps.setObject(1, hx.getMaHangXe());
+            ps.setObject(2, hx.getTenHangXe());
+            check = ps.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace(System.out);
+        }
+        return check > 0;
+    }
+
+    public boolean update(HangXe hx, String tenHangXe) {
+        int check = 0;
+        String query = "UPDATE [dbo].[HangXe]\n"
+                + "   SET [tenHangXe] = ?"
+                + " WHERE [maHangXe] = ?";
+        try {
+            Connection con = DBConnection.getConnection();
+            PreparedStatement ps = con.prepareStatement(query);
+            ps.setObject(1, hx.getMaHangXe());
+            ps.setObject(2, tenHangXe);
+            check = ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace(System.out);
+        }
+        return check > 0;
+    }
 }
