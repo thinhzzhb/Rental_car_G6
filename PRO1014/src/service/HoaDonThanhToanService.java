@@ -15,9 +15,13 @@ public interface HoaDonThanhToanService {
 
     public List<HoaDonThanhToan> getAll();
 
-    HoaDonThanhToan findByID(int id);
+    //HoaDonThanhToan findByIDHD(int id);
+    
+    List<HoaDonThanhToan> findByIDHD(List<HoaDonThanhToan> listHD, int id);
 
-    String addCTHD(HoaDonThanhToan hdtt);
+    String add(HoaDonThanhToan hdtt);
 
     String Update(int id, HoaDonThanhToan hdtt);
+    
+    String Remove(int id);
 }

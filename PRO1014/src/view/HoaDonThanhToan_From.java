@@ -6,12 +6,15 @@ package view;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 import model.HoaDonThanhToan;
 import model.HopDong;
+import service.HoaDonThanhToanService;
 import service.Impl.HoaDonThanhToanIMPL;
 
 /**
@@ -24,13 +27,14 @@ public class HoaDonThanhToan_From extends javax.swing.JFrame {
      * Creates new form HoaDonThanhToan_From
      */
     private DefaultTableModel _dtm;
-    private HoaDonThanhToanIMPL hdSer;
+    private List<HoaDonThanhToan> listHDTT = new ArrayList<>();
+    private HoaDonThanhToanService hdTTSer = new HoaDonThanhToanIMPL();
     
     public HoaDonThanhToan_From() {
         initComponents();
         _dtm = (DefaultTableModel) tblHD.getModel();
-        hdSer = new HoaDonThanhToanIMPL();
-        loadtb();
+        listHDTT = hdTTSer.getAll();
+        loadtb(listHDTT);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -62,7 +66,7 @@ public class HoaDonThanhToan_From extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
         btnSearchtk = new javax.swing.JButton();
-        txtMatKhau1 = new javax.swing.JPasswordField();
+        txtSearch = new javax.swing.JPasswordField();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblHD = new javax.swing.JTable();
@@ -218,7 +222,7 @@ public class HoaDonThanhToan_From extends javax.swing.JFrame {
 
         btnSearchtk.setBackground(new java.awt.Color(51, 255, 204));
         btnSearchtk.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-        btnSearchtk.setText("Tìm kiếm");
+        btnSearchtk.setText("Tìm kiếm id Hợp đồng");
         btnSearchtk.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSearchtkActionPerformed(evt);
@@ -277,7 +281,7 @@ public class HoaDonThanhToan_From extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnSearchtk)
                         .addGap(18, 18, 18)
-                        .addComponent(txtMatKhau1, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(43, 43, 43))))
         );
         jPanel3Layout.setVerticalGroup(
@@ -291,7 +295,7 @@ public class HoaDonThanhToan_From extends javax.swing.JFrame {
                         .addGap(28, 28, 28)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnSearchtk, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtMatKhau1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(14, 14, 14)
                 .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -354,7 +358,7 @@ public class HoaDonThanhToan_From extends javax.swing.JFrame {
             h.setPhiPs(phiPs);
             h.setTongThanhToan(tongTT);
             
-            loadtb();
+            loadtb(listHDTT);
         } catch (ParseException ex) {
             Logger.getLogger(HoaDonThanhToan_From.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -363,6 +367,7 @@ public class HoaDonThanhToan_From extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnThemActionPerformed
 
+    
     private void tblHDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblHDMouseClicked
         // TODO add your handling code here:     
         int selectRow = tblHD.getSelectedRow();
@@ -372,6 +377,8 @@ public class HoaDonThanhToan_From extends javax.swing.JFrame {
         txtTienCoc.setText(tblHD.getValueAt(selectRow, 3).toString());
         txtPhiPs.setText(tblHD.getValueAt(selectRow, 4).toString());
         txtTongThanhToan.setText(tblHD.getValueAt(selectRow, 5).toString());
+        
+        
     }//GEN-LAST:event_tblHDMouseClicked
 
     private void btnSuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuaActionPerformed
@@ -398,7 +405,7 @@ public class HoaDonThanhToan_From extends javax.swing.JFrame {
             h.setPhiPs(phiPs);
             h.setTongThanhToan(tongTT);
             
-            loadtb();
+            loadtb(listHDTT);
         } catch (ParseException ex) {
             Logger.getLogger(HoaDonThanhToan_From.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -415,20 +422,17 @@ public class HoaDonThanhToan_From extends javax.swing.JFrame {
     }//GEN-LAST:event_btnClearActionPerformed
 
     private void btnSearchtkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchtkActionPerformed
-        // TODO add your handling code here:
+        String idHDTTStr = txtSearch.getText();
+        int idHDTT = Integer.parseInt(idHDTTStr);
+        List<HoaDonThanhToan> listSearch = hdTTSer.findByIDHD(listHDTT, idHDTT);
+        loadtb(listSearch);
     }//GEN-LAST:event_btnSearchtkActionPerformed
 
-    private void loadtb() {
+    private void loadtb(List<HoaDonThanhToan> listHDTT) {
         _dtm.setRowCount(0);
-        for (HoaDonThanhToan hd : hdSer.getAll()) {
-            Object[] row = new Object[]{
-                hd.getIdHdtt(),
-                hd.getNgayTao(),
-                hd.getTongXe(),
-                hd.getTienCoc(),
-                hd.getPhiPs(),
-                hd.getTongThanhToan(),};
-            _dtm.addRow(row);
+        _dtm.setRowCount(0);
+        for (HoaDonThanhToan x : listHDTT) {
+            _dtm.addRow(x.toDataRow());
         }
     }
     /**
@@ -496,9 +500,9 @@ public class HoaDonThanhToan_From extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblMaHD;
     private javax.swing.JTable tblHD;
-    private javax.swing.JPasswordField txtMatKhau1;
     private javax.swing.JTextField txtNgayTao;
     private javax.swing.JTextField txtPhiPs;
+    private javax.swing.JPasswordField txtSearch;
     private javax.swing.JPasswordField txtTienCoc;
     private javax.swing.JTextField txtTongThanhToan;
     private javax.swing.JTextField txtTongXe;
