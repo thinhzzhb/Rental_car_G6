@@ -33,6 +33,15 @@ public class KhachHang {
         this.IdCv = IdCv;
     }
 
+    public KhachHang(String maKh, String TenKh, String DiaChi, String Sdt, String Cccd, boolean GioiTinh) {
+        this.maKh = maKh;
+        this.TenKh = TenKh;
+        this.DiaChi = DiaChi;
+        this.Sdt = Sdt;
+        this.Cccd = Cccd;
+        this.GioiTinh = GioiTinh;
+    }
+
     public KhachHang(String TenKh) {
         this.TenKh = TenKh;
     }
@@ -101,4 +110,7 @@ public class KhachHang {
         this.IdCv = IdCv;
     }
 
+    public Object[] todataRow() {
+        return new Object[]{maKh, TenKh, GioiTinh == true ? "Nam" : "Nu", DiaChi, Sdt, Cccd};
+    }
 }
