@@ -122,7 +122,7 @@
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace pref="37" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
@@ -294,6 +294,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="S&#x1eed;a"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSuaActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnClear">
                   <Properties>
@@ -308,6 +311,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="L&#xe0;m m&#x1edb;i"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnClearActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnDisable">
                   <Properties>
@@ -322,20 +328,24 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="V&#xf4; hi&#x1ec7;u h&#xf3;a"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDisableActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JPasswordField" name="txtMatKhau">
                 </Component>
                 <Component class="javax.swing.JComboBox" name="cbbChucVu">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="4">
-                        <StringItem index="0" value="Item 1"/>
-                        <StringItem index="1" value="Item 2"/>
-                        <StringItem index="2" value="Item 3"/>
-                        <StringItem index="3" value="Item 4"/>
+                      <StringArray count="2">
+                        <StringItem index="0" value="Kh&#xe1;ch h&#xe0;ng"/>
+                        <StringItem index="1" value="Nh&#xe2;n vi&#xea;n"/>
                       </StringArray>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbbChucVuActionPerformed"/>
+                  </Events>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
@@ -414,8 +424,9 @@
                           <Color blue="66" green="66" red="0" type="rgb"/>
                         </Property>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="5" rowCount="4">
-                            <Column editable="true" title="Id" type="java.lang.Object"/>
+                          <Table columnCount="6" rowCount="4">
+                            <Column editable="true" title="IdTK" type="java.lang.Object"/>
+                            <Column editable="true" title="M&#xe3; T&#xe0;i kho&#x1ea3;n" type="java.lang.Object"/>
                             <Column editable="true" title="T&#xea;n &#x110;&#x103;ng nh&#x1ead;p" type="java.lang.Object"/>
                             <Column editable="true" title="M&#x1ead;t kh&#x1ea9;u" type="java.lang.Object"/>
                             <Column editable="true" title="Vai tr&#xf2;" type="java.lang.Object"/>
@@ -442,6 +453,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="T&#xec;m ki&#x1ebf;m"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSearchtkActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtSearchTK">
                 </Component>

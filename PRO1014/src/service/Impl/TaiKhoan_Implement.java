@@ -6,6 +6,8 @@ package service.Impl;
 
 import Respository.TaiKhoanRespository;
 import java.util.List;
+import java.util.Random;
+import javax.swing.JOptionPane;
 import model.TaiKhoan;
 import service.Taikhoan_Interface;
 
@@ -13,17 +15,23 @@ import service.Taikhoan_Interface;
  *
  * @author Admin
  */
-public class TaiKhoan_Implement implements Taikhoan_Interface{
+public class TaiKhoan_Implement implements Taikhoan_Interface {
+
     private TaiKhoanRespository tkRep;
 
     public TaiKhoan_Implement() {
         tkRep = new TaiKhoanRespository();
     }
-    
+
+    public String ZenMA() {
+        Random rd = new Random();
+        int ranNub = rd.nextInt(999999);
+        return "Tk" + ranNub;
+    }
 
     @Override
     public List<TaiKhoan> getAll() {
-       return this.tkRep.getAll();
+        return this.tkRep.getAll();
     }
 
     @Override
@@ -32,31 +40,62 @@ public class TaiKhoan_Implement implements Taikhoan_Interface{
     }
 
     @Override
-    public TaiKhoan addTK(TaiKhoan tk) {
-//        if (tk.getUserName() == null) {
-//            return "Tài khoản không được để trống";
-//        }else if (tk.getPass() == null) {
-//            return "Mật khẩu không được để trống";
-//        } else if (tkRep.checkExists(tk.getUserName()) == true) {
-//            return "Tên tài khoản đã tồn tại";
-//        } else {
-//        }
-      return tk;
+    public String addTK(TaiKhoan tk) {
+        if (tk.getUserName().isBlank()) {
+            return "Tài khoản không được để trống";
+        } else if (tk.getPass().isBlank()) {
+            return "Mật khẩu không được để trống";
+
+        } else if (tkRep.add(tk) == true) {
+            return "Thêm thành công";
+        } else {
+            return "Thêm thất bại";
+        }
     }
 
     @Override
     public String update(int id, TaiKhoan tk) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        if (tk.getUserName() == null) {
+            return "Tài khoản không được để trống";
+        } else if (tk.getPass() == null) {
+            return "Mật khẩu không được để trống";
+        } else if (tkRep.update(id, tk) == true) {
+            return "Sửa thành công";
+        } else {
+            return "Sửa thất bại";
+        }
     }
 
     @Override
     public TaiKhoan findID(String username) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return tkRep.findID(username);
     }
-    public Integer checkLogin(String User, String pass){
-        if (tkRep.getUser(User, pass)==null) {
+
+    public Integer checkLogin(String User, String pass) {
+        if (tkRep.getUser(User, pass) == null) {
             return -1;
         }
         return tkRep.getUser(User, pass).getVaiTro();
+    }
+
+    @Override
+    public String disable(int id, TaiKhoan t) {
+        if (tkRep.disable(id, t)) {
+            return "Tài khoản đã bị vô hiệu hóa";
+        }else {
+            return "Không thể vô hiệu hóa";
+        }
+    }
+
+    @Override
+    public String Xoa(int id) {
+        if (tkRep.Xoa(id)) {
+            return "Xóa thành công";
+        }else {
+            return "Xóa thất bại";
+        }
+    }
+    public int stateChangeAccount(String userName){
+        return tkRep.stateChangeAccount(userName);
     }
 }

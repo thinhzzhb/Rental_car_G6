@@ -30,6 +30,8 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
         _lst.add(new DanhMuc("Nhân viên", pnlNV, lblNV));
         _lst.add(new DanhMuc("Khách hàng", pnlKhachHang, lblKhachHang));
         _lst.add(new DanhMuc("Tài khoản", pnlTaiKhoan, lblTaiKhoan));
+        _lst.add(new DanhMuc("Thống kê", pnlThongKe, lblThongke));
+        _lst.add(new DanhMuc("Sổ đặt", pnlSodat, lblSodat));
         cm.setEvent(_lst);
     }
 
@@ -71,6 +73,8 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
         lblThueXe = new javax.swing.JLabel();
         pnlThongKe2 = new javax.swing.JPanel();
         lblCanhBao = new javax.swing.JLabel();
+        pnlSodat = new javax.swing.JPanel();
+        lblSodat = new javax.swing.JLabel();
         pnView = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -381,9 +385,30 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
                 .addComponent(lblCanhBao, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanel1.add(pnlThongKe2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 250, 30));
+        jPanel1.add(pnlThongKe2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 250, 30));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 250, 570));
+        pnlSodat.setBackground(new java.awt.Color(153, 255, 204));
+
+        lblSodat.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
+        lblSodat.setForeground(new java.awt.Color(0, 0, 153));
+        lblSodat.setText("Sổ đặt");
+
+        javax.swing.GroupLayout pnlSodatLayout = new javax.swing.GroupLayout(pnlSodat);
+        pnlSodat.setLayout(pnlSodatLayout);
+        pnlSodatLayout.setHorizontalGroup(
+            pnlSodatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblSodat, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+        );
+        pnlSodatLayout.setVerticalGroup(
+            pnlSodatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSodatLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(lblSodat, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jPanel1.add(pnlSodat, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 250, 30));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 250, 570));
 
         javax.swing.GroupLayout pnViewLayout = new javax.swing.GroupLayout(pnView);
         pnView.setLayout(pnViewLayout);
@@ -484,6 +509,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
     private javax.swing.JLabel lblKhuyenmai;
     private javax.swing.JLabel lblNV;
     private javax.swing.JLabel lblQuanLyXe;
+    private javax.swing.JLabel lblSodat;
     private javax.swing.JLabel lblTaiKhoan;
     private javax.swing.JLabel lblThongke;
     private javax.swing.JLabel lblThueXe;
@@ -495,6 +521,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
     private javax.swing.JPanel pnlKhachHang;
     private javax.swing.JPanel pnlKhuyenMai;
     private javax.swing.JPanel pnlNV;
+    private javax.swing.JPanel pnlSodat;
     private javax.swing.JPanel pnlTaiKhoan;
     private javax.swing.JPanel pnlThongKe;
     private javax.swing.JPanel pnlThongKe1;

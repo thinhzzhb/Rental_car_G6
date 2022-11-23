@@ -41,6 +41,7 @@ public class Hopdong_Form extends javax.swing.JPanel {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        btnLocHopDong = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblHopDong = new javax.swing.JTable();
@@ -58,32 +59,32 @@ public class Hopdong_Form extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         tblHoaDon = new javax.swing.JTable();
 
-        jPanel1.setBackground(new java.awt.Color(102, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(102, 102, 255));
 
         jPanel3.setBackground(new java.awt.Color(153, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tìm & lọc hợp đồng", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 14))); // NOI18N
 
-        cbbMaKhach.setBackground(new java.awt.Color(0, 204, 204));
+        cbbMaKhach.setBackground(new java.awt.Color(204, 204, 204));
         cbbMaKhach.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         cbbMaKhach.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        cbbMaNV.setBackground(new java.awt.Color(0, 204, 204));
+        cbbMaNV.setBackground(new java.awt.Color(204, 204, 204));
         cbbMaNV.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         cbbMaNV.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        cbbTenXe.setBackground(new java.awt.Color(0, 204, 204));
+        cbbTenXe.setBackground(new java.awt.Color(204, 204, 204));
         cbbTenXe.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         cbbTenXe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        cbbTienCoc.setBackground(new java.awt.Color(0, 204, 204));
+        cbbTienCoc.setBackground(new java.awt.Color(204, 204, 204));
         cbbTienCoc.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         cbbTienCoc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        cbbThang.setBackground(new java.awt.Color(0, 204, 204));
+        cbbThang.setBackground(new java.awt.Color(204, 204, 204));
         cbbThang.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         cbbThang.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        cbbNam.setBackground(new java.awt.Color(0, 204, 204));
+        cbbNam.setBackground(new java.awt.Color(204, 204, 204));
         cbbNam.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         cbbNam.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -111,12 +112,16 @@ public class Hopdong_Form extends javax.swing.JPanel {
         jLabel10.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel10.setText("Tìm theo tên xe");
 
+        btnLocHopDong.setBackground(new java.awt.Color(0, 102, 255));
+        btnLocHopDong.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\filter.png")); // NOI18N
+        btnLocHopDong.setText("Lọc");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(134, 134, 134)
+                .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel5)
@@ -128,9 +133,9 @@ public class Hopdong_Form extends javax.swing.JPanel {
                             .addComponent(jLabel6))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(cbbMaNV, 0, 134, Short.MAX_VALUE)
-                            .addComponent(cbbTenXe, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cbbMaNV, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cbbTenXe, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel7)
@@ -144,12 +149,14 @@ public class Hopdong_Form extends javax.swing.JPanel {
                         .addComponent(jLabel9)
                         .addGap(18, 18, 18)
                         .addComponent(cbbNam, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(45, 45, 45))
+                .addGap(36, 36, 36)
+                .addComponent(btnLocHopDong)
+                .addGap(26, 26, 26))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addGap(21, 21, 21)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cbbMaKhach, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cbbThang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -161,13 +168,14 @@ public class Hopdong_Form extends javax.swing.JPanel {
                     .addComponent(cbbNam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
                     .addComponent(jLabel9))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
                     .addComponent(jLabel7)
                     .addComponent(cbbTienCoc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbbTenXe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23))
+                    .addComponent(cbbTenXe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLocHopDong))
+                .addGap(29, 29, 29))
         );
 
         jPanel4.setBackground(new java.awt.Color(102, 255, 255));
@@ -211,8 +219,8 @@ public class Hopdong_Form extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -361,7 +369,7 @@ public class Hopdong_Form extends javax.swing.JPanel {
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addContainerGap(93, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Hóa đơn", jPanel2);
@@ -380,6 +388,7 @@ public class Hopdong_Form extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnLocHopDong;
     private javax.swing.JComboBox<String> cbbGiaTien;
     private javax.swing.JComboBox<String> cbbMaKhach;
     private javax.swing.JComboBox<String> cbbMaNV;

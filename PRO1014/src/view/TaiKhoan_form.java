@@ -4,7 +4,9 @@
  */
 package view;
 
+import java.util.List;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.TaiKhoan;
 import service.Impl.TaiKhoan_Implement;
@@ -18,6 +20,7 @@ public class TaiKhoan_form extends javax.swing.JPanel {
     /**
      * Creates new form TaiKhoan_form
      */
+    private List<TaiKhoan> _lstTK;
     private DefaultTableModel _dtm;
     private TaiKhoan_Implement tkSer;
     private boolean isHidden = true;
@@ -26,7 +29,8 @@ public class TaiKhoan_form extends javax.swing.JPanel {
         initComponents();
         _dtm = (DefaultTableModel) tblTK.getModel();
         tkSer = new TaiKhoan_Implement();
-        loadtb();
+        _lstTK = tkSer.getAll();
+        loadtb(tkSer.getAll());
     }
 
     /**
@@ -107,18 +111,38 @@ public class TaiKhoan_form extends javax.swing.JPanel {
         btnSua.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnSua.setIcon(new javax.swing.ImageIcon("D:\\Pro1014\\PRO1014\\PRO1014\\image\\edit_property_24px.png")); // NOI18N
         btnSua.setText("Sửa");
+        btnSua.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSuaActionPerformed(evt);
+            }
+        });
 
         btnClear.setBackground(new java.awt.Color(51, 255, 204));
         btnClear.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnClear.setIcon(new javax.swing.ImageIcon("D:\\Pro1014\\PRO1014\\PRO1014\\image\\clear.png")); // NOI18N
         btnClear.setText("Làm mới");
+        btnClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClearActionPerformed(evt);
+            }
+        });
 
         btnDisable.setBackground(new java.awt.Color(51, 255, 204));
         btnDisable.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnDisable.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\lock.png")); // NOI18N
         btnDisable.setText("Vô hiệu hóa");
+        btnDisable.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDisableActionPerformed(evt);
+            }
+        });
 
-        cbbChucVu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbbChucVu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Khách hàng", "Nhân viên" }));
+        cbbChucVu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbbChucVuActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -148,7 +172,7 @@ public class TaiKhoan_form extends javax.swing.JPanel {
                             .addComponent(cbbChucVu, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel20)
                             .addComponent(jLabel16))
@@ -205,13 +229,13 @@ public class TaiKhoan_form extends javax.swing.JPanel {
         tblTK.setForeground(new java.awt.Color(0, 102, 102));
         tblTK.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Id", "Tên Đăng nhập", "Mật khẩu", "Vai trò", "Tình trạng"
+                "IdTK", "Mã Tài khoản", "Tên Đăng nhập", "Mật khẩu", "Vai trò", "Tình trạng"
             }
         ));
         tblTK.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -225,6 +249,11 @@ public class TaiKhoan_form extends javax.swing.JPanel {
         btnSearchtk.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnSearchtk.setIcon(new javax.swing.ImageIcon("D:\\Pro1014\\PRO1014\\PRO1014\\image\\search_26px.png")); // NOI18N
         btnSearchtk.setText("Tìm kiếm");
+        btnSearchtk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchtkActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -287,31 +316,111 @@ public class TaiKhoan_form extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     
-    
     private void btnThemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemActionPerformed
         // TODO add your handling code here:
+        String maTk = tkSer.ZenMA();
+        String User = txtUser.getText();
+        String pass = txtMatKhau.getText();
+        String ChucVu = cbbChucVu.getSelectedItem().toString();
+        String TinhTrang = cbbTinhTrang.getSelectedItem().toString();
+        
+        int VaiTro =  ChucVu.equals("Khách hàng")?1:0;
+        int tTrang = TinhTrang.equals("Vô Hiệu Hóa")?0:1;
+        TaiKhoan t = new TaiKhoan();
+        t.setMaTK(maTk);
+        t.setPass(pass);
+        t.setUserName(User);
+        t.setVaiTro(VaiTro);
+        t.setTinhTrang(tTrang);
+        JOptionPane.showMessageDialog(this, tkSer.addTK(t));
+        loadtb(tkSer.getAll());
     }//GEN-LAST:event_btnThemActionPerformed
 
+    private TaiKhoan getFormTB(){
+        String maTk = tkSer.ZenMA();
+        String User = txtUser.getText();
+        String pass = txtMatKhau.getText();
+        String ChucVu = cbbChucVu.getSelectedItem().toString();
+        String TinhTrang = cbbTinhTrang.getSelectedItem().toString();
+        
+        int VaiTro =  ChucVu.equals("Khách hàng")?1:0;
+        int tTrang = TinhTrang.equals("Vô Hiệu Hóa")?0:1;
+        TaiKhoan t = new TaiKhoan();
+        t.setMaTK(maTk);
+        t.setPass(pass);
+        t.setUserName(User);
+        t.setVaiTro(VaiTro);
+        t.setTinhTrang(tTrang);
+        return new TaiKhoan(0, maTk, User, pass, VaiTro, tTrang);
+    }
+    
     private void tblTKMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblTKMouseClicked
         // TODO add your handling code here:
         int selectRow = tblTK.getSelectedRow();
-        lblMaTK.setText(tblTK.getValueAt(selectRow, 0).toString());
-        txtUser.setText(tblTK.getValueAt(selectRow, 1).toString());
-        txtMatKhau.setText(tblTK.getValueAt(selectRow, 2).toString());
-        cbbChucVu.setSelectedItem(tblTK.getValueAt(selectRow, 3).toString());
-        cbbTinhTrang.setSelectedItem(tblTK.getValueAt(selectRow, 4));
+        lblMaTK.setText(tblTK.getValueAt(selectRow, 1).toString());
+        txtUser.setText(tblTK.getValueAt(selectRow, 2).toString());
+        txtMatKhau.setText(tblTK.getValueAt(selectRow, 3).toString());
+        cbbChucVu.setSelectedItem(tblTK.getValueAt(selectRow, 4).toString());
+        cbbTinhTrang.setSelectedItem(tblTK.getValueAt(selectRow, 5));
     }//GEN-LAST:event_tblTKMouseClicked
 
-    private void loadtb() {
+    private void cbbChucVuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbbChucVuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbbChucVuActionPerformed
+
+    private void btnSuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuaActionPerformed
+        // TODO add your handling code here:
+        int selectRow = tblTK.getSelectedRow();
+        if (selectRow == -1) {
+            JOptionPane.showMessageDialog(this, "Chọn 1 dòng để sửa");
+            return;
+        }
+        String id = tblTK.getValueAt(selectRow, 0).toString();
+        int idTK = Integer.parseInt(id);
+        
+        JOptionPane.showMessageDialog(this, tkSer.update(idTK, getFormTB()));
+        loadtb(tkSer.getAll());
+    }//GEN-LAST:event_btnSuaActionPerformed
+
+    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
+        // TODO add your handling code here:
+        lblMaTK.setText("");
+        txtUser.setText("");
+        txtMatKhau.setText("");
+        cbbChucVu.setSelectedItem("");
+        cbbTinhTrang.setSelectedIndex(1);
+    }//GEN-LAST:event_btnClearActionPerformed
+
+    private void btnSearchtkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchtkActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSearchtkActionPerformed
+
+    private void btnDisableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisableActionPerformed
+       if (tblTK.getSelectedRow() == -1) {
+            JOptionPane.showMessageDialog(this, "Vui lòng click vào Bảng tài khoản");
+        } else {
+            int row = tblTK.getSelectedRow();
+            if (tkSer.stateChangeAccount(tblTK.getValueAt(row, 2).toString()) > 0) {
+                JOptionPane.showMessageDialog(this, "Vô hiệu hóa thành công");
+                loadtb(tkSer.getAll());
+            } else {
+                JOptionPane.showMessageDialog(this, "Vô hiệu hóa thất bại");
+            }
+        }
+    }//GEN-LAST:event_btnDisableActionPerformed
+
+    private void loadtb(List<TaiKhoan> _Lst) {
         _dtm.setRowCount(0);
-        for (TaiKhoan tk : tkSer.getAll()) {
-            Object[] row = new Object[]{
+        for (TaiKhoan tk : _Lst) {
+            _dtm.addRow(new Object[]{
                 tk.getIdTk(),
+                tk.getMaTK(),
                 tk.getUserName(),
                 tk.getPass(),
-                tk.getVaiTro() == 0 ? "Nhân viên" : "Khách hàng",
-                tk.getTinhTrang() == 1 ? "Đang hoạt động" : "Vô hiệu hóa",};
-            _dtm.addRow(row);
+                tk.getVaiTro() == 0?"Khách hàng":"Nhân viên",
+                tk.getTinhTrang() == 1?"Đang hoạt động":"Nhân viên"
+            }
+            );
         }
     }
 

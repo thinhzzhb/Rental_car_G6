@@ -11,6 +11,7 @@ package model;
 public class TaiKhoan {
 
     private int IdTk;
+    private String MaTK;
     private String userName;
     private String pass;
     private int VaiTro;
@@ -23,8 +24,9 @@ public class TaiKhoan {
         this.IdTk = IdTk;
     }
 
-    public TaiKhoan(int IdTk, String userName, String pass, int VaiTro, int tinhTrang) {
+    public TaiKhoan(int IdTk, String MaTK, String userName, String pass, int VaiTro, int tinhTrang) {
         this.IdTk = IdTk;
+        this.MaTK = MaTK;
         this.userName = userName;
         this.pass = pass;
         this.VaiTro = VaiTro;
@@ -37,6 +39,14 @@ public class TaiKhoan {
 
     public void setIdTk(int IdTk) {
         this.IdTk = IdTk;
+    }
+
+    public String getMaTK() {
+        return MaTK;
+    }
+
+    public void setMaTK(String MaTK) {
+        this.MaTK = MaTK;
     }
 
     public String getUserName() {
@@ -70,6 +80,8 @@ public class TaiKhoan {
     public void setTinhTrang(int tinhTrang) {
         this.tinhTrang = tinhTrang;
     }
+
+    
 
     @Override
     public String toString() {

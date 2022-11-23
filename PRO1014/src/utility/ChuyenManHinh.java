@@ -15,7 +15,9 @@ import view.Hopdong_Form;
 import view.KhachHangForm;
 import view.KhuyenMai_Form;
 import view.NhanVien_form;
+import view.SoDat_form;
 import view.TaiKhoan_form;
+import view.ThongKe_form;
 import view.TrangChu;
 import view.Xe_Form;
 
@@ -91,6 +93,12 @@ public class ChuyenManHinh {
                 case "Tài khoản":
                     pnlNode = new TaiKhoan_form();
                     break;
+                case "Thống kê":
+                    pnlNode = new ThongKe_form();
+                    break;
+                case "Sổ đặt":
+                    pnlNode = new SoDat_form();
+                    break;
                 default:
                     pnlNode = new TrangChu();
                     break;
@@ -105,8 +113,8 @@ public class ChuyenManHinh {
         @Override
         public void mousePressed(MouseEvent e) {
             txtO = txt;
-            pnlItem.setBackground(new Color(96, 100, 191));
-            lblItem.setBackground(new Color(96, 100, 191));
+            pnlItem.setBackground(new Color(0,204,204));
+            lblItem.setBackground(new Color(0,204,204));
         }
 
         @Override
@@ -122,8 +130,8 @@ public class ChuyenManHinh {
         @Override
         public void mouseExited(MouseEvent e) {
             if (!txtO.equalsIgnoreCase(txt)) {
-                pnlItem.setBackground(new Color(76, 175, 80));
-                lblItem.setBackground(new Color(76, 175, 80));
+                pnlItem.setBackground(new Color(153,255,204));
+                lblItem.setBackground(new Color(153,255,204));
             }
         }
 
