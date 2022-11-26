@@ -54,13 +54,13 @@ public class KhuyenMai_Form extends javax.swing.JPanel {
         txtSearch = new javax.swing.JTextField();
         btnTIm = new javax.swing.JButton();
 
-        jTabbedPane1.setBackground(new java.awt.Color(0, 204, 255));
+        jTabbedPane1.setBackground(new java.awt.Color(23, 35, 51));
 
-        jPanel1.setBackground(new java.awt.Color(51, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(23, 35, 51));
         jPanel1.setPreferredSize(new java.awt.Dimension(997, 698));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(102, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(71, 120, 197));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
@@ -140,7 +140,7 @@ public class KhuyenMai_Form extends javax.swing.JPanel {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 270));
 
-        jPanel3.setBackground(new java.awt.Color(102, 255, 255));
+        jPanel3.setBackground(new java.awt.Color(71, 120, 197));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thời gian Khuyến mãi", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
         jLabel5.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
@@ -195,19 +195,19 @@ public class KhuyenMai_Form extends javax.swing.JPanel {
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 0, 320, 250));
 
-        btnTao.setBackground(new java.awt.Color(51, 255, 204));
+        btnTao.setBackground(new java.awt.Color(51, 51, 255));
         btnTao.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnTao.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\add.png")); // NOI18N
         btnTao.setText("Tạo");
         jPanel1.add(btnTao, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 250, -1, -1));
 
-        btnSuaDoi.setBackground(new java.awt.Color(51, 255, 204));
+        btnSuaDoi.setBackground(new java.awt.Color(51, 51, 255));
         btnSuaDoi.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnSuaDoi.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\edit_property_24px.png")); // NOI18N
         btnSuaDoi.setText("Sửa đổi");
         jPanel1.add(btnSuaDoi, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 250, -1, -1));
 
-        btnXoa.setBackground(new java.awt.Color(51, 255, 204));
+        btnXoa.setBackground(new java.awt.Color(51, 51, 255));
         btnXoa.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnXoa.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\delete.png")); // NOI18N
         btnXoa.setText("Xóa");
@@ -218,10 +218,10 @@ public class KhuyenMai_Form extends javax.swing.JPanel {
         });
         jPanel1.add(btnXoa, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 250, -1, -1));
 
-        jPanel4.setBackground(new java.awt.Color(102, 255, 255));
+        jPanel4.setBackground(new java.awt.Color(71, 120, 197));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Danh sách Khuyến mãi", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
-        jTable1.setBackground(new java.awt.Color(51, 255, 204));
+        jTable1.setBackground(new java.awt.Color(153, 153, 255));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -275,12 +275,12 @@ public class KhuyenMai_Form extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 860, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 632, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents

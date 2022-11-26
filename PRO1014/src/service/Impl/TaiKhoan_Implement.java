@@ -72,9 +72,6 @@ public class TaiKhoan_Implement implements Taikhoan_Interface {
     }
 
     public Integer checkLogin(String User, String pass) {
-        if (tkRep.getUser(User, pass) == null) {
-            return -1;
-        }
         return tkRep.getUser(User, pass).getVaiTro();
     }
 
@@ -97,5 +94,8 @@ public class TaiKhoan_Implement implements Taikhoan_Interface {
     }
     public int stateChangeAccount(String userName){
         return tkRep.stateChangeAccount(userName);
+    }
+    public  int staChangeAC2(String user){
+        return tkRep.stateChangeAccount2(user);
     }
 }

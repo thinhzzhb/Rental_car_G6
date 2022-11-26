@@ -51,7 +51,9 @@ public class SoDat_form extends javax.swing.JPanel {
         btnSearch1 = new javax.swing.JButton();
         txtSearchKH = new javax.swing.JTextField();
 
-        jPanel7.setBackground(new java.awt.Color(153, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(23, 35, 51));
+
+        jPanel7.setBackground(new java.awt.Color(71, 120, 197));
         jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thông tin sổ đặt", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
         jLabel18.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
@@ -162,16 +164,16 @@ public class SoDat_form extends javax.swing.JPanel {
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(txtSoLuongxe, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(26, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addComponent(jLabel22)
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
 
-        jPanel8.setBackground(new java.awt.Color(51, 204, 255));
+        jPanel8.setBackground(new java.awt.Color(71, 120, 197));
         jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Danh sách khách đặt", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
-        tblSoDat.setBackground(new java.awt.Color(0, 255, 204));
+        tblSoDat.setBackground(new java.awt.Color(153, 153, 255));
         tblSoDat.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -189,31 +191,34 @@ public class SoDat_form extends javax.swing.JPanel {
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2)
+                .addContainerGap())
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 323, Short.MAX_VALUE))
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 17, Short.MAX_VALUE))
         );
 
-        btnTao1.setBackground(new java.awt.Color(51, 255, 204));
+        btnTao1.setBackground(new java.awt.Color(51, 51, 255));
         btnTao1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnTao1.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\add.png")); // NOI18N
         btnTao1.setText("Tạo");
 
-        btnSua1.setBackground(new java.awt.Color(51, 255, 204));
+        btnSua1.setBackground(new java.awt.Color(51, 51, 255));
         btnSua1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnSua1.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\edit_property_24px.png")); // NOI18N
         btnSua1.setText("Sửa");
 
-        btnClearNv1.setBackground(new java.awt.Color(51, 255, 204));
+        btnClearNv1.setBackground(new java.awt.Color(51, 51, 255));
         btnClearNv1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnClearNv1.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\clear.png")); // NOI18N
         btnClearNv1.setText("Làm mới");
 
-        btnSearch1.setBackground(new java.awt.Color(51, 255, 204));
+        btnSearch1.setBackground(new java.awt.Color(51, 51, 255));
         btnSearch1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnSearch1.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\search.png")); // NOI18N
         btnSearch1.setText("Tìm kiếm");
@@ -223,7 +228,6 @@ public class SoDat_form extends javax.swing.JPanel {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(btnTao1)
@@ -235,7 +239,8 @@ public class SoDat_form extends javax.swing.JPanel {
                 .addComponent(btnSearch1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtSearchKH, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(89, Short.MAX_VALUE))
+            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -248,9 +253,9 @@ public class SoDat_form extends javax.swing.JPanel {
                     .addComponent(btnClearNv1)
                     .addComponent(btnSearch1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtSearchKH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(79, 79, 79))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -264,7 +269,7 @@ public class SoDat_form extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -279,50 +284,24 @@ public class SoDat_form extends javax.swing.JPanel {
     private javax.swing.JButton btnSearch1;
     private javax.swing.JButton btnSua1;
     private javax.swing.JButton btnTao1;
-    private javax.swing.JComboBox<String> cbbGioiTinhKH;
-    private javax.swing.JComboBox<String> cbbGioiTinhKH1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JLabel lblMaKH;
-    private javax.swing.JLabel lblMaKH1;
     private javax.swing.JLabel lblMaSoDat;
     private javax.swing.JTable tblSoDat;
-    private javax.swing.JTextField txtDiaChiKH;
-    private javax.swing.JTextField txtDiaChiKH1;
     private javax.swing.JTextField txtNgayDat;
     private javax.swing.JTextField txtNgayHen;
     private javax.swing.JTextField txtSearchKH;
-    private javax.swing.JTextField txtSoCCCD;
-    private javax.swing.JTextField txtSoCCCD1;
-    private javax.swing.JTextField txtSoDTKH;
-    private javax.swing.JTextField txtSoDTKH1;
     private javax.swing.JTextField txtSoGhe;
     private javax.swing.JTextField txtSoLuongxe;
-    private javax.swing.JTextField txtTenKh;
-    private javax.swing.JTextField txtTenKh1;
     private javax.swing.JTextField txtTenKhach;
     private javax.swing.JTextField txtTenXe;
     // End of variables declaration//GEN-END:variables

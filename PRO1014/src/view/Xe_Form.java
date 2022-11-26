@@ -104,9 +104,10 @@ public class Xe_Form extends javax.swing.JPanel {
         lblMaMau = new javax.swing.JLabel();
         txtTenMau = new javax.swing.JTextField();
 
-        jPanel14.setBackground(new java.awt.Color(51, 153, 255));
+        jPanel14.setBackground(new java.awt.Color(23, 35, 51));
+        jPanel14.setPreferredSize(new java.awt.Dimension(860, 560));
 
-        jPanel12.setBackground(new java.awt.Color(102, 255, 255));
+        jPanel12.setBackground(new java.awt.Color(71, 120, 197));
         jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Quản lý xe", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
         jLabel14.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
@@ -187,7 +188,7 @@ public class Xe_Form extends javax.swing.JPanel {
                             .addComponent(cbbTenHang, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cbbMauSac, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtSoGhe, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 222, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 282, Short.MAX_VALUE)))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txtBienSo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
@@ -226,10 +227,10 @@ public class Xe_Form extends javax.swing.JPanel {
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
-        jPanel11.setBackground(new java.awt.Color(102, 255, 255));
+        jPanel11.setBackground(new java.awt.Color(71, 120, 197));
         jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thông tin xe", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
-        tblXe.setBackground(new java.awt.Color(51, 255, 204));
+        tblXe.setBackground(new java.awt.Color(153, 153, 255));
         tblXe.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(51, 255, 204), null));
         tblXe.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         tblXe.setForeground(new java.awt.Color(0, 102, 102));
@@ -246,7 +247,7 @@ public class Xe_Form extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblXe);
 
-        btnSearch.setBackground(new java.awt.Color(51, 255, 204));
+        btnSearch.setBackground(new java.awt.Color(51, 51, 255));
         btnSearch.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnSearch.setText("Tìm kiếm");
 
@@ -256,7 +257,7 @@ public class Xe_Form extends javax.swing.JPanel {
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 735, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 795, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -272,8 +273,7 @@ public class Xe_Form extends javax.swing.JPanel {
                     .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE))
         );
 
         btnThem.setBackground(new java.awt.Color(51, 255, 204));
@@ -316,23 +316,28 @@ public class Xe_Form extends javax.swing.JPanel {
                     .addComponent(btnClear)
                     .addComponent(btnSua)
                     .addComponent(btnThem))
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Thông tin xe", jPanel14);
 
-        pnlHangXe.setBackground(new java.awt.Color(51, 153, 255));
+        pnlHangXe.setBackground(new java.awt.Color(23, 35, 51));
 
-        jPanel13.setBackground(new java.awt.Color(102, 255, 255));
+        jPanel13.setBackground(new java.awt.Color(71, 120, 197));
         jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Hãng xe", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
+        jLabel22.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel22.setText("Mã Hãng");
 
+        jLabel23.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel23.setText("Tên Hãng");
 
         lblMaHang.setBackground(new java.awt.Color(255, 255, 255));
+        lblMaHang.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         lblMaHang.setText("_");
         lblMaHang.setEnabled(false);
+
+        txtTenHang.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
@@ -349,7 +354,7 @@ public class Xe_Form extends javax.swing.JPanel {
                         .addComponent(jLabel23)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txtTenHang, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(490, Short.MAX_VALUE))
+                .addContainerGap(542, Short.MAX_VALUE))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -365,7 +370,7 @@ public class Xe_Form extends javax.swing.JPanel {
                 .addContainerGap(94, Short.MAX_VALUE))
         );
 
-        btnThem1.setBackground(new java.awt.Color(51, 255, 204));
+        btnThem1.setBackground(new java.awt.Color(51, 51, 255));
         btnThem1.setText("Thêm");
         btnThem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -373,7 +378,7 @@ public class Xe_Form extends javax.swing.JPanel {
             }
         });
 
-        btnSua1.setBackground(new java.awt.Color(102, 255, 204));
+        btnSua1.setBackground(new java.awt.Color(51, 51, 255));
         btnSua1.setText("Sửa");
         btnSua1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -381,7 +386,7 @@ public class Xe_Form extends javax.swing.JPanel {
             }
         });
 
-        btnClear1.setBackground(new java.awt.Color(51, 255, 204));
+        btnClear1.setBackground(new java.awt.Color(51, 51, 255));
         btnClear1.setText("Làm mới");
         btnClear1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -389,7 +394,7 @@ public class Xe_Form extends javax.swing.JPanel {
             }
         });
 
-        jPanel15.setBackground(new java.awt.Color(102, 255, 255));
+        jPanel15.setBackground(new java.awt.Color(71, 120, 197));
         jPanel15.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Danh sách", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
         tblXe1.setBackground(new java.awt.Color(51, 255, 204));
@@ -423,7 +428,7 @@ public class Xe_Form extends javax.swing.JPanel {
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 735, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 795, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -457,7 +462,7 @@ public class Xe_Form extends javax.swing.JPanel {
                         .addComponent(btnThem1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnSua1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(btnClear1)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -474,27 +479,32 @@ public class Xe_Form extends javax.swing.JPanel {
                     .addComponent(btnClear1)
                     .addComponent(btnSua1)
                     .addComponent(btnThem1))
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Hãng xe", pnlHangXe);
 
+        jPanel1.setBackground(new java.awt.Color(23, 35, 51));
+
         btnThem2.setBackground(new java.awt.Color(51, 255, 204));
+        btnThem2.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnThem2.setIcon(new javax.swing.ImageIcon("D:\\Pro1014\\PRO1014\\PRO1014\\image\\add.png")); // NOI18N
         btnThem2.setText("Thêm");
 
         btnSua2.setBackground(new java.awt.Color(102, 255, 204));
+        btnSua2.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnSua2.setIcon(new javax.swing.ImageIcon("D:\\Pro1014\\PRO1014\\PRO1014\\image\\edit_property_24px.png")); // NOI18N
         btnSua2.setText("Sửa");
 
         btnClear2.setBackground(new java.awt.Color(51, 255, 204));
+        btnClear2.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnClear2.setIcon(new javax.swing.ImageIcon("D:\\Pro1014\\PRO1014\\PRO1014\\image\\clear.png")); // NOI18N
         btnClear2.setText("Làm mới");
 
-        jPanel16.setBackground(new java.awt.Color(102, 255, 255));
+        jPanel16.setBackground(new java.awt.Color(71, 120, 197));
         jPanel16.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Danh sách", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
-        tblMS.setBackground(new java.awt.Color(51, 255, 204));
+        tblMS.setBackground(new java.awt.Color(153, 153, 255));
         tblMS.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(51, 255, 204), null));
         tblMS.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         tblMS.setForeground(new java.awt.Color(0, 102, 102));
@@ -522,7 +532,7 @@ public class Xe_Form extends javax.swing.JPanel {
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 759, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 819, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -538,11 +548,11 @@ public class Xe_Form extends javax.swing.JPanel {
                     .addComponent(txtSearchMS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSearchMS, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 253, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jPanel17.setBackground(new java.awt.Color(102, 255, 255));
+        jPanel17.setBackground(new java.awt.Color(71, 120, 197));
         jPanel17.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Hãng xe", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
         jLabel24.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
@@ -624,15 +634,17 @@ public class Xe_Form extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGap(0, 860, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jTabbedPane2))
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 860, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 632, Short.MAX_VALUE)
+            .addGap(0, 560, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jTabbedPane2))
+                .addGroup(layout.createSequentialGroup()
+                    .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 544, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 16, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 

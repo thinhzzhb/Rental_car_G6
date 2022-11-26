@@ -45,12 +45,13 @@ public class ThongKe_form extends javax.swing.JPanel {
         txtSearchXeTK = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(23, 35, 51));
         setPreferredSize(new java.awt.Dimension(800, 632));
 
-        jPanel1.setBackground(new java.awt.Color(102, 102, 255));
+        jPanel1.setBackground(new java.awt.Color(71, 120, 197));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Doanh thu", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
-        jPanel2.setBackground(new java.awt.Color(51, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(51, 51, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel1.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
@@ -83,7 +84,7 @@ public class ThongKe_form extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel4.setBackground(new java.awt.Color(51, 255, 255));
+        jPanel4.setBackground(new java.awt.Color(51, 51, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel2.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
@@ -116,7 +117,7 @@ public class ThongKe_form extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel5.setBackground(new java.awt.Color(51, 255, 255));
+        jPanel5.setBackground(new java.awt.Color(51, 51, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel3.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
@@ -149,7 +150,7 @@ public class ThongKe_form extends javax.swing.JPanel {
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
-        rdoAll.setBackground(new java.awt.Color(102, 102, 255));
+        rdoAll.setBackground(new java.awt.Color(71, 120, 197));
         rdoAll.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         rdoAll.setText("Tất cả");
         rdoAll.addActionListener(new java.awt.event.ActionListener() {
@@ -158,11 +159,11 @@ public class ThongKe_form extends javax.swing.JPanel {
             }
         });
 
-        rdoMonth.setBackground(new java.awt.Color(102, 102, 255));
+        rdoMonth.setBackground(new java.awt.Color(71, 120, 197));
         rdoMonth.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         rdoMonth.setText("Tháng");
 
-        rdoYear.setBackground(new java.awt.Color(102, 102, 255));
+        rdoYear.setBackground(new java.awt.Color(71, 120, 197));
         rdoYear.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         rdoYear.setText("Năm");
 
@@ -182,7 +183,7 @@ public class ThongKe_form extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(41, 41, 41)
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -202,13 +203,13 @@ public class ThongKe_form extends javax.swing.JPanel {
                 .addComponent(rdoMonth)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(rdoYear)
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(102, 102, 255));
+        jPanel3.setBackground(new java.awt.Color(71, 120, 197));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thống kê xe", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
-        tblThongKe.setBackground(new java.awt.Color(51, 255, 204));
+        tblThongKe.setBackground(new java.awt.Color(153, 153, 255));
         tblThongKe.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(51, 255, 204), null));
         tblThongKe.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         tblThongKe.setForeground(new java.awt.Color(0, 102, 102));
@@ -230,7 +231,7 @@ public class ThongKe_form extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblThongKe);
 
-        jButton1.setBackground(new java.awt.Color(0, 255, 255));
+        jButton1.setBackground(new java.awt.Color(51, 51, 255));
         jButton1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\search.png")); // NOI18N
         jButton1.setText("Tìm kiếm");
@@ -257,7 +258,7 @@ public class ThongKe_form extends javax.swing.JPanel {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtSearchXeTK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24))
         );
@@ -273,8 +274,9 @@ public class ThongKe_form extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 

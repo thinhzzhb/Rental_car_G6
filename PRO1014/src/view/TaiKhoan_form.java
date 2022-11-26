@@ -4,6 +4,7 @@
  */
 package view;
 
+import java.util.ArrayList;
 import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
@@ -67,9 +68,9 @@ public class TaiKhoan_form extends javax.swing.JPanel {
 
         jTabbedPane1.setBackground(new java.awt.Color(51, 51, 255));
 
-        jPanel1.setBackground(new java.awt.Color(51, 153, 255));
+        jPanel1.setBackground(new java.awt.Color(23, 35, 51));
 
-        jPanel12.setBackground(new java.awt.Color(102, 255, 255));
+        jPanel12.setBackground(new java.awt.Color(71, 120, 197));
         jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Quản lý tài khoản", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
         jLabel14.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
@@ -97,7 +98,7 @@ public class TaiKhoan_form extends javax.swing.JPanel {
         cbbTinhTrang.setBackground(new java.awt.Color(153, 0, 255));
         cbbTinhTrang.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Vô Hiệu Hóa", "Đang hoạt động" }));
 
-        btnThem.setBackground(new java.awt.Color(51, 255, 204));
+        btnThem.setBackground(new java.awt.Color(51, 51, 255));
         btnThem.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnThem.setIcon(new javax.swing.ImageIcon("D:\\Pro1014\\PRO1014\\PRO1014\\image\\add.png")); // NOI18N
         btnThem.setText("Thêm");
@@ -107,7 +108,7 @@ public class TaiKhoan_form extends javax.swing.JPanel {
             }
         });
 
-        btnSua.setBackground(new java.awt.Color(102, 255, 204));
+        btnSua.setBackground(new java.awt.Color(51, 51, 255));
         btnSua.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnSua.setIcon(new javax.swing.ImageIcon("D:\\Pro1014\\PRO1014\\PRO1014\\image\\edit_property_24px.png")); // NOI18N
         btnSua.setText("Sửa");
@@ -117,7 +118,7 @@ public class TaiKhoan_form extends javax.swing.JPanel {
             }
         });
 
-        btnClear.setBackground(new java.awt.Color(51, 255, 204));
+        btnClear.setBackground(new java.awt.Color(51, 51, 255));
         btnClear.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnClear.setIcon(new javax.swing.ImageIcon("D:\\Pro1014\\PRO1014\\PRO1014\\image\\clear.png")); // NOI18N
         btnClear.setText("Làm mới");
@@ -127,7 +128,7 @@ public class TaiKhoan_form extends javax.swing.JPanel {
             }
         });
 
-        btnDisable.setBackground(new java.awt.Color(51, 255, 204));
+        btnDisable.setBackground(new java.awt.Color(51, 51, 255));
         btnDisable.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnDisable.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\lock.png")); // NOI18N
         btnDisable.setText("Vô hiệu hóa");
@@ -172,7 +173,7 @@ public class TaiKhoan_form extends javax.swing.JPanel {
                             .addComponent(cbbChucVu, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel20)
                             .addComponent(jLabel16))
@@ -220,10 +221,10 @@ public class TaiKhoan_form extends javax.swing.JPanel {
                 .addContainerGap(55, Short.MAX_VALUE))
         );
 
-        jPanel11.setBackground(new java.awt.Color(102, 255, 255));
+        jPanel11.setBackground(new java.awt.Color(71, 120, 197));
         jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Danh sách tài khoản", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
-        tblTK.setBackground(new java.awt.Color(51, 255, 204));
+        tblTK.setBackground(new java.awt.Color(153, 153, 255));
         tblTK.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(51, 255, 204), null));
         tblTK.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         tblTK.setForeground(new java.awt.Color(0, 102, 102));
@@ -255,13 +256,26 @@ public class TaiKhoan_form extends javax.swing.JPanel {
             }
         });
 
+        txtSearchTK.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                txtSearchTKInputMethodTextChanged(evt);
+            }
+        });
+        txtSearchTK.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtSearchTKKeyTyped(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 741, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 795, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -277,7 +291,7 @@ public class TaiKhoan_form extends javax.swing.JPanel {
                     .addComponent(txtSearchTK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSearchtk, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -315,7 +329,7 @@ public class TaiKhoan_form extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    
+
     private void btnThemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemActionPerformed
         // TODO add your handling code here:
         String maTk = tkSer.ZenMA();
@@ -323,9 +337,9 @@ public class TaiKhoan_form extends javax.swing.JPanel {
         String pass = txtMatKhau.getText();
         String ChucVu = cbbChucVu.getSelectedItem().toString();
         String TinhTrang = cbbTinhTrang.getSelectedItem().toString();
-        
-        int VaiTro =  ChucVu.equals("Khách hàng")?1:0;
-        int tTrang = TinhTrang.equals("Vô Hiệu Hóa")?0:1;
+
+        int VaiTro = ChucVu.equals("Khách hàng") ? 1 : 0;
+        int tTrang = TinhTrang.equals("Vô Hiệu Hóa") ? 0 : 1;
         TaiKhoan t = new TaiKhoan();
         t.setMaTK(maTk);
         t.setPass(pass);
@@ -336,15 +350,15 @@ public class TaiKhoan_form extends javax.swing.JPanel {
         loadtb(tkSer.getAll());
     }//GEN-LAST:event_btnThemActionPerformed
 
-    private TaiKhoan getFormTB(){
+    private TaiKhoan getFormTB() {
         String maTk = tkSer.ZenMA();
         String User = txtUser.getText();
         String pass = txtMatKhau.getText();
         String ChucVu = cbbChucVu.getSelectedItem().toString();
         String TinhTrang = cbbTinhTrang.getSelectedItem().toString();
-        
-        int VaiTro =  ChucVu.equals("Khách hàng")?1:0;
-        int tTrang = TinhTrang.equals("Vô Hiệu Hóa")?0:1;
+
+        int VaiTro = ChucVu.equals("Khách hàng") ? 1 : 0;
+        int tTrang = TinhTrang.equals("Vô Hiệu Hóa") ? 0 : 1;
         TaiKhoan t = new TaiKhoan();
         t.setMaTK(maTk);
         t.setPass(pass);
@@ -353,7 +367,7 @@ public class TaiKhoan_form extends javax.swing.JPanel {
         t.setTinhTrang(tTrang);
         return new TaiKhoan(0, maTk, User, pass, VaiTro, tTrang);
     }
-    
+
     private void tblTKMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblTKMouseClicked
         // TODO add your handling code here:
         int selectRow = tblTK.getSelectedRow();
@@ -361,7 +375,13 @@ public class TaiKhoan_form extends javax.swing.JPanel {
         txtUser.setText(tblTK.getValueAt(selectRow, 2).toString());
         txtMatKhau.setText(tblTK.getValueAt(selectRow, 3).toString());
         cbbChucVu.setSelectedItem(tblTK.getValueAt(selectRow, 4).toString());
-        cbbTinhTrang.setSelectedItem(tblTK.getValueAt(selectRow, 5));
+        cbbTinhTrang.setSelectedItem(tblTK.getValueAt(selectRow, 5).toString());
+        String tinhTrangStr = tblTK.getValueAt(selectRow, 5).toString();
+        if (tinhTrangStr.equalsIgnoreCase("Vô hiệu hóa")) {
+            btnDisable.setText("Mở tài khoản");
+        } else {
+            btnDisable.setText("Vô hiệu hóa");
+        }
     }//GEN-LAST:event_tblTKMouseClicked
 
     private void cbbChucVuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbbChucVuActionPerformed
@@ -377,7 +397,7 @@ public class TaiKhoan_form extends javax.swing.JPanel {
         }
         String id = tblTK.getValueAt(selectRow, 0).toString();
         int idTK = Integer.parseInt(id);
-        
+
         JOptionPane.showMessageDialog(this, tkSer.update(idTK, getFormTB()));
         loadtb(tkSer.getAll());
     }//GEN-LAST:event_btnSuaActionPerformed
@@ -393,12 +413,30 @@ public class TaiKhoan_form extends javax.swing.JPanel {
 
     private void btnSearchtkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchtkActionPerformed
         // TODO add your handling code here:
+        if (txtSearchTK.getText().trim().equals("")) {
+            JOptionPane.showMessageDialog(this, "Cần phải điền thông tin để tìm kiếm");
+            return;
+        }
+        TaiKhoan tkCheck = tkSer.findID(txtSearchTK.getText().trim());
+        if (tkCheck == null) {
+            JOptionPane.showMessageDialog(this, "Không tìm thấy");
+            return;
+        } else {
+            lblMaTK.setText(tkCheck.getMaTK()+ "");
+            txtUser.setText(tkCheck.getUserName());
+            txtMatKhau.setText(tkCheck.getPass());
+            cbbChucVu.setSelectedItem(tkCheck.getVaiTro()==0?"Nhân viên":"Khách hàng");
+            cbbTinhTrang.setSelectedItem(tkCheck.getTinhTrang()==0?"Vô hiệu hóa":"Đang hoạt động");
+            List<TaiKhoan> _lstT = new ArrayList<>();
+            _lstT.add(tkCheck);
+            loadtb(_lstT);
+        }
     }//GEN-LAST:event_btnSearchtkActionPerformed
 
     private void btnDisableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisableActionPerformed
-       if (tblTK.getSelectedRow() == -1) {
+        if (tblTK.getSelectedRow() == -1) {
             JOptionPane.showMessageDialog(this, "Vui lòng click vào Bảng tài khoản");
-        } else {
+        } else if (btnDisable.getText().equalsIgnoreCase("Vô hiệu hóa")) {
             int row = tblTK.getSelectedRow();
             if (tkSer.stateChangeAccount(tblTK.getValueAt(row, 2).toString()) > 0) {
                 JOptionPane.showMessageDialog(this, "Vô hiệu hóa thành công");
@@ -406,10 +444,27 @@ public class TaiKhoan_form extends javax.swing.JPanel {
             } else {
                 JOptionPane.showMessageDialog(this, "Vô hiệu hóa thất bại");
             }
+        } else if (btnDisable.getText().equalsIgnoreCase("Mở tài khoản")) {
+            int row = tblTK.getSelectedRow();
+            if (tkSer.staChangeAC2(tblTK.getValueAt(row, 2).toString()) > 0) {
+                JOptionPane.showMessageDialog(this, "Mở tài khoản thành công");
+                loadtb(tkSer.getAll());
+            } else {
+                JOptionPane.showMessageDialog(this, "Mở tài khoản thất bại");
+            }
         }
+
     }//GEN-LAST:event_btnDisableActionPerformed
 
-    private void loadtb(List<TaiKhoan> _Lst) {
+    private void txtSearchTKInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_txtSearchTKInputMethodTextChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSearchTKInputMethodTextChanged
+
+    private void txtSearchTKKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSearchTKKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSearchTKKeyTyped
+
+private void loadtb(List<TaiKhoan> _Lst) {
         _dtm.setRowCount(0);
         for (TaiKhoan tk : _Lst) {
             _dtm.addRow(new Object[]{
@@ -418,7 +473,7 @@ public class TaiKhoan_form extends javax.swing.JPanel {
                 tk.getUserName(),
                 tk.getPass(),
                 tk.getVaiTro() == 0?"Khách hàng":"Nhân viên",
-                tk.getTinhTrang() == 1?"Đang hoạt động":"Nhân viên"
+                tk.getTinhTrang() == 1?"Đang hoạt động":"Vô hiệu hóa"
             }
             );
         }

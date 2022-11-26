@@ -113,8 +113,8 @@ public class ChuyenManHinh {
         @Override
         public void mousePressed(MouseEvent e) {
             txtO = txt;
-            pnlItem.setBackground(new Color(0,204,204));
-            lblItem.setBackground(new Color(0,204,204));
+            pnlItem.setBackground(new Color(41, 57, 80));
+            lblItem.setBackground(new Color(41, 57, 80));
         }
 
         @Override
@@ -123,26 +123,26 @@ public class ChuyenManHinh {
 
         @Override
         public void mouseEntered(MouseEvent e) {
-            pnlItem.setBackground(new Color(96, 100, 191));
-            lblItem.setBackground(new Color(96, 100, 191));
+            pnlItem.setBackground(new Color(41, 57, 80));
+            lblItem.setBackground(new Color(41, 57, 80));
         }
 
         @Override
         public void mouseExited(MouseEvent e) {
             if (!txtO.equalsIgnoreCase(txt)) {
-                pnlItem.setBackground(new Color(153,255,204));
-                lblItem.setBackground(new Color(153,255,204));
+                pnlItem.setBackground(new Color(23, 35, 51));
+                lblItem.setBackground(new Color(23, 35, 51));
             }
         }
 
         public void setChangeBG(String txt) {
             for (DanhMuc item : lst) {
                 if (item.getTxt().equalsIgnoreCase(txt)) {
-                    item.getLbl().setBackground(new Color(96, 100, 191));
-                    item.getPnl().setBackground(new Color(96, 100, 191));
+                    item.getLbl().setBackground(new Color(23, 35, 51));
+                    item.getPnl().setBackground(new Color(23, 35, 51));
                 } else {
-                    item.getLbl().setBackground(new Color(76, 175, 80));
-                    item.getPnl().setBackground(new Color(76, 175, 80));
+                    item.getLbl().setBackground(new Color(41, 57, 80));
+                    item.getPnl().setBackground(new Color(41, 57, 80));
                 }
             }
         }

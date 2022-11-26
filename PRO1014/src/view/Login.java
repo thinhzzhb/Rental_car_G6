@@ -9,6 +9,7 @@ import java.awt.Color;
 import java.util.prefs.Preferences;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import model.TaiKhoan;
 import service.Impl.TaiKhoan_Implement;
 
 /**
@@ -39,7 +40,6 @@ public class Login extends javax.swing.JFrame {
 
         this.setLocationRelativeTo(null);
         this.setIconImage(new ImageIcon("image//LoginIcon.png").getImage());
-        this.lblBackground.setIcon(new ImageIcon(""));
         this.lblUser.setIcon(new ImageIcon("image//user.png"));
         this.lblPassword.setIcon(new ImageIcon("image//lock.png"));
         this.lblToggle.setIcon(new ImageIcon("image//eyeClosed.png"));
@@ -69,14 +69,14 @@ public class Login extends javax.swing.JFrame {
     }
 
     private void rememberMe() {
-        preference = Preferences.userRoot().node("RememberPassAssSu22");
-        boolean rememberMe = preference.getBoolean("RememberMe", Boolean.valueOf(""));
-
-        if (rememberMe) {
-            txtUser.setText(preference.get("User", ""));
-            txtPassword.setText(preference.get("Pass", ""));
-        }
-        chkRememberMe.setSelected(rememberMe);
+//        preference = Preferences.userRoot().node("RememberPassAssSu22");
+//        boolean rememberMe = preference.getBoolean("RememberMe", Boolean.valueOf(""));
+//
+//        if (rememberMe) {
+//            txtUser.setText(preference.get("User", ""));
+//            txtPassword.setText(preference.get("Pass", ""));
+//        }
+//        chkRememberMe.setSelected(rememberMe);
     }
 
     /**
@@ -97,7 +97,6 @@ public class Login extends javax.swing.JFrame {
         lblUser = new javax.swing.JLabel();
         lblToggle = new javax.swing.JLabel();
         btnExit = new javax.swing.JButton();
-        lblBackground = new javax.swing.JLabel();
         lblrerr = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -193,8 +192,6 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        lblBackground.setForeground(new java.awt.Color(255, 255, 255));
-
         lblrerr.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         lblrerr.setText("--");
 
@@ -232,9 +229,7 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblrerr)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblBackground, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(chkRememberMe)))
                 .addContainerGap())
         );
@@ -269,12 +264,9 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(lblrerr)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(270, 270, 270)
-                        .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(lblBackground, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 18, Short.MAX_VALUE))
+                .addGap(270, 270, 270)
+                .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 78, Short.MAX_VALUE))
         );
 
         pack();
@@ -356,6 +348,17 @@ public class Login extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_btnExitActionPerformed
 
+    private String checkData() {
+        String username = txtUser.getText();
+        String password = txtPassword.getText();
+
+        if (username.isBlank() || password.isBlank()) {
+            return "Tài khoản | Mật khẩu không được để trống!";
+        }
+        return "";
+    }
+
+    
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         if (txtUser.getText().trim().equals("")) {
             lblrerr.setText("Tên đăng nhập không được bỏ trống");
@@ -365,19 +368,21 @@ public class Login extends javax.swing.JFrame {
             return;
         } else {
             Integer checkRole = tkSer.checkLogin(txtUser.getText().trim(), new String(txtPassword.getPassword()).trim());
+            System.out.println(checkRole);
             if (checkRole == -1) {
                 lblrerr.setText("Tên đăng nhập hoặc mật khẩu không đúng");
                 return;
-            } else if (checkRole == 1) {
-                
-                HeThongChoThueXe htx = new HeThongChoThueXe();
-                htx.setVisible(true);
+            } else if (checkRole == 0) {
                 this.dispose();
-                return;
+                new HeThongChoThueXe(0).setVisible(true);
+            } else if (checkRole == 1){
+                this.dispose();
+                new HeThongChoThueXe(1).setVisible(true);
             }
         }
     }//GEN-LAST:event_btnLoginActionPerformed
 
+    
     /**
      * @param args the command line arguments
      */
@@ -418,7 +423,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnLogin;
     private javax.swing.JCheckBox chkRememberMe;
-    private javax.swing.JLabel lblBackground;
     private javax.swing.JLabel lblLogin;
     private javax.swing.JLabel lblPassword;
     private javax.swing.JLabel lblToggle;

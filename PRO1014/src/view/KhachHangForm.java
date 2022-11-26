@@ -48,12 +48,12 @@ public class KhachHangForm extends javax.swing.JPanel {
         jLabel11 = new javax.swing.JLabel();
         txtSoCCCD = new javax.swing.JTextField();
 
-        setBackground(new java.awt.Color(51, 204, 255));
+        setBackground(new java.awt.Color(23, 35, 51));
 
-        jPanel6.setBackground(new java.awt.Color(51, 204, 255));
+        jPanel6.setBackground(new java.awt.Color(71, 120, 197));
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Danh sách nhân viên", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
-        tblkhachhang.setBackground(new java.awt.Color(0, 255, 204));
+        tblkhachhang.setBackground(new java.awt.Color(153, 153, 255));
         tblkhachhang.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -77,30 +77,30 @@ public class KhachHangForm extends javax.swing.JPanel {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE))
         );
 
-        btnTao1.setBackground(new java.awt.Color(51, 255, 204));
+        btnTao1.setBackground(new java.awt.Color(51, 51, 255));
         btnTao1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnTao1.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\add.png")); // NOI18N
         btnTao1.setText("Tạo");
 
-        btnSua1.setBackground(new java.awt.Color(51, 255, 204));
+        btnSua1.setBackground(new java.awt.Color(51, 51, 255));
         btnSua1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnSua1.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\edit_property_24px.png")); // NOI18N
         btnSua1.setText("Sửa");
 
-        btnClearNv1.setBackground(new java.awt.Color(51, 255, 204));
+        btnClearNv1.setBackground(new java.awt.Color(51, 51, 255));
         btnClearNv1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnClearNv1.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\clear.png")); // NOI18N
         btnClearNv1.setText("Làm mới");
 
-        btnSearch1.setBackground(new java.awt.Color(51, 255, 204));
+        btnSearch1.setBackground(new java.awt.Color(51, 51, 255));
         btnSearch1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnSearch1.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\search.png")); // NOI18N
         btnSearch1.setText("Tìm kiếm");
 
-        jPanel5.setBackground(new java.awt.Color(153, 255, 255));
+        jPanel5.setBackground(new java.awt.Color(71, 120, 197));
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thông tin khách hàng", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
@@ -143,18 +143,14 @@ public class KhachHangForm extends javax.swing.JPanel {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblMaKH, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel10))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cbbGioiTinhKH, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtTenKh))))
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel6))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblMaKH, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cbbGioiTinhKH, 0, 348, Short.MAX_VALUE)
+                    .addComponent(txtTenKh))
                 .addGap(45, 45, 45)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9)
@@ -223,7 +219,7 @@ public class KhachHangForm extends javax.swing.JPanel {
                         .addComponent(btnSearch1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txtSearchKH, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(27, Short.MAX_VALUE))
+                        .addContainerGap(87, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)

@@ -69,33 +69,45 @@ public class HoaDonThanhToan_From extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(51, 153, 255));
+        jPanel1.setBackground(new java.awt.Color(71, 120, 197));
+        jPanel1.setPreferredSize(new java.awt.Dimension(860, 560));
 
-        jPanel2.setBackground(new java.awt.Color(102, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(23, 35, 51));
 
         jLabel14.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Mã Hóa Đơn");
 
         jLabel15.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Ngày tạo");
 
         txtNgayTao.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        txtNgayTao.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel17.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Tổng xe");
 
+        txtTienCoc.setForeground(new java.awt.Color(255, 255, 255));
+
         jLabel16.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Tiền cọc");
 
         jLabel20.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setText("Phí phát sinh");
 
         txtPhiPs.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        txtPhiPs.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel21.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setText("Tổng thanh toán");
 
         txtTongThanhToan.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        txtTongThanhToan.setForeground(new java.awt.Color(255, 255, 255));
 
         btnThem.setBackground(new java.awt.Color(51, 255, 204));
         btnThem.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
@@ -125,12 +137,15 @@ public class HoaDonThanhToan_From extends javax.swing.JFrame {
         });
 
         jLabel18.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("Hóa đơn chi tiết");
 
         txtTongXe.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        txtTongXe.setForeground(new java.awt.Color(255, 255, 255));
 
         lblMaHD.setBackground(new java.awt.Color(255, 255, 255));
         lblMaHD.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblMaHD.setForeground(new java.awt.Color(255, 255, 255));
         lblMaHD.setText("_");
         lblMaHD.setEnabled(false);
 
@@ -156,7 +171,7 @@ public class HoaDonThanhToan_From extends javax.swing.JFrame {
                                     .addComponent(jLabel15)
                                     .addGap(32, 32, 32)
                                     .addComponent(txtNgayTao, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 157, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -208,12 +223,13 @@ public class HoaDonThanhToan_From extends javax.swing.JFrame {
                     .addComponent(btnSua)
                     .addComponent(btnClear)
                     .addComponent(btnThem))
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(102, 255, 255));
+        jPanel3.setBackground(new java.awt.Color(23, 35, 51));
 
         jLabel19.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("Danh sách hóa đơn");
 
         btnSearchtk.setBackground(new java.awt.Color(51, 255, 204));
@@ -326,7 +342,7 @@ public class HoaDonThanhToan_From extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 596, Short.MAX_VALUE)
         );
 
         pack();

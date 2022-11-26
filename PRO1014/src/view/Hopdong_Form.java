@@ -59,9 +59,9 @@ public class Hopdong_Form extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         tblHoaDon = new javax.swing.JTable();
 
-        jPanel1.setBackground(new java.awt.Color(102, 102, 255));
+        jPanel1.setBackground(new java.awt.Color(23, 35, 51));
 
-        jPanel3.setBackground(new java.awt.Color(153, 255, 255));
+        jPanel3.setBackground(new java.awt.Color(71, 120, 197));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tìm & lọc hợp đồng", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 14))); // NOI18N
 
         cbbMaKhach.setBackground(new java.awt.Color(204, 204, 204));
@@ -112,7 +112,8 @@ public class Hopdong_Form extends javax.swing.JPanel {
         jLabel10.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel10.setText("Tìm theo tên xe");
 
-        btnLocHopDong.setBackground(new java.awt.Color(0, 102, 255));
+        btnLocHopDong.setBackground(new java.awt.Color(51, 51, 255));
+        btnLocHopDong.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnLocHopDong.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\filter.png")); // NOI18N
         btnLocHopDong.setText("Lọc");
 
@@ -135,7 +136,7 @@ public class Hopdong_Form extends javax.swing.JPanel {
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(cbbMaNV, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cbbTenXe, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel7)
@@ -178,10 +179,10 @@ public class Hopdong_Form extends javax.swing.JPanel {
                 .addGap(29, 29, 29))
         );
 
-        jPanel4.setBackground(new java.awt.Color(102, 255, 255));
+        jPanel4.setBackground(new java.awt.Color(71, 120, 197));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Danh sách hợp đồng", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 14))); // NOI18N
 
-        tblHopDong.setBackground(new java.awt.Color(51, 255, 204));
+        tblHopDong.setBackground(new java.awt.Color(153, 153, 255));
         tblHopDong.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -201,14 +202,14 @@ public class Hopdong_Form extends javax.swing.JPanel {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 735, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 795, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(173, 173, 173))
         );
 
@@ -235,9 +236,9 @@ public class Hopdong_Form extends javax.swing.JPanel {
 
         jTabbedPane1.addTab("Hợp đồng", jPanel1);
 
-        jPanel2.setBackground(new java.awt.Color(102, 204, 255));
+        jPanel2.setBackground(new java.awt.Color(23, 35, 53));
 
-        jPanel5.setBackground(new java.awt.Color(102, 255, 255));
+        jPanel5.setBackground(new java.awt.Color(71, 120, 197));
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "TÌm kiếm hóa đơn", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 153));
@@ -293,7 +294,7 @@ public class Hopdong_Form extends javax.swing.JPanel {
                             .addComponent(cbbGiaTien, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cbbThangHd, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cbbNamHD, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(279, Short.MAX_VALUE))
+                .addContainerGap(339, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -317,10 +318,10 @@ public class Hopdong_Form extends javax.swing.JPanel {
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
-        jPanel6.setBackground(new java.awt.Color(51, 204, 255));
+        jPanel6.setBackground(new java.awt.Color(71, 120, 197));
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Danh sách hóa đơn", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 14))); // NOI18N
 
-        tblHoaDon.setBackground(new java.awt.Color(51, 255, 204));
+        tblHoaDon.setBackground(new java.awt.Color(153, 153, 255));
         tblHoaDon.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -340,7 +341,7 @@ public class Hopdong_Form extends javax.swing.JPanel {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 735, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 795, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
@@ -369,7 +370,7 @@ public class Hopdong_Form extends javax.swing.JPanel {
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(93, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Hóa đơn", jPanel2);
@@ -382,7 +383,7 @@ public class Hopdong_Form extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 560, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

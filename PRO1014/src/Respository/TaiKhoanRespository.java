@@ -181,4 +181,17 @@ public class TaiKhoanRespository {
         }
         return checkAC;
     }
+    public static int stateChangeAccount2(String userName) {
+        int checkAC = 0;
+        String sql = "UPDATE TaiKhoan SET TinhTrang = 1 where username = ?";
+        try {
+            Connection con = DBConnection.getConnection();
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setObject(1, userName);
+            checkAC = ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return checkAC;
+    }
 }
