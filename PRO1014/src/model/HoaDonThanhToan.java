@@ -5,6 +5,7 @@
 package model;
 
 import java.util.Date;
+import java.util.Vector;
 
 /**
  *
@@ -87,6 +88,10 @@ public class HoaDonThanhToan {
 
     public void setTongThanhToan(int TongThanhToan) {
         this.TongThanhToan = TongThanhToan;
+    }
+
+    public Vector<?> toDataRow() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 }

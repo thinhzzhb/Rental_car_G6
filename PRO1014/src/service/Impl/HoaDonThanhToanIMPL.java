@@ -5,6 +5,7 @@
 package service.Impl;
 
 import Respository.HoaDonThanhToanRespository;
+import java.util.ArrayList;
 import java.util.List;
 import model.HoaDonThanhToan;
 import service.HoaDonThanhToanService;
@@ -15,31 +16,51 @@ import service.HoaDonThanhToanService;
  */
 public class HoaDonThanhToanIMPL implements HoaDonThanhToanService {
     
-    private HoaDonThanhToanRespository hdttRep;
+    private HoaDonThanhToanRespository hdTTRespository = new HoaDonThanhToanRespository();
 
-    public HoaDonThanhToanIMPL() {
-        hdttRep = new HoaDonThanhToanRespository();
-    }
-    
-    
-    
     @Override
     public List<HoaDonThanhToan> getAll() {
-        return hdttRep.getAll();
+        return hdTTRespository.getAll();
         }
 
+    
     @Override
-    public HoaDonThanhToan findByID(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public String addCTHD(HoaDonThanhToan hdtt) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public String add (HoaDonThanhToan hdtt) {
+        boolean add = hdTTRespository.Add(hdtt);
+        if (add) {
+            return "Them Thanh Cong";
+        } else {
+            return "Them That Bai";
+        }
     }
 
     @Override
     public String Update(int id, HoaDonThanhToan hdtt) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        boolean update = hdTTRespository.Update(hdtt, id);
+        if (update) {
+            return "Sua Thanh cong";
+        } else {
+            return "Sua that Bai";
+        }
+    }
+    @Override
+    public List<HoaDonThanhToan> findByIDHDTT(List<HoaDonThanhToan> listHDTT, int idHDTT) {
+        List<HoaDonThanhToan> findByIDHDTT = new ArrayList<>();
+        for (HoaDonThanhToan x : listHDTT) {
+            if (x.getIdHdtt() == idHDTT) {
+                findByIDHDTT.add(x);
+            }
+        }
+        return findByIDHDTT;
+    }
+
+    @Override
+    public String Remove(int idHDTT) {
+        boolean remove = hdTTRespository.Remove(idHDTT);
+        if (remove) {
+            return "Xoa Thanh Cong";
+        } else {
+            return "Xoa That Bai";
+        }
     }
 }

@@ -43,4 +43,71 @@ public class HoaDonThanhToanRespository {
         }
         return null;
     }
+    
+    public boolean Add(HoaDonThanhToan hd) {
+        String query = "INSERT INTO [dbo].[HoaDonTT]\n"
+                + "      [idHDTT]\n"
+                + "      ,[idHD]\n"
+                + "      ,[ngayTao]\n"
+                + "      ,[tongXe]\n"
+                + "      ,[tienCoc]\n"
+                + "      ,[phiPS]\n"
+                + "      ,[tongThanhToan]\n"
+                + "     VALUES\n"
+                + "           (?,?,?,?,?,?,?)";
+        int check = 0;
+        try ( Connection con = DBConnection.getConnection();  PreparedStatement ps = con.prepareStatement(query);) {
+            ps.setObject(1, hd.getIdHdtt());
+            ps.setObject(2, hd.getIdHd());
+            ps.setObject(3, hd.getNgayTao());
+            ps.setObject(4, hd.getTongXe());
+            ps.setObject(5, hd.getTienCoc());
+            ps.setObject(6, hd.getPhiPs());
+            ps.setObject(7, hd.getTongThanhToan());
+            check = ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace(System.out);
+        }
+        return check > 0;
+    }
+
+
+    public boolean Remove(int idHDTT) {
+        String query = "DELETE FROM [dbo].[HoaDonTT]\n"
+                + "      WHERE [idHDTT] = ? ";
+        int check = 0;
+        try ( Connection con = DBConnection.getConnection();  PreparedStatement ps = con.prepareStatement(query);) {
+            ps.setObject(1, idHDTT);
+            check = ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace(System.out);
+        }
+        return check > 0;
+    }
+
+    public boolean Update(HoaDonThanhToan hdtt, int idHDTT) {
+        String query = "UPDATE [dbo].[HoaDonTT]\n"
+                + "   SET [idHD] = ?"
+                + "      ,[ngayTao] = ?"
+                + "      ,[tongXe] = ?"
+                + "      ,[tienCoc] = ?"
+                + "      ,[phiPS] = ?"
+                + "      ,[tongThanhToan] = ?"
+                + " WHERE [idHDTT] = ? ";
+        int check = 0;
+        try ( Connection con = DBConnection.getConnection();  PreparedStatement ps = con.prepareStatement(query);) {
+            ps.setObject(1, hdtt.getIdHd());
+            ps.setObject(3, hdtt.getNgayTao());
+            ps.setObject(4, hdtt.getTongXe());
+            ps.setObject(5, hdtt.getTienCoc());
+            ps.setObject(6, hdtt.getPhiPs());
+            ps.setObject(7, hdtt.getTongThanhToan());
+            ps.setObject(5, idHDTT);
+
+            check = ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace(System.out);
+        }
+        return check > 0;
+    }
 }
