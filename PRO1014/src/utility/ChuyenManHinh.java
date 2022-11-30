@@ -18,6 +18,8 @@ import view.NhanVien_form;
 import view.SoDat_form;
 import view.TaiKhoan_form;
 import view.ThongKe_form;
+import view.ThueXe_form;
+import view.TraXe_Form;
 import view.TrangChu;
 import view.Xe_Form;
 
@@ -66,7 +68,7 @@ public class ChuyenManHinh {
             this.txt = txt;
             this.pnlItem = pnlItem;
             this.lblItem = lblItem;
-            
+
         }
 
         @Override
@@ -98,6 +100,12 @@ public class ChuyenManHinh {
                     break;
                 case "Sổ đặt":
                     pnlNode = new SoDat_form();
+                    break;
+                case "Thuê xe":
+                    pnlNode = new ThueXe_form();
+                    break;
+                case "Trả xe":
+                    pnlNode = new TraXe_Form();
                     break;
                 default:
                     pnlNode = new TrangChu();

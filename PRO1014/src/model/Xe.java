@@ -12,27 +12,19 @@ public class Xe {
 
     private int IdXe;
     private String MaXe;
-    private HangXe IdHangXe;
-    private MauSac IdMauSac;
-    private String TenXe;
-    private String BienSoXe;
-    private String TinhTrangXe;
+    private int IdHangXe;
+    private int soGhe;
+    private byte[] hinhAnh;
 
     public Xe() {
     }
 
-    public Xe(int IdXe, String MaXe, HangXe IdHangXe, MauSac IdMauSac, String TenXe, String BienSoXe, String TinhTrangXe) {
+    public Xe(int IdXe, String MaXe, int IdHangXe, int soGhe, byte[] hinhAnh) {
         this.IdXe = IdXe;
         this.MaXe = MaXe;
         this.IdHangXe = IdHangXe;
-        this.IdMauSac = IdMauSac;
-        this.TenXe = TenXe;
-        this.BienSoXe = BienSoXe;
-        this.TinhTrangXe = TinhTrangXe;
-    }
-
-    public Xe(String TenXe) {
-        this.TenXe = TenXe;
+        this.soGhe = soGhe;
+        this.hinhAnh = hinhAnh;
     }
 
     public int getIdXe() {
@@ -51,44 +43,34 @@ public class Xe {
         this.MaXe = MaXe;
     }
 
-    public HangXe getIdHangXe() {
+    public int getIdHangXe() {
         return IdHangXe;
     }
 
-    public void setIdHangXe(HangXe IdHangXe) {
+    public void setIdHangXe(int IdHangXe) {
         this.IdHangXe = IdHangXe;
     }
 
-    public MauSac getIdMauSac() {
-        return IdMauSac;
+    public int getSoGhe() {
+        return soGhe;
     }
 
-    public void setIdMauSac(MauSac IdMauSac) {
-        this.IdMauSac = IdMauSac;
+    public void setSoGhe(int soGhe) {
+        this.soGhe = soGhe;
     }
 
-    public String getTenXe() {
-        return TenXe;
+    public byte[] getHinhAnh() {
+        return hinhAnh;
     }
 
-    public void setTenXe(String TenXe) {
-        this.TenXe = TenXe;
+    public void setHinhAnh(byte[] hinhAnh) {
+        this.hinhAnh = hinhAnh;
     }
 
-    public String getBienSoXe() {
-        return BienSoXe;
+    @Override
+    public String toString() {
+        return "Xe{" + "IdXe=" + IdXe + ", MaXe=" + MaXe + ", IdHangXe=" + IdHangXe + ", soGhe=" + soGhe + ", hinhAnh=" + hinhAnh + '}';
     }
 
-    public void setBienSoXe(String BienSoXe) {
-        this.BienSoXe = BienSoXe;
-    }
-
-    public String getTinhTrangXe() {
-        return TinhTrangXe;
-    }
-
-    public void setTinhTrangXe(String TinhTrangXe) {
-        this.TinhTrangXe = TinhTrangXe;
-    }
-
+    
 }

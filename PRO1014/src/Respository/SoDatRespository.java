@@ -21,27 +21,27 @@ import model.Xe;
  */
 public class SoDatRespository {
 
-    public List<SoDat> getAll() {
-        String query = "SELECT [idSoDat]\n"
-                + "      ,[idKH]\n"
-                + "      ,[idXe]\n"
-                + "      ,[ngayDat]\n"
-                + "      ,[ngayHenLay]\n"
-                + "      ,[soLuongXe]\n"
-                + "  FROM [dbo].[soDat]";
-        try ( Connection con = DBConnection.getConnection();  PreparedStatement ps = con.prepareStatement(query);) {
-            ResultSet rs = ps.executeQuery();
-            List<SoDat> lissd = new ArrayList<>();
-            while (rs.next()) {
-                KhachHang kh = new KhachHang(rs.getString(2));
-                Xe xe = new Xe(rs.getString(3));
-                SoDat sd = new SoDat(rs.getInt(1), kh, xe, rs.getDate(4), rs.getDate(5), rs.getInt(6));
-                lissd.add(sd);
-            }
-            return lissd;
-        } catch (SQLException e) {
-            e.printStackTrace(System.out);
-        }
-        return null;
-    }
+//    public List<SoDat> getAll() {
+//        String query = "SELECT [idSoDat]\n"
+//                + "      ,[idKH]\n"
+//                + "      ,[idXe]\n"
+//                + "      ,[ngayDat]\n"
+//                + "      ,[ngayHenLay]\n"
+//                + "      ,[soLuongXe]\n"
+//                + "  FROM [dbo].[soDat]";
+//        try ( Connection con = DBConnection.getConnection();  PreparedStatement ps = con.prepareStatement(query);) {
+//            ResultSet rs = ps.executeQuery();
+//            List<SoDat> lissd = new ArrayList<>();
+//            while (rs.next()) {
+//                KhachHang kh = new KhachHang(rs.getString(2));
+//                Xe xe = new Xe(rs.getString(3));
+//                SoDat sd = new SoDat(rs.getInt(1), kh, xe, rs.getDate(4), rs.getDate(5), rs.getInt(6));
+//                lissd.add(sd);
+//            }
+//            return lissd;
+//        } catch (SQLException e) {
+//            e.printStackTrace(System.out);
+//        }
+//        return null;
+//    }
 }

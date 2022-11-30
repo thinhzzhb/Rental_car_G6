@@ -137,6 +137,8 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                                   <Component id="btnDisable" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                                  <Component id="btnHienTHi" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -182,6 +184,7 @@
                               <Component id="btnSua" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btnClear" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btnDisable" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="btnHienTHi" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="55" max="32767" attributes="0"/>
                       </Group>
@@ -349,6 +352,14 @@
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnHienTHi">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Hi&#x1ec3;n th&#x1ecb;"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnHienTHiActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>

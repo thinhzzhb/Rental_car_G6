@@ -15,15 +15,9 @@ import service.ChiTietHopDongservice;
  */
 public class ChitiethopdongIMPL implements ChiTietHopDongservice{
 
-    private ChiTietHopDongRespository cthdRep;
-    
-    public ChitiethopdongIMPL() {
-        cthdRep = new ChiTietHopDongRespository();
-    }
-
     @Override
     public List<ChiTietHopDong> getAllfromDB() {
-        return cthdRep.getAll();
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
@@ -40,5 +34,7 @@ public class ChitiethopdongIMPL implements ChiTietHopDongservice{
     public String Update(int id, ChiTietHopDong c) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
+//    
     
 }

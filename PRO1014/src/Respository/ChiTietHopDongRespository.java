@@ -21,25 +21,25 @@ import model.Xe;
  */
 public class ChiTietHopDongRespository {
 
-    public List<ChiTietHopDong> getAll() {
-        String query = "SELECT [idXe]\n"
-                + "      ,[idHD]\n"
-                + "      ,[soLuongXe]\n"
-                + "      ,[donGia]\n"
-                + "  FROM [dbo].[ChiTietHopDong]";
-        try ( Connection con = DBConnection.getConnection();  PreparedStatement ps = con.prepareStatement(query);) {
-            ResultSet rs = ps.executeQuery();
-            List<ChiTietHopDong> listcthd = new ArrayList<>();
-            while (rs.next()) {
-                Xe xe = new Xe(rs.getString(1));
-                HopDong hd = new HopDong(rs.getString(2));
-                ChiTietHopDong cthd = new ChiTietHopDong(xe, hd, rs.getInt(3), rs.getInt(4));
-                listcthd.add(cthd);
-            }
-            return listcthd;
-        } catch (SQLException e) {
-            e.printStackTrace(System.out);
-        }
-        return null;
-    }
+//    public List<ChiTietHopDong> getAll() {
+//        String query = "SELECT [idXe]\n"
+//                + "      ,[idHD]\n"
+//                + "      ,[soLuongXe]\n"
+//                + "      ,[donGia]\n"
+//                + "  FROM [dbo].[ChiTietHopDong]";
+//        try ( Connection con = DBConnection.getConnection();  PreparedStatement ps = con.prepareStatement(query);) {
+//            ResultSet rs = ps.executeQuery();
+//            List<ChiTietHopDong> listcthd = new ArrayList<>();
+//            while (rs.next()) {
+//                Xe xe = new Xe(rs.getString(1));
+//                HopDong hd = new HopDong(rs.getString(2));
+//                ChiTietHopDong cthd = new ChiTietHopDong(xe, hd, rs.getInt(3), rs.getInt(4));
+//                listcthd.add(cthd);
+//            }
+//            return listcthd;
+//        } catch (SQLException e) {
+//            e.printStackTrace(System.out);
+//        }
+//        return null;
+//    }
 }

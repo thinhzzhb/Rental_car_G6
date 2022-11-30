@@ -74,6 +74,10 @@ public class TaiKhoan_Implement implements Taikhoan_Interface {
     public Integer checkLogin(String User, String pass) {
         return tkRep.getUser(User, pass).getVaiTro();
     }
+    public Integer checkTinhTrang(String user, String pass){
+        return tkRep.getUser(user, pass).getTinhTrang();
+    }
+    
 
     @Override
     public String disable(int id, TaiKhoan t) {

@@ -51,4 +51,10 @@ public class HangXe {
         this.TenHangXe = TenHangXe;
     }
 
+    @Override
+    public String toString() {
+        return TenHangXe;
+    }
+    
+
 }

@@ -448,7 +448,7 @@ public class HoaDonThanhToan_From extends javax.swing.JFrame {
         _dtm.setRowCount(0);
         _dtm.setRowCount(0);
         for (HoaDonThanhToan x : listHDTT) {
-            _dtm.addRow(x.toDataRow());
+//            _dtm.addRow(x.toDataRow());
         }
     }
     /**

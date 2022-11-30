@@ -20,28 +20,73 @@ import model.MauSac;
  * @author Acer
  */
 public class XeResposiotry {
-    
+
     public List<Xe> getAll() {
-        String query = "SELECT [idXe]\n"
-                + "      ,[maXe]\n"
-                + "      ,[idHangXe]\n"
-                + "      ,[idMS]\n"
-                + "      ,[tenXe]\n"
-                + "      ,[bienSoXe]\n"
-                + "      ,[tinhTrangXe]\n"
-                + "  FROM [dbo].[Xe]";
+        String query = "Select "
+                + "idXe, maXe,idHangXe,soGhe,hinhAnh "
+                + "from Xe";
         try ( Connection con = DBConnection.getConnection();  PreparedStatement ps = con.prepareStatement(query);) {
             ResultSet rs = ps.executeQuery();
             List<Xe> listxe = new ArrayList<>();
             while (rs.next()) {
-                HangXe hx = new HangXe(rs.getString(3));
-                MauSac ms = new MauSac(rs.getString(4));
-                Xe xe = new Xe(rs.getInt(1), rs.getString(2), hx, ms, rs.getString(5), rs.getString(6), rs.getString(7));
+                Xe xe = new Xe(rs.getInt(1), rs.getString(2), rs.getInt(3),rs.getInt(4), rs.getBytes(5));
                 listxe.add(xe);
             }
             return listxe;
         } catch (SQLException e) {
-            e.printStackTrace(System.out);
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public Boolean add(Xe x) {
+        int checkInsert = 0;
+        String query = "insert into Xe "
+                + "(maXe,idHangXe,soGhe,hinhAnh) "
+                + "values (?, ?, ?, ?)";
+        try {
+            Connection con = DBConnection.getConnection();
+            PreparedStatement ps = con.prepareStatement(query);
+            ps.setObject(1, x.getMaXe());
+            ps.setObject(2, x.getIdHangXe());
+            ps.setObject(3, x.getSoGhe());
+            ps.setObject(4, x.getHinhAnh());
+            checkInsert = ps.executeUpdate();
+            return checkInsert > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    public Boolean update(int id, Xe x) {
+        int checkUpdate = 0;
+        String query = "UPDATE Xe SET idHangXe = ?, soGhe = ?, hinhAnh = ?"
+                + " WHERE idXe = ?";
+        try {
+            Connection con = DBConnection.getConnection();
+            PreparedStatement ps = con.prepareStatement(query);
+            ps.setObject(1, x.getIdHangXe());
+            ps.setObject(2, x.getSoGhe());
+            ps.setObject(3, x.getHinhAnh());
+            ps.setObject(4, id);
+            checkUpdate = ps.executeUpdate();
+            return checkUpdate > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    public Boolean delete(int id) {
+        int checkUpdate = 0;
+        String query = "DELETE FROM Xe WHERE idXe =?";
+        try {
+            Connection con = DBConnection.getConnection();
+            PreparedStatement ps = con.prepareStatement(query);
+            ps.setObject(1, id);
+            checkUpdate = ps.executeUpdate();
+            return checkUpdate > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return null;
     }

@@ -31,7 +31,6 @@ public class TaiKhoan_form extends javax.swing.JPanel {
         _dtm = (DefaultTableModel) tblTK.getModel();
         tkSer = new TaiKhoan_Implement();
         _lstTK = tkSer.getAll();
-        loadtb(tkSer.getAll());
     }
 
     /**
@@ -60,6 +59,7 @@ public class TaiKhoan_form extends javax.swing.JPanel {
         btnDisable = new javax.swing.JButton();
         txtMatKhau = new javax.swing.JPasswordField();
         cbbChucVu = new javax.swing.JComboBox<>();
+        btnHienTHi = new javax.swing.JButton();
         jPanel11 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblTK = new javax.swing.JTable();
@@ -145,6 +145,13 @@ public class TaiKhoan_form extends javax.swing.JPanel {
             }
         });
 
+        btnHienTHi.setText("Hiển thị");
+        btnHienTHi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHienTHiActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
@@ -185,6 +192,8 @@ public class TaiKhoan_form extends javax.swing.JPanel {
                     .addGroup(jPanel12Layout.createSequentialGroup()
                         .addGap(27, 27, 27)
                         .addComponent(btnDisable)
+                        .addGap(37, 37, 37)
+                        .addComponent(btnHienTHi)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel12Layout.setVerticalGroup(
@@ -217,7 +226,8 @@ public class TaiKhoan_form extends javax.swing.JPanel {
                     .addComponent(btnThem)
                     .addComponent(btnSua)
                     .addComponent(btnClear)
-                    .addComponent(btnDisable, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnDisable, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnHienTHi))
                 .addContainerGap(55, Short.MAX_VALUE))
         );
 
@@ -422,11 +432,11 @@ public class TaiKhoan_form extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Không tìm thấy");
             return;
         } else {
-            lblMaTK.setText(tkCheck.getMaTK()+ "");
+            lblMaTK.setText(tkCheck.getMaTK() + "");
             txtUser.setText(tkCheck.getUserName());
             txtMatKhau.setText(tkCheck.getPass());
-            cbbChucVu.setSelectedItem(tkCheck.getVaiTro()==0?"Nhân viên":"Khách hàng");
-            cbbTinhTrang.setSelectedItem(tkCheck.getTinhTrang()==0?"Vô hiệu hóa":"Đang hoạt động");
+            cbbChucVu.setSelectedItem(tkCheck.getVaiTro() == 0 ? "Nhân viên" : "Khách hàng");
+            cbbTinhTrang.setSelectedItem(tkCheck.getTinhTrang() == 0 ? "Vô hiệu hóa" : "Đang hoạt động");
             List<TaiKhoan> _lstT = new ArrayList<>();
             _lstT.add(tkCheck);
             loadtb(_lstT);
@@ -464,7 +474,12 @@ public class TaiKhoan_form extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSearchTKKeyTyped
 
-private void loadtb(List<TaiKhoan> _Lst) {
+    private void btnHienTHiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHienTHiActionPerformed
+        // TODO add your handling code here:
+        loadtb(tkSer.getAll());
+    }//GEN-LAST:event_btnHienTHiActionPerformed
+
+    private void loadtb(List<TaiKhoan> _Lst) {
         _dtm.setRowCount(0);
         for (TaiKhoan tk : _Lst) {
             _dtm.addRow(new Object[]{
@@ -472,8 +487,8 @@ private void loadtb(List<TaiKhoan> _Lst) {
                 tk.getMaTK(),
                 tk.getUserName(),
                 tk.getPass(),
-                tk.getVaiTro() == 0?"Khách hàng":"Nhân viên",
-                tk.getTinhTrang() == 1?"Đang hoạt động":"Vô hiệu hóa"
+                tk.getVaiTro() == 0 ? "Khách hàng" : "Nhân viên",
+                tk.getTinhTrang() == 1 ? "Đang hoạt động" : "Vô hiệu hóa"
             }
             );
         }
@@ -482,6 +497,7 @@ private void loadtb(List<TaiKhoan> _Lst) {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnClear;
     private javax.swing.JButton btnDisable;
+    private javax.swing.JButton btnHienTHi;
     private javax.swing.JButton btnSearchtk;
     private javax.swing.JButton btnSua;
     private javax.swing.JButton btnThem;

@@ -24,7 +24,7 @@ public class Login extends javax.swing.JFrame {
     private boolean ishidden = true;
     private Preferences preference;
     private TaiKhoan_Implement tkSer;
-
+    public static String user;
     /**
      * Creates new form LoginForm
      */
@@ -33,6 +33,7 @@ public class Login extends javax.swing.JFrame {
         tkSer = new TaiKhoan_Implement();
         rememberMe();
         setGraphics();
+        user = txtUser.getText().trim();
 
     }
 
@@ -109,7 +110,6 @@ public class Login extends javax.swing.JFrame {
         lblLogin.setText("ĐĂNG NHẬP");
 
         txtUser.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        txtUser.setText("Tài khoản");
         txtUser.setToolTipText("Tài Khoản");
         txtUser.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -121,7 +121,6 @@ public class Login extends javax.swing.JFrame {
         });
 
         txtPassword.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        txtPassword.setText("Mật khẩu");
         txtPassword.setToolTipText("Mật khẩu");
         txtPassword.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -358,7 +357,7 @@ public class Login extends javax.swing.JFrame {
         return "";
     }
 
-    
+
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         if (txtUser.getText().trim().equals("")) {
             lblrerr.setText("Tên đăng nhập không được bỏ trống");
@@ -368,21 +367,26 @@ public class Login extends javax.swing.JFrame {
             return;
         } else {
             Integer checkRole = tkSer.checkLogin(txtUser.getText().trim(), new String(txtPassword.getPassword()).trim());
-            System.out.println(checkRole);
-            if (checkRole == -1) {
+            Integer checktinhtrang = tkSer.checkTinhTrang(txtUser.getText().trim(), new String(txtPassword.getPassword()).trim());
+            if (checktinhtrang == 2) {
+                JOptionPane.showMessageDialog(this, "Tài khoản của bạn đã bị khóa vui lòng liên hệ Admin");
+                return;
+            } else if (checkRole == -1) {
                 lblrerr.setText("Tên đăng nhập hoặc mật khẩu không đúng");
                 return;
             } else if (checkRole == 0) {
                 this.dispose();
                 new HeThongChoThueXe(0).setVisible(true);
-            } else if (checkRole == 1){
+            } else if (checkRole == 1) {
                 this.dispose();
                 new HeThongChoThueXe(1).setVisible(true);
             }
         }
     }//GEN-LAST:event_btnLoginActionPerformed
 
-    
+//    public String GetUser(){
+//        return user;
+//    }
     /**
      * @param args the command line arguments
      */

@@ -4,41 +4,17 @@
  */
 package view;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
-import model.KhachHang;
-import service.Impl.KhachHangServiceImpl;
-import service.KhachHangService;
-
 /**
  *
  * @author Admin
  */
 public class KhachHangForm extends javax.swing.JPanel {
-    
-    private DefaultTableModel dtm = new DefaultTableModel();
-    private List<KhachHang> listkh = new ArrayList<>();
-    private KhachHangService khachHangService = new KhachHangServiceImpl();
 
     /**
      * Creates new form KhachHangForm
      */
     public KhachHangForm() {
         initComponents();
-        tblkhachhang.setModel(dtm);
-        String[] headers = {"Ma Khach Hang", "Ten Khach Hang", "Gioi Tinh", "Dia Chi", "So Dien Thoai", "Can Cuoc Cong Dan"};
-        dtm.setColumnIdentifiers(headers);
-        listkh = khachHangService.getAll();
-        ShowDataRow(listkh);
-    }
-    
-    private void ShowDataRow(List<KhachHang> lists) {
-        dtm.setRowCount(0);
-        for (KhachHang x : lists) {
-            dtm.addRow(x.todataRow());
-        }
     }
 
     /**
@@ -50,7 +26,6 @@ public class KhachHangForm extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel6 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblkhachhang = new javax.swing.JTable();
@@ -69,10 +44,9 @@ public class KhachHangForm extends javax.swing.JPanel {
         txtTenKh = new javax.swing.JTextField();
         txtSoDTKH = new javax.swing.JTextField();
         txtDiaChiKH = new javax.swing.JTextField();
+        cbbGioiTinhKH = new javax.swing.JComboBox<>();
         jLabel11 = new javax.swing.JLabel();
         txtSoCCCD = new javax.swing.JTextField();
-        RadioNam = new javax.swing.JRadioButton();
-        RadioNu = new javax.swing.JRadioButton();
 
         setBackground(new java.awt.Color(23, 35, 51));
 
@@ -91,11 +65,6 @@ public class KhachHangForm extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        tblkhachhang.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tblkhachhangMouseClicked(evt);
-            }
-        });
         jScrollPane2.setViewportView(tblkhachhang);
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
@@ -108,48 +77,28 @@ public class KhachHangForm extends javax.swing.JPanel {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-<<<<<<< HEAD
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE))
-=======
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 335, Short.MAX_VALUE))
->>>>>>> 4988e226ba482cf6feecfd5ed757409be804e9aa
         );
 
         btnTao1.setBackground(new java.awt.Color(51, 51, 255));
         btnTao1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnTao1.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\add.png")); // NOI18N
         btnTao1.setText("Tạo");
-        btnTao1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTao1ActionPerformed(evt);
-            }
-        });
 
         btnSua1.setBackground(new java.awt.Color(51, 51, 255));
         btnSua1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnSua1.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\edit_property_24px.png")); // NOI18N
         btnSua1.setText("Sửa");
-        btnSua1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSua1ActionPerformed(evt);
-            }
-        });
 
         btnClearNv1.setBackground(new java.awt.Color(51, 51, 255));
         btnClearNv1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnClearNv1.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\clear.png")); // NOI18N
         btnClearNv1.setText("Làm mới");
-        btnClearNv1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnClearNv1ActionPerformed(evt);
-            }
-        });
 
         btnSearch1.setBackground(new java.awt.Color(51, 51, 255));
         btnSearch1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        btnSearch1.setIcon(new javax.swing.ImageIcon("D:\\GitHub\\PRO1014\\image\\search.png")); // NOI18N
         btnSearch1.setText("Tìm kiếm");
-        btnSearch1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSearch1ActionPerformed(evt);
-            }
-        });
 
         jPanel5.setBackground(new java.awt.Color(71, 120, 197));
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thông tin khách hàng", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Monospaced", 1, 12))); // NOI18N
@@ -178,16 +127,14 @@ public class KhachHangForm extends javax.swing.JPanel {
 
         txtDiaChiKH.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
 
+        cbbGioiTinhKH.setBackground(new java.awt.Color(51, 51, 255));
+        cbbGioiTinhKH.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        cbbGioiTinhKH.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         jLabel11.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel11.setText("Số CCCD");
 
         txtSoCCCD.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
-
-        buttonGroup1.add(RadioNam);
-        RadioNam.setText("Nam");
-
-        buttonGroup1.add(RadioNu);
-        RadioNu.setText("Nữ");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -196,7 +143,6 @@ public class KhachHangForm extends javax.swing.JPanel {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< HEAD
                     .addComponent(jLabel7)
                     .addComponent(jLabel10)
                     .addComponent(jLabel6))
@@ -205,24 +151,6 @@ public class KhachHangForm extends javax.swing.JPanel {
                     .addComponent(lblMaKH, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(cbbGioiTinhKH, 0, 348, Short.MAX_VALUE)
                     .addComponent(txtTenKh))
-=======
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblMaKH, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel10))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtTenKh, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(RadioNam)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(RadioNu)
-                                .addGap(0, 0, Short.MAX_VALUE)))))
->>>>>>> 4988e226ba482cf6feecfd5ed757409be804e9aa
                 .addGap(45, 45, 45)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9)
@@ -259,17 +187,18 @@ public class KhachHangForm extends javax.swing.JPanel {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel10)
-                            .addComponent(RadioNam)
-                            .addComponent(RadioNu))
-                        .addGap(23, 23, 23))
+                        .addComponent(jLabel10)
+                        .addGap(24, 24, 24))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel11)
-                            .addComponent(txtSoCCCD, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(12, Short.MAX_VALUE))))
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel11)
+                                    .addComponent(txtSoCCCD, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(cbbGioiTinhKH, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addContainerGap())))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -315,81 +244,13 @@ public class KhachHangForm extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void fill(int i) {
-        KhachHang kh = listkh.get(i);
-        lblMaKH.setText(kh.getMaKh());
-        txtTenKh.setText(kh.getTenKh());
-        txtDiaChiKH.setText(kh.getDiaChi());
-        txtSoCCCD.setText(kh.getCccd());
-        txtSoDTKH.setText(kh.getSdt());
-        if (kh.isGioiTinh()) {
-            RadioNam.setSelected(true);
-        } else {
-            RadioNu.setSelected(true);
-        }
-    }
-
-    private void btnTao1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTao1ActionPerformed
-        // TODO add your handling code here:
-        String makh = khachHangService.ZenMa();
-        String tenkh = txtTenKh.getText();
-        boolean gt = RadioNam.isSelected();
-        String dc = txtDiaChiKH.getText();
-        String sdt = txtSoDTKH.getText();
-        String cccd = txtSoCCCD.getText();
-        KhachHang kh = new KhachHang(makh, tenkh, dc, sdt, cccd, gt);
-        JOptionPane.showMessageDialog(this, khachHangService.Them(kh));
-        listkh = khachHangService.getAll();
-        ShowDataRow(listkh);
-    }//GEN-LAST:event_btnTao1ActionPerformed
-
-    private void btnSua1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSua1ActionPerformed
-        // TODO add your handling code here:
-        String makh = khachHangService.ZenMa();
-        String tenkh = txtTenKh.getText();
-        boolean gt = RadioNam.isSelected();
-        String dc = txtDiaChiKH.getText();
-        String sdt = txtSoDTKH.getText();
-        String cccd = txtSoCCCD.getText();
-        KhachHang kh = new KhachHang(makh, tenkh, dc, sdt, cccd, gt);
-        JOptionPane.showMessageDialog(this, khachHangService.Sua(kh, tenkh));
-        listkh = khachHangService.getAll();
-        ShowDataRow(listkh);
-    }//GEN-LAST:event_btnSua1ActionPerformed
-
-    private void btnClearNv1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearNv1ActionPerformed
-        // TODO add your handling code here:
-        lblMaKH.setText("");
-        txtTenKh.setText("");
-        txtDiaChiKH.setText("");
-        txtSearchKH.setText("");
-        txtSoCCCD.setText("");
-        txtSoDTKH.setText("");
-        buttonGroup1.clearSelection();
-    }//GEN-LAST:event_btnClearNv1ActionPerformed
-
-    private void btnSearch1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearch1ActionPerformed
-        // TODO add your handling code here:
-        String tenKh = txtSearchKH.getText();
-        List<KhachHang> listSearch = khachHangService.listSearch(listkh, tenKh);
-        ShowDataRow(listSearch);
-    }//GEN-LAST:event_btnSearch1ActionPerformed
-
-    private void tblkhachhangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblkhachhangMouseClicked
-        // TODO add your handling code here:
-        int row = tblkhachhang.getSelectedRow();
-        fill(row);
-    }//GEN-LAST:event_tblkhachhangMouseClicked
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JRadioButton RadioNam;
-    private javax.swing.JRadioButton RadioNu;
     private javax.swing.JButton btnClearNv1;
     private javax.swing.JButton btnSearch1;
     private javax.swing.JButton btnSua1;
     private javax.swing.JButton btnTao1;
-    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JComboBox<String> cbbGioiTinhKH;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel6;

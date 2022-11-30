@@ -8,6 +8,7 @@ import java.awt.Color;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import utility.ChuyenManHinh;
 import utility.DanhMuc;
@@ -52,6 +53,8 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
         _lst.add(new DanhMuc("Tài khoản", btn_7, lblTaiKHoan));
         _lst.add(new DanhMuc("Thống kê", btn_8, lblThongke));
         _lst.add(new DanhMuc("Sổ đặt", btn_9, lblSoDat));
+        _lst.add(new DanhMuc("Thuê xe", btn_10, lblThueXe));
+        _lst.add(new DanhMuc("Trả xe", btn_11, lblTraXe));
         cm.setEvent(_lst);
         setClock();
 
@@ -103,6 +106,9 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
         lblUser = new javax.swing.JLabel();
         lblDay = new javax.swing.JLabel();
         lblTime = new javax.swing.JLabel();
+        btn_11 = new javax.swing.JPanel();
+        ind_11 = new javax.swing.JPanel();
+        lblTraXe = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         btnChangeAC = new javax.swing.JButton();
@@ -121,6 +127,8 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
         side_pane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btn_1.setBackground(new java.awt.Color(23, 35, 51));
+        btn_1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        btn_1.setPreferredSize(new java.awt.Dimension(220, 43));
         btn_1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 btn_1MousePressed(evt);
@@ -138,10 +146,10 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
         );
         ind_1Layout.setVerticalGroup(
             ind_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 43, Short.MAX_VALUE)
+            .addGap(0, 64, Short.MAX_VALUE)
         );
 
-        lblTrangChu.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblTrangChu.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
         lblTrangChu.setForeground(new java.awt.Color(255, 255, 255));
         lblTrangChu.setText("Trang Chủ");
         lblTrangChu.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -163,15 +171,16 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
         btn_1Layout.setVerticalGroup(
             btn_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btn_1Layout.createSequentialGroup()
-                .addGroup(btn_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ind_1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblTrangChu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(btn_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ind_1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTrangChu, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        side_pane.add(btn_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 210, -1));
+        side_pane.add(btn_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 43));
 
         btn_2.setBackground(new java.awt.Color(23, 35, 51));
+        btn_2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btn_2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 btn_2MouseReleased(evt);
@@ -192,7 +201,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        lblNhanVien.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblNhanVien.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
         lblNhanVien.setForeground(new java.awt.Color(255, 255, 255));
         lblNhanVien.setText("Nhân viên");
         lblNhanVien.setPreferredSize(new java.awt.Dimension(210, 43));
@@ -208,7 +217,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
             btn_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btn_2Layout.createSequentialGroup()
                 .addComponent(ind_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addComponent(lblNhanVien, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btn_2Layout.setVerticalGroup(
@@ -220,9 +229,10 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        side_pane.add(btn_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 210, -1));
+        side_pane.add(btn_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 210, 43));
 
         btn_3.setBackground(new java.awt.Color(23, 35, 51));
+        btn_3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btn_3.setPreferredSize(new java.awt.Dimension(220, 43));
         btn_3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -244,7 +254,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
             .addGap(0, 43, Short.MAX_VALUE)
         );
 
-        lblQuanLyXe.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblQuanLyXe.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
         lblQuanLyXe.setForeground(new java.awt.Color(255, 255, 255));
         lblQuanLyXe.setText("Quản Lý Xe");
         lblQuanLyXe.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -259,7 +269,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
             btn_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btn_3Layout.createSequentialGroup()
                 .addComponent(ind_3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addComponent(lblQuanLyXe, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btn_3Layout.setVerticalGroup(
@@ -271,9 +281,10 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        side_pane.add(btn_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 210, -1));
+        side_pane.add(btn_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 210, -1));
 
         btn_4.setBackground(new java.awt.Color(23, 35, 51));
+        btn_4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btn_4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 btn_4MousePressed(evt);
@@ -294,7 +305,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
             .addGap(0, 43, Short.MAX_VALUE)
         );
 
-        lblKhuyenMai.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblKhuyenMai.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
         lblKhuyenMai.setForeground(new java.awt.Color(255, 255, 255));
         lblKhuyenMai.setText("Khuyến mãi");
         lblKhuyenMai.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -309,7 +320,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
             btn_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btn_4Layout.createSequentialGroup()
                 .addComponent(ind_4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addComponent(lblKhuyenMai, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btn_4Layout.setVerticalGroup(
@@ -321,9 +332,10 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        side_pane.add(btn_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 210, -1));
+        side_pane.add(btn_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 210, 43));
 
         btn_5.setBackground(new java.awt.Color(23, 35, 51));
+        btn_5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btn_5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 btn_5MouseReleased(evt);
@@ -344,7 +356,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
             .addGap(0, 43, Short.MAX_VALUE)
         );
 
-        lblKhachhang.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblKhachhang.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
         lblKhachhang.setForeground(new java.awt.Color(255, 255, 255));
         lblKhachhang.setText("Khách hàng");
         lblKhachhang.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -359,7 +371,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
             btn_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btn_5Layout.createSequentialGroup()
                 .addComponent(ind_5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addComponent(lblKhachhang, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btn_5Layout.setVerticalGroup(
@@ -371,9 +383,10 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        side_pane.add(btn_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 210, -1));
+        side_pane.add(btn_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 210, -1));
 
         btn_6.setBackground(new java.awt.Color(23, 35, 51));
+        btn_6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btn_6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 btn_6MouseReleased(evt);
@@ -394,7 +407,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
             .addGap(0, 43, Short.MAX_VALUE)
         );
 
-        lblHopDong.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblHopDong.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
         lblHopDong.setForeground(new java.awt.Color(255, 255, 255));
         lblHopDong.setText("Hợp đồng ");
         lblHopDong.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -409,7 +422,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
             btn_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btn_6Layout.createSequentialGroup()
                 .addComponent(ind_6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addComponent(lblHopDong, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btn_6Layout.setVerticalGroup(
@@ -421,9 +434,10 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        side_pane.add(btn_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 210, -1));
+        side_pane.add(btn_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 210, 43));
 
         btn_7.setBackground(new java.awt.Color(23, 35, 51));
+        btn_7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btn_7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 btn_7MouseReleased(evt);
@@ -444,7 +458,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        lblTaiKHoan.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblTaiKHoan.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
         lblTaiKHoan.setForeground(new java.awt.Color(255, 255, 255));
         lblTaiKHoan.setText("Tài khoản");
         lblTaiKHoan.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -459,7 +473,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
             btn_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btn_7Layout.createSequentialGroup()
                 .addComponent(ind_7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addComponent(lblTaiKHoan, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btn_7Layout.setVerticalGroup(
@@ -471,9 +485,10 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        side_pane.add(btn_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 210, -1));
+        side_pane.add(btn_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 210, -1));
 
         btn_8.setBackground(new java.awt.Color(23, 35, 51));
+        btn_8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btn_8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 btn_8MouseReleased(evt);
@@ -494,7 +509,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        lblThongke.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblThongke.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
         lblThongke.setForeground(new java.awt.Color(255, 255, 255));
         lblThongke.setText("Thống kê");
         lblThongke.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -509,7 +524,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
             btn_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btn_8Layout.createSequentialGroup()
                 .addComponent(ind_8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addComponent(lblThongke, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btn_8Layout.setVerticalGroup(
@@ -521,9 +536,10 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        side_pane.add(btn_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 210, -1));
+        side_pane.add(btn_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 210, 43));
 
         btn_9.setBackground(new java.awt.Color(23, 35, 51));
+        btn_9.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btn_9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 btn_9MouseReleased(evt);
@@ -544,7 +560,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
             .addGap(0, 43, Short.MAX_VALUE)
         );
 
-        lblSoDat.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblSoDat.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
         lblSoDat.setForeground(new java.awt.Color(255, 255, 255));
         lblSoDat.setText("Sổ đặt");
         lblSoDat.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -559,7 +575,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
             btn_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btn_9Layout.createSequentialGroup()
                 .addComponent(ind_9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addComponent(lblSoDat, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btn_9Layout.setVerticalGroup(
@@ -571,9 +587,10 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        side_pane.add(btn_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, 210, -1));
+        side_pane.add(btn_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 210, -1));
 
         btn_10.setBackground(new java.awt.Color(23, 35, 51));
+        btn_10.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btn_10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 btn_10MouseReleased(evt);
@@ -594,7 +611,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        lblThueXe.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblThueXe.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
         lblThueXe.setForeground(new java.awt.Color(255, 255, 255));
         lblThueXe.setText("Thuê xe");
         lblThueXe.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -609,7 +626,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
             btn_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btn_10Layout.createSequentialGroup()
                 .addComponent(ind_10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addComponent(lblThueXe, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         btn_10Layout.setVerticalGroup(
@@ -621,23 +638,74 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        side_pane.add(btn_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 550, 210, -1));
+        side_pane.add(btn_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 440, 210, 43));
 
         lblUser.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         lblUser.setForeground(new java.awt.Color(255, 255, 255));
         lblUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8_Contacts_25px.png"))); // NOI18N
         lblUser.setText("_");
-        side_pane.add(lblUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        side_pane.add(lblUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         lblDay.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
         lblDay.setForeground(new java.awt.Color(255, 255, 255));
         lblDay.setText("Day");
-        side_pane.add(lblDay, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
+        side_pane.add(lblDay, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
 
         lblTime.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
         lblTime.setForeground(new java.awt.Color(255, 255, 255));
         lblTime.setText("Time");
-        side_pane.add(lblTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, -1, -1));
+        side_pane.add(lblTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, -1, -1));
+
+        btn_11.setBackground(new java.awt.Color(23, 35, 51));
+        btn_11.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        btn_11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                btn_11MouseReleased(evt);
+            }
+        });
+
+        ind_11.setOpaque(false);
+        ind_11.setPreferredSize(new java.awt.Dimension(3, 43));
+
+        javax.swing.GroupLayout ind_11Layout = new javax.swing.GroupLayout(ind_11);
+        ind_11.setLayout(ind_11Layout);
+        ind_11Layout.setHorizontalGroup(
+            ind_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 3, Short.MAX_VALUE)
+        );
+        ind_11Layout.setVerticalGroup(
+            ind_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        lblTraXe.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        lblTraXe.setForeground(new java.awt.Color(255, 255, 255));
+        lblTraXe.setText("Trả xe");
+        lblTraXe.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                lblTraXeMouseReleased(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btn_11Layout = new javax.swing.GroupLayout(btn_11);
+        btn_11.setLayout(btn_11Layout);
+        btn_11Layout.setHorizontalGroup(
+            btn_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btn_11Layout.createSequentialGroup()
+                .addComponent(ind_11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(lblTraXe, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        btn_11Layout.setVerticalGroup(
+            btn_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btn_11Layout.createSequentialGroup()
+                .addGroup(btn_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(ind_11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblTraXe, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        side_pane.add(btn_11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 480, 210, 43));
 
         getContentPane().add(side_pane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 210, 610));
 
@@ -657,11 +725,21 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
         btnChangeAC.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnChangeAC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8_Lock_25px.png"))); // NOI18N
         btnChangeAC.setText("Đổi tài khoản");
+        btnChangeAC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnChangeACActionPerformed(evt);
+            }
+        });
 
         btnOut.setBackground(new java.awt.Color(51, 51, 255));
         btnOut.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8_Exit_25px_1.png"))); // NOI18N
         btnOut.setText("Thoát");
+        btnOut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOutActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -770,6 +848,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
     }
 
     private void HienThiUser(){
+//        lblUser.setText(lg.GetUser());
     }
     private void showMainJPanel(JPanel jpanel) {
         hopDong.setVisible(false);
@@ -918,6 +997,35 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
     private void lblSoDatMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblSoDatMouseReleased
         // TODO add your handling code here:
     }//GEN-LAST:event_lblSoDatMouseReleased
+
+    private void btnOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOutActionPerformed
+        // TODO add your handling code here:
+        int confirm = JOptionPane.showConfirmDialog(this, "Xác nhận thoát chương trình");
+        if (confirm != JOptionPane.YES_OPTION) {
+            return;
+        }else{
+            System.exit(0);
+        }
+    }//GEN-LAST:event_btnOutActionPerformed
+
+    private void btnChangeACActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChangeACActionPerformed
+        // TODO add your handling code here:
+        int confirm = JOptionPane.showConfirmDialog(this, "Xác nhận đổi tài khoản");
+        if (confirm != JOptionPane.YES_OPTION) {
+            return;
+        } else {
+            this.dispose();
+            lg.setVisible(true);
+        }
+    }//GEN-LAST:event_btnChangeACActionPerformed
+
+    private void lblTraXeMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblTraXeMouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblTraXeMouseReleased
+
+    private void btn_11MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_11MouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_11MouseReleased
     private void showPanel(JPanel jpanel) {
         childPan = jpanel;
         pnView.removeAll();
@@ -980,6 +1088,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
     private javax.swing.JButton btnOut;
     private javax.swing.JPanel btn_1;
     private javax.swing.JPanel btn_10;
+    private javax.swing.JPanel btn_11;
     private javax.swing.JPanel btn_2;
     private javax.swing.JPanel btn_3;
     private javax.swing.JPanel btn_4;
@@ -990,6 +1099,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
     private javax.swing.JPanel btn_9;
     private javax.swing.JPanel ind_1;
     private javax.swing.JPanel ind_10;
+    private javax.swing.JPanel ind_11;
     private javax.swing.JPanel ind_2;
     private javax.swing.JPanel ind_3;
     private javax.swing.JPanel ind_4;
@@ -1011,6 +1121,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
     private javax.swing.JLabel lblThongke;
     private javax.swing.JLabel lblThueXe;
     private javax.swing.JLabel lblTime;
+    private javax.swing.JLabel lblTraXe;
     private javax.swing.JLabel lblTrangChu;
     private javax.swing.JLabel lblUser;
     private javax.swing.JPanel pnView;

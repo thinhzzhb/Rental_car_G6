@@ -21,26 +21,26 @@ import model.Xe;
  */
 public class SoThueRespository {
 
-    public List<SoThue> getAll() {
-        String query = "SELECT [idSo]\n"
-                + "      ,[idXe]\n"
-                + "      ,[idHD]\n"
-                + "      ,[ngayNhan]\n"
-                + "      ,[ngayTra]\n"
-                + "  FROM [dbo].[SoThue]";
-        try ( Connection con = DBConnection.getConnection();  PreparedStatement ps = con.prepareStatement(query);) {
-            ResultSet rs = ps.executeQuery();
-            List<SoThue> listst = new ArrayList<>();
-            while (rs.next()) {
-                Xe xe = new Xe(rs.getString(2));
-                HopDong hd = new HopDong(rs.getString(3));
-                SoThue st = new SoThue(rs.getInt(1), xe, hd, rs.getDate(4), rs.getDate(5));
-                listst.add(st);
-            }
-            return listst;
-        } catch (SQLException e) {
-            e.printStackTrace(System.out);
-        }
-        return null;
-    }
+//    public List<SoThue> getAll() {
+//        String query = "SELECT [idSo]\n"
+//                + "      ,[idXe]\n"
+//                + "      ,[idHD]\n"
+//                + "      ,[ngayNhan]\n"
+//                + "      ,[ngayTra]\n"
+//                + "  FROM [dbo].[SoThue]";
+//        try ( Connection con = DBConnection.getConnection();  PreparedStatement ps = con.prepareStatement(query);) {
+//            ResultSet rs = ps.executeQuery();
+//            List<SoThue> listst = new ArrayList<>();
+//            while (rs.next()) {
+//                Xe xe = new Xe(rs.getString(2));
+//                HopDong hd = new HopDong(rs.getString(3));
+//                SoThue st = new SoThue(rs.getInt(1), xe, hd, rs.getDate(4), rs.getDate(5));
+//                listst.add(st);
+//            }
+//            return listst;
+//        } catch (SQLException e) {
+//            e.printStackTrace(System.out);
+//        }
+//        return null;
+//    }
 }

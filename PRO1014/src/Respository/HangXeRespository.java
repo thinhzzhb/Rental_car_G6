@@ -73,4 +73,29 @@ public class HangXeRespository {
         }
         return check > 0;
     }
+    public HangXe getNameById(int id) {
+        String query = "SELECT tenHangXe "
+                + "FROM Xe x JOIN HangXe hx "
+                + "ON x.idHangXe = hx.idHangXe "
+                + "WHERE x.idHangXe = ?";
+        try ( Connection con = DBConnection.getConnection();  PreparedStatement ps = con.prepareStatement(query);) {
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                HangXe hxe = new HangXe(rs.getString(2));
+                return hxe;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    public int getIdFormName(String name) {
+        int idHang = 0;
+        for (int i = 0; i < getAll().size(); i++) {
+            if (name.equals(getAll().get(i).getTenHangXe())) {
+                idHang = getAll().get(i).getIdHangXe();
+            }
+        }
+        return idHang;
+    }
 }

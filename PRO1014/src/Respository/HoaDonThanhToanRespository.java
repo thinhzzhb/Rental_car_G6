@@ -34,8 +34,7 @@ public class HoaDonThanhToanRespository {
             List<HoaDonThanhToan> listhdtt = new ArrayList<>();
             while (rs.next()) {
                 HopDong hd = new HopDong(rs.getString(2));
-                HoaDonThanhToan hdtt = new HoaDonThanhToan(rs.getInt(1), hd, rs.getDate(3), rs.getInt(4), rs.getInt(5), rs.getInt(6), rs.getInt(7));
-                listhdtt.add(hdtt);
+//                listhdtt.add(hdtt);
             }
             return listhdtt;
         } catch (SQLException e) {

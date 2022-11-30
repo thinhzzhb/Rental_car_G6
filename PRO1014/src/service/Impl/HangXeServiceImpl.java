@@ -5,6 +5,7 @@
 package service.Impl;
 
 import Respository.HangXeRespository;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import model.HangXe;
@@ -20,6 +21,7 @@ public class HangXeServiceImpl implements HangXeService {
 
     @Override
     public List<HangXe> getAll() {
+        List<HangXe> _lst = new ArrayList<>();
         return HangXeRespository.getAll();
     }
 
@@ -49,6 +51,14 @@ public class HangXeServiceImpl implements HangXeService {
         } else {
             return " sua that bai";
         }
+    }
+
+    public HangXe getnameById(int id) {
+        return HangXeRespository.getNameById(id);
+    }
+
+    public int getIdFormName(String name) {
+        return HangXeRespository.getIdFormName(name);
     }
 
 }
