@@ -649,12 +649,12 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
         lblDay.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
         lblDay.setForeground(new java.awt.Color(255, 255, 255));
         lblDay.setText("Day");
-        side_pane.add(lblDay, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
+        side_pane.add(lblDay, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
 
         lblTime.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
         lblTime.setForeground(new java.awt.Color(255, 255, 255));
         lblTime.setText("Time");
-        side_pane.add(lblTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, -1, -1));
+        side_pane.add(lblTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, -1, -1));
 
         btn_11.setBackground(new java.awt.Color(23, 35, 51));
         btn_11.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -721,7 +721,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
             }
         });
 
-        btnChangeAC.setBackground(new java.awt.Color(51, 51, 255));
+        btnChangeAC.setBackground(new java.awt.Color(51, 204, 255));
         btnChangeAC.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnChangeAC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8_Lock_25px.png"))); // NOI18N
         btnChangeAC.setText("Đổi tài khoản");
@@ -731,7 +731,7 @@ public class HeThongChoThueXe extends javax.swing.JFrame {
             }
         });
 
-        btnOut.setBackground(new java.awt.Color(51, 51, 255));
+        btnOut.setBackground(new java.awt.Color(51, 204, 255));
         btnOut.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         btnOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8_Exit_25px_1.png"))); // NOI18N
         btnOut.setText("Thoát");

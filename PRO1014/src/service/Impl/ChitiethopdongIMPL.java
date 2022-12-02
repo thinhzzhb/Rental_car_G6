@@ -6,7 +6,7 @@ package service.Impl;
 
 import Respository.ChiTietHopDongRespository;
 import java.util.List;
-import model.ChiTietHopDong;
+import model.ChiTietHoaDon;
 import service.ChiTietHopDongservice;
 
 /**
@@ -16,22 +16,22 @@ import service.ChiTietHopDongservice;
 public class ChitiethopdongIMPL implements ChiTietHopDongservice{
 
     @Override
-    public List<ChiTietHopDong> getAllfromDB() {
+    public List<ChiTietHoaDon> getAllfromDB() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public ChiTietHopDong findById(int id) {
+    public ChiTietHoaDon findById(int id) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public String addCTHD(ChiTietHopDong cthd) {
+    public String addCTHD(ChiTietHoaDon cthd) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public String Update(int id, ChiTietHopDong c) {
+    public String Update(int id, ChiTietHoaDon c) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 

@@ -6,7 +6,7 @@ package Respository;
 
 import utility.DBConnection;
 import java.util.List;
-import model.ChiTietHopDong;
+import model.ChiTietHoaDon;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

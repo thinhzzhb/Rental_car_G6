@@ -141,14 +141,19 @@ public class ChiTietXeForm extends javax.swing.JPanel {
 
         txtTenHangctXe.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
 
+        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel1.setText("Màu Sắc");
 
+        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel2.setText("Tình trạng xe");
 
+        jLabel3.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel3.setText("Số km đã đi");
 
+        jLabel4.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel4.setText("Ngày bảo dưỡng");
 
+        lblHinhanhct.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         lblHinhanhct.setText("Hình ảnh");
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
@@ -232,7 +237,7 @@ public class ChiTietXeForm extends javax.swing.JPanel {
                     .addComponent(btnClear1)
                     .addComponent(btnSua1)
                     .addComponent(btnThem1))
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addContainerGap(75, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

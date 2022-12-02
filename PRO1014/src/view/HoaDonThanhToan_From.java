@@ -76,7 +76,7 @@ public class HoaDonThanhToan_From extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(71, 120, 197));
         jPanel1.setPreferredSize(new java.awt.Dimension(860, 560));
 
-        jPanel2.setBackground(new java.awt.Color(23, 35, 51));
+        jPanel2.setBackground(new java.awt.Color(51, 204, 255));
 
         jLabel14.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
@@ -230,7 +230,7 @@ public class HoaDonThanhToan_From extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(23, 35, 51));
+        jPanel3.setBackground(new java.awt.Color(51, 204, 255));
 
         jLabel19.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));

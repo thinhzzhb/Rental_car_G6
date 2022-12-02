@@ -15,7 +15,6 @@ public class HoaDonThanhToan {
     private int IdHdtt;
     private HopDong IdHd;
     private Date ngayTao;
-    private String tinhTrangXe;
     private int tongXe;
     private int TienCoc;
     private int PhiPs;
@@ -26,11 +25,10 @@ public class HoaDonThanhToan {
     public HoaDonThanhToan() {
     }
 
-    public HoaDonThanhToan(int IdHdtt, HopDong IdHd, Date ngayTao, String tinhTrangXe, int tongXe, int TienCoc, int PhiPs, String ghiChu, int TongThanhToan, int tinhTrang) {
+    public HoaDonThanhToan(int IdHdtt, HopDong IdHd, Date ngayTao, int tongXe, int TienCoc, int PhiPs, String ghiChu, int TongThanhToan, int tinhTrang) {
         this.IdHdtt = IdHdtt;
         this.IdHd = IdHd;
         this.ngayTao = ngayTao;
-        this.tinhTrangXe = tinhTrangXe;
         this.tongXe = tongXe;
         this.TienCoc = TienCoc;
         this.PhiPs = PhiPs;
@@ -61,14 +59,6 @@ public class HoaDonThanhToan {
 
     public void setNgayTao(Date ngayTao) {
         this.ngayTao = ngayTao;
-    }
-
-    public String getTinhTrangXe() {
-        return tinhTrangXe;
-    }
-
-    public void setTinhTrangXe(String tinhTrangXe) {
-        this.tinhTrangXe = tinhTrangXe;
     }
 
     public int getTongXe() {
@@ -121,10 +111,8 @@ public class HoaDonThanhToan {
 
     @Override
     public String toString() {
-        return "HoaDonThanhToan{" + "IdHdtt=" + IdHdtt + ", IdHd=" + IdHd + ", ngayTao=" + ngayTao + ", tinhTrangXe=" + tinhTrangXe + ", tongXe=" + tongXe + ", TienCoc=" + TienCoc + ", PhiPs=" + PhiPs + ", ghiChu=" + ghiChu + ", TongThanhToan=" + TongThanhToan + ", tinhTrang=" + tinhTrang + '}';
+        return "HoaDonThanhToan{" + "IdHdtt=" + IdHdtt + ", IdHd=" + IdHd + ", ngayTao=" + ngayTao + ", tongXe=" + tongXe + ", TienCoc=" + TienCoc + ", PhiPs=" + PhiPs + ", ghiChu=" + ghiChu + ", TongThanhToan=" + TongThanhToan + ", tinhTrang=" + tinhTrang + '}';
     }
-
-   
 
     
 

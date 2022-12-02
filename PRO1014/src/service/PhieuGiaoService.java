@@ -5,19 +5,18 @@
 package service;
 
 import java.util.List;
-import model.ChiTietHoaDon;
+import java.util.Random;
+import model.PhieuGiao;
 
 /**
  *
  * @author Admin
  */
-public interface ChiTietHopDongservice {
+public interface PhieuGiaoService {
 
-    public List<ChiTietHoaDon> getAllfromDB();
+    Boolean addPg(PhieuGiao pg);
 
-    ChiTietHoaDon findById(int id);
+    public String ZenMA();
 
-    String addCTHD(ChiTietHoaDon cthd);
-
-    String Update(int id, ChiTietHoaDon c);
+    public List<PhieuGiao> getList();
 }

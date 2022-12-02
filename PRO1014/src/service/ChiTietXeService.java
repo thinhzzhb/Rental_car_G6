@@ -5,19 +5,12 @@
 package service;
 
 import java.util.List;
-import model.ChiTietHoaDon;
+import model.ChiTietXe;
 
 /**
  *
  * @author Admin
  */
-public interface ChiTietHopDongservice {
-
-    public List<ChiTietHoaDon> getAllfromDB();
-
-    ChiTietHoaDon findById(int id);
-
-    String addCTHD(ChiTietHoaDon cthd);
-
-    String Update(int id, ChiTietHoaDon c);
+public interface ChiTietXeService {
+    public List<ChiTietXe> getAll();
 }
