@@ -5,21 +5,16 @@
 package service;
 
 import java.util.List;
-import model.KhachHang;
+import model.PhieuGiaoChiTiet;
+import viewModel.PhieuGiaoCTViewModel;
 
 /**
  *
- * @author Acer
+ * @author Admin
  */
-public interface KhachHangService {
+public interface PhieuGiaoCTService {
 
-    List<KhachHang> getAll();
-
-    String Them(KhachHang kh);
-
-    String ZenMa();
-
-    String Sua(KhachHang kh, String TenKh);
-
-    KhachHang findbyName(String name);
+    public List<PhieuGiaoCTViewModel> getList();
+    
+    String addPG (PhieuGiaoChiTiet pgt);
 }

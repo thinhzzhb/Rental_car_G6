@@ -13,4 +13,6 @@ import model.ChiTietXe;
  */
 public interface ChiTietXeService {
     public List<ChiTietXe> getAll();
+    
+    ChiTietXe findBS(String bs);
 }

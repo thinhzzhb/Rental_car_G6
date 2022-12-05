@@ -23,8 +23,13 @@ public class PhieuGiaoIMPL implements PhieuGiaoService {
     }
 
     @Override
-    public Boolean addPg(PhieuGiao pg) {
-        return pgRep.addPG(pg);
+    public String addPg(PhieuGiao pg) {
+        boolean addPG = pgRep.addPG(pg);
+        if (addPG == true) {
+            return "Tạo phiếu giao thành công";
+        } else {
+            return "Không tạo được phiếu giao";
+        }
     }
 
     @Override
@@ -37,6 +42,16 @@ public class PhieuGiaoIMPL implements PhieuGiaoService {
     @Override
     public List<PhieuGiao> getList() {
         return pgRep.getAll();
+    }
+
+    @Override
+    public String updatePg(String Ma, PhieuGiao pg) {
+        boolean Update = pgRep.updatePG(Ma,pg);
+        if (Update == true) {
+            return "Đã cập nhật Phiếu giao";
+        } else {
+            return "Cập nhật thất bại";
+        }
     }
 
 }

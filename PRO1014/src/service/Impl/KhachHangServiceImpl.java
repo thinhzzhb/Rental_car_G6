@@ -52,14 +52,8 @@ public class KhachHangServiceImpl implements KhachHangService {
     }
 
     @Override
-    public List<KhachHang> listSearch(List<KhachHang> listkh, String TenKh) {
-        List<KhachHang> listSearch = new ArrayList<>();
-        for (KhachHang x : listkh) {
-            if (x.getTenKh().contains(TenKh)) {
-                listSearch.add(x);
-            }
-        }
-        return listSearch;
+    public KhachHang findbyName(String name) {
+        return KhachHangRespository.findByName(name);
     }
 
 }

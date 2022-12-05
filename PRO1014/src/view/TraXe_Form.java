@@ -26,6 +26,73 @@ public class TraXe_Form extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        ThanhToanDialog = new javax.swing.JDialog();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel14 = new javax.swing.JPanel();
+        jLabel57 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
+        txtTenXe6 = new javax.swing.JTextField();
+        jLabel59 = new javax.swing.JLabel();
+        txtGiaThue6 = new javax.swing.JPasswordField();
+        jLabel60 = new javax.swing.JLabel();
+        jLabel61 = new javax.swing.JLabel();
+        txtGioThue6 = new javax.swing.JTextField();
+        jLabel62 = new javax.swing.JLabel();
+        txtPhiPhatSinh6 = new javax.swing.JTextField();
+        bntThanhToan6 = new javax.swing.JButton();
+        jLabel63 = new javax.swing.JLabel();
+        txtTienCocTT6 = new javax.swing.JTextField();
+        lblTenKhach7 = new javax.swing.JLabel();
+        jLabel64 = new javax.swing.JLabel();
+        lblTongTT6 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        bntThanhToan3 = new javax.swing.JButton();
+        txtTenXe3 = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        txtTienCocTT3 = new javax.swing.JTextField();
+        lblTongTT3 = new javax.swing.JLabel();
+        txtGiaThue3 = new javax.swing.JPasswordField();
+        lblTenKhach4 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        txtGioThue3 = new javax.swing.JTextField();
+        jLabel21 = new javax.swing.JLabel();
+        txtPhiPhatSinh3 = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        bntThanhToan4 = new javax.swing.JButton();
+        txtTenXe4 = new javax.swing.JTextField();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        txtTienCocTT4 = new javax.swing.JTextField();
+        lblTongTT4 = new javax.swing.JLabel();
+        txtGiaThue4 = new javax.swing.JPasswordField();
+        lblTenKhach5 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        txtGioThue4 = new javax.swing.JTextField();
+        jLabel48 = new javax.swing.JLabel();
+        txtPhiPhatSinh4 = new javax.swing.JTextField();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        bntThanhToan5 = new javax.swing.JButton();
+        txtTenXe5 = new javax.swing.JTextField();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        txtTienCocTT5 = new javax.swing.JTextField();
+        lblTongTT5 = new javax.swing.JLabel();
+        txtGiaThue5 = new javax.swing.JPasswordField();
+        lblTenKhach6 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        txtGioThue5 = new javax.swing.JTextField();
+        jLabel55 = new javax.swing.JLabel();
+        txtPhiPhatSinh5 = new javax.swing.JTextField();
+        jLabel56 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -49,6 +116,417 @@ public class TraXe_Form extends javax.swing.JPanel {
         btnThanhToan = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         txtTienCoc = new javax.swing.JTextField();
+
+        ThanhToanDialog.setSize(new java.awt.Dimension(860, 560));
+
+        jPanel14.setBackground(new java.awt.Color(51, 204, 255));
+
+        jLabel57.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel57.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel57.setText("Tên khách");
+
+        jLabel58.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel58.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel58.setText("Tên xe");
+
+        txtTenXe6.setEditable(false);
+        txtTenXe6.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        txtTenXe6.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel59.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel59.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel59.setText("Tiền cọc");
+
+        txtGiaThue6.setEditable(false);
+        txtGiaThue6.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel60.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel60.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel60.setText("Giá thuê");
+
+        jLabel61.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel61.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel61.setText("Số Giờ thuê");
+
+        txtGioThue6.setEditable(false);
+        txtGioThue6.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        txtGioThue6.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel62.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel62.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel62.setText("Phí phát sinh");
+
+        txtPhiPhatSinh6.setEditable(false);
+        txtPhiPhatSinh6.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        txtPhiPhatSinh6.setForeground(new java.awt.Color(255, 255, 255));
+
+        bntThanhToan6.setBackground(new java.awt.Color(51, 255, 204));
+        bntThanhToan6.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        bntThanhToan6.setText("Thanh Toán");
+        bntThanhToan6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntThanhToan6ActionPerformed(evt);
+            }
+        });
+
+        jLabel63.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel63.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel63.setText("Thanh toán");
+
+        txtTienCocTT6.setEditable(false);
+        txtTienCocTT6.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        txtTienCocTT6.setForeground(new java.awt.Color(255, 255, 255));
+        txtTienCocTT6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTienCocTT6ActionPerformed(evt);
+            }
+        });
+
+        lblTenKhach7.setBackground(new java.awt.Color(255, 255, 255));
+        lblTenKhach7.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblTenKhach7.setForeground(new java.awt.Color(255, 255, 255));
+        lblTenKhach7.setText("_");
+        lblTenKhach7.setEnabled(false);
+
+        jLabel64.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel64.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel64.setText("Tổng Thanh Toán");
+
+        lblTongTT6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblTongTT6.setForeground(new java.awt.Color(255, 0, 0));
+        lblTongTT6.setText("_");
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel60, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel61, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel62, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtGiaThue6, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtGioThue6, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtPhiPhatSinh6, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel14Layout.createSequentialGroup()
+                            .addComponent(jLabel57)
+                            .addGap(18, 18, 18)
+                            .addComponent(lblTenKhach7, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel14Layout.createSequentialGroup()
+                            .addComponent(jLabel58)
+                            .addGap(32, 32, 32)
+                            .addComponent(txtTenXe6, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addComponent(jLabel59)
+                        .addGap(39, 39, 39)
+                        .addComponent(txtTienCocTT6, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(109, Short.MAX_VALUE))
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel63))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(bntThanhToan6)))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel64)
+                .addGap(39, 39, 39)
+                .addComponent(lblTongTT6)
+                .addGap(86, 86, 86))
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel63)
+                .addGap(28, 28, 28)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel57)
+                    .addComponent(lblTenKhach7))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel58)
+                    .addComponent(txtTenXe6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel59)
+                    .addComponent(txtTienCocTT6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtGiaThue6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel60))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel61)
+                    .addComponent(txtGioThue6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel62)
+                    .addComponent(txtPhiPhatSinh6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel64)
+                    .addComponent(lblTongTT6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addComponent(bntThanhToan6)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout ThanhToanDialogLayout = new javax.swing.GroupLayout(ThanhToanDialog.getContentPane());
+        ThanhToanDialog.getContentPane().setLayout(ThanhToanDialogLayout);
+        ThanhToanDialogLayout.setHorizontalGroup(
+            ThanhToanDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        ThanhToanDialogLayout.setVerticalGroup(
+            ThanhToanDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        jLabel15.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("Tên xe");
+
+        bntThanhToan3.setBackground(new java.awt.Color(51, 255, 204));
+        bntThanhToan3.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        bntThanhToan3.setText("Thanh Toán");
+        bntThanhToan3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntThanhToan3ActionPerformed(evt);
+            }
+        });
+
+        txtTenXe3.setEditable(false);
+        txtTenXe3.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        txtTenXe3.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel18.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("Thanh toán");
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel11.setText("Tổng Thanh Toán");
+
+        jLabel17.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setText("Tiền cọc");
+
+        txtTienCocTT3.setEditable(false);
+        txtTienCocTT3.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        txtTienCocTT3.setForeground(new java.awt.Color(255, 255, 255));
+        txtTienCocTT3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTienCocTT3ActionPerformed(evt);
+            }
+        });
+
+        lblTongTT3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblTongTT3.setForeground(new java.awt.Color(255, 0, 0));
+        lblTongTT3.setText("_");
+
+        txtGiaThue3.setEditable(false);
+        txtGiaThue3.setForeground(new java.awt.Color(255, 255, 255));
+
+        lblTenKhach4.setBackground(new java.awt.Color(255, 255, 255));
+        lblTenKhach4.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblTenKhach4.setForeground(new java.awt.Color(255, 255, 255));
+        lblTenKhach4.setText("_");
+        lblTenKhach4.setEnabled(false);
+
+        jLabel16.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("Giá thuê");
+
+        jLabel20.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText("Số Giờ thuê");
+
+        txtGioThue3.setEditable(false);
+        txtGioThue3.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        txtGioThue3.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel21.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel21.setText("Phí phát sinh");
+
+        txtPhiPhatSinh3.setEditable(false);
+        txtPhiPhatSinh3.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        txtPhiPhatSinh3.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel14.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("Tên khách");
+
+        jLabel43.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel43.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel43.setText("Tên xe");
+
+        bntThanhToan4.setBackground(new java.awt.Color(51, 255, 204));
+        bntThanhToan4.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        bntThanhToan4.setText("Thanh Toán");
+        bntThanhToan4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntThanhToan4ActionPerformed(evt);
+            }
+        });
+
+        txtTenXe4.setEditable(false);
+        txtTenXe4.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        txtTenXe4.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel44.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel44.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel44.setText("Thanh toán");
+
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel12.setText("Tổng Thanh Toán");
+
+        jLabel45.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel45.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel45.setText("Tiền cọc");
+
+        txtTienCocTT4.setEditable(false);
+        txtTienCocTT4.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        txtTienCocTT4.setForeground(new java.awt.Color(255, 255, 255));
+        txtTienCocTT4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTienCocTT4ActionPerformed(evt);
+            }
+        });
+
+        lblTongTT4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblTongTT4.setForeground(new java.awt.Color(255, 0, 0));
+        lblTongTT4.setText("_");
+
+        txtGiaThue4.setEditable(false);
+        txtGiaThue4.setForeground(new java.awt.Color(255, 255, 255));
+
+        lblTenKhach5.setBackground(new java.awt.Color(255, 255, 255));
+        lblTenKhach5.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblTenKhach5.setForeground(new java.awt.Color(255, 255, 255));
+        lblTenKhach5.setText("_");
+        lblTenKhach5.setEnabled(false);
+
+        jLabel46.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel46.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel46.setText("Giá thuê");
+
+        jLabel47.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel47.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel47.setText("Số Giờ thuê");
+
+        txtGioThue4.setEditable(false);
+        txtGioThue4.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        txtGioThue4.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel48.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel48.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel48.setText("Phí phát sinh");
+
+        txtPhiPhatSinh4.setEditable(false);
+        txtPhiPhatSinh4.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        txtPhiPhatSinh4.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel49.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel49.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel49.setText("Tên khách");
+
+        jLabel50.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel50.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel50.setText("Tên xe");
+
+        bntThanhToan5.setBackground(new java.awt.Color(51, 255, 204));
+        bntThanhToan5.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        bntThanhToan5.setText("Thanh Toán");
+        bntThanhToan5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntThanhToan5ActionPerformed(evt);
+            }
+        });
+
+        txtTenXe5.setEditable(false);
+        txtTenXe5.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        txtTenXe5.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel51.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel51.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel51.setText("Thanh toán");
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel13.setText("Tổng Thanh Toán");
+
+        jLabel52.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel52.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel52.setText("Tiền cọc");
+
+        txtTienCocTT5.setEditable(false);
+        txtTienCocTT5.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        txtTienCocTT5.setForeground(new java.awt.Color(255, 255, 255));
+        txtTienCocTT5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTienCocTT5ActionPerformed(evt);
+            }
+        });
+
+        lblTongTT5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblTongTT5.setForeground(new java.awt.Color(255, 0, 0));
+        lblTongTT5.setText("_");
+
+        txtGiaThue5.setEditable(false);
+        txtGiaThue5.setForeground(new java.awt.Color(255, 255, 255));
+
+        lblTenKhach6.setBackground(new java.awt.Color(255, 255, 255));
+        lblTenKhach6.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        lblTenKhach6.setForeground(new java.awt.Color(255, 255, 255));
+        lblTenKhach6.setText("_");
+        lblTenKhach6.setEnabled(false);
+
+        jLabel53.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel53.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel53.setText("Giá thuê");
+
+        jLabel54.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel54.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel54.setText("Số Giờ thuê");
+
+        txtGioThue5.setEditable(false);
+        txtGioThue5.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        txtGioThue5.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel55.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel55.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel55.setText("Phí phát sinh");
+
+        txtPhiPhatSinh5.setEditable(false);
+        txtPhiPhatSinh5.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        txtPhiPhatSinh5.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel56.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel56.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel56.setText("Tên khách");
 
         jPanel1.setBackground(new java.awt.Color(23, 35, 51));
 
@@ -133,6 +611,11 @@ public class TraXe_Form extends javax.swing.JPanel {
         jScrollPane2.setViewportView(txtGhiChu);
 
         btnThanhToan.setText("Xác Nhận");
+        btnThanhToan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnThanhToanActionPerformed(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
         jLabel8.setText("Tiền Cọc");
@@ -164,10 +647,9 @@ public class TraXe_Form extends javax.swing.JPanel {
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(txtTienCoc)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(lblPhiPs, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 12, Short.MAX_VALUE)
-                                        .addComponent(lblDate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(lblTenKhach, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(lblPhiPs, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 12, Short.MAX_VALUE)
+                                    .addComponent(lblDate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblTenKhach, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(lblMahb, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtTinhTrang, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE))
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
@@ -243,20 +725,153 @@ public class TraXe_Form extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnThanhToanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThanhToanActionPerformed
+        // TODO add your handling code here:
+        ThanhToanDialog.setVisible(true);
+    }//GEN-LAST:event_btnThanhToanActionPerformed
+
+    private void bntThanhToan3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntThanhToan3ActionPerformed
+        // TODO add your handling code here:
+        lblTenKhach.setText("");
+        txtTenXe.setText("");
+        txtTienCocTT.setText("");
+        txtGiaThue.setText("");
+        txtGioThue.setText("");
+        txtPhiPhatSinh.setText("");
+    }//GEN-LAST:event_bntThanhToan3ActionPerformed
+
+    private void txtTienCocTT3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTienCocTT3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTienCocTT3ActionPerformed
+
+    private void bntThanhToan4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntThanhToan4ActionPerformed
+        // TODO add your handling code here:
+        lblTenKhach.setText("");
+        txtTenXe.setText("");
+        txtTienCocTT.setText("");
+        txtGiaThue.setText("");
+        txtGioThue.setText("");
+        txtPhiPhatSinh.setText("");
+    }//GEN-LAST:event_bntThanhToan4ActionPerformed
+
+    private void txtTienCocTT4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTienCocTT4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTienCocTT4ActionPerformed
+
+    private void bntThanhToan5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntThanhToan5ActionPerformed
+        // TODO add your handling code here:
+        lblTenKhach.setText("");
+        txtTenXe.setText("");
+        txtTienCocTT.setText("");
+        txtGiaThue.setText("");
+        txtGioThue.setText("");
+        txtPhiPhatSinh.setText("");
+    }//GEN-LAST:event_bntThanhToan5ActionPerformed
+
+    private void txtTienCocTT5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTienCocTT5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTienCocTT5ActionPerformed
+
+    private void bntThanhToan6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntThanhToan6ActionPerformed
+        // TODO add your handling code here:
+        lblTenKhach.setText("");
+        txtTenXe.setText("");
+        txtTienCocTT.setText("");
+        txtGiaThue.setText("");
+        txtGioThue.setText("");
+        txtPhiPhatSinh.setText("");
+    }//GEN-LAST:event_bntThanhToan6ActionPerformed
+
+    private void txtTienCocTT6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTienCocTT6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTienCocTT6ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDialog ThanhToanDialog;
+    private javax.swing.JButton bntThanhToan;
+    private javax.swing.JButton bntThanhToan1;
+    private javax.swing.JButton bntThanhToan2;
+    private javax.swing.JButton bntThanhToan3;
+    private javax.swing.JButton bntThanhToan4;
+    private javax.swing.JButton bntThanhToan5;
+    private javax.swing.JButton bntThanhToan6;
     private javax.swing.JButton btnThanhToan;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
@@ -264,9 +879,58 @@ public class TraXe_Form extends javax.swing.JPanel {
     private javax.swing.JLabel lblMahb;
     private javax.swing.JLabel lblPhiPs;
     private javax.swing.JLabel lblTenKhach;
+    private javax.swing.JLabel lblTenKhach1;
+    private javax.swing.JLabel lblTenKhach2;
+    private javax.swing.JLabel lblTenKhach3;
+    private javax.swing.JLabel lblTenKhach4;
+    private javax.swing.JLabel lblTenKhach5;
+    private javax.swing.JLabel lblTenKhach6;
+    private javax.swing.JLabel lblTenKhach7;
+    private javax.swing.JLabel lblTongTT;
+    private javax.swing.JLabel lblTongTT1;
+    private javax.swing.JLabel lblTongTT2;
+    private javax.swing.JLabel lblTongTT3;
+    private javax.swing.JLabel lblTongTT4;
+    private javax.swing.JLabel lblTongTT5;
+    private javax.swing.JLabel lblTongTT6;
     private javax.swing.JTextArea txtGhiChu;
+    private javax.swing.JPasswordField txtGiaThue;
+    private javax.swing.JPasswordField txtGiaThue1;
+    private javax.swing.JPasswordField txtGiaThue2;
+    private javax.swing.JPasswordField txtGiaThue3;
+    private javax.swing.JPasswordField txtGiaThue4;
+    private javax.swing.JPasswordField txtGiaThue5;
+    private javax.swing.JPasswordField txtGiaThue6;
+    private javax.swing.JTextField txtGioThue;
+    private javax.swing.JTextField txtGioThue1;
+    private javax.swing.JTextField txtGioThue2;
+    private javax.swing.JTextField txtGioThue3;
+    private javax.swing.JTextField txtGioThue4;
+    private javax.swing.JTextField txtGioThue5;
+    private javax.swing.JTextField txtGioThue6;
+    private javax.swing.JTextField txtPhiPhatSinh;
+    private javax.swing.JTextField txtPhiPhatSinh1;
+    private javax.swing.JTextField txtPhiPhatSinh2;
+    private javax.swing.JTextField txtPhiPhatSinh3;
+    private javax.swing.JTextField txtPhiPhatSinh4;
+    private javax.swing.JTextField txtPhiPhatSinh5;
+    private javax.swing.JTextField txtPhiPhatSinh6;
     private javax.swing.JTextField txtSearch;
+    private javax.swing.JTextField txtTenXe;
+    private javax.swing.JTextField txtTenXe1;
+    private javax.swing.JTextField txtTenXe2;
+    private javax.swing.JTextField txtTenXe3;
+    private javax.swing.JTextField txtTenXe4;
+    private javax.swing.JTextField txtTenXe5;
+    private javax.swing.JTextField txtTenXe6;
     private javax.swing.JTextField txtTienCoc;
+    private javax.swing.JTextField txtTienCocTT;
+    private javax.swing.JTextField txtTienCocTT1;
+    private javax.swing.JTextField txtTienCocTT2;
+    private javax.swing.JTextField txtTienCocTT3;
+    private javax.swing.JTextField txtTienCocTT4;
+    private javax.swing.JTextField txtTienCocTT5;
+    private javax.swing.JTextField txtTienCocTT6;
     private javax.swing.JTextField txtTinhTrang;
     // End of variables declaration//GEN-END:variables
 }

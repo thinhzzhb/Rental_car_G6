@@ -14,9 +14,11 @@ import model.PhieuGiao;
  */
 public interface PhieuGiaoService {
 
-    Boolean addPg(PhieuGiao pg);
+    String addPg(PhieuGiao pg);
 
     public String ZenMA();
 
     public List<PhieuGiao> getList();
+    
+    String updatePg(String Ma, PhieuGiao pg);
 }

@@ -23,7 +23,7 @@ public class DBConnection {
 
     public static final String PORT = "1433";
 
-    public static final String DBNAME = "DB_DuAn1";
+    public static final String DBNAME = "DB_DuAn1_GSix";
 
     public static final String USERNAME = "sa";
 

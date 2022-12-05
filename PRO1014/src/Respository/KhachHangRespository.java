@@ -84,4 +84,23 @@ public class KhachHangRespository {
         }
         return check > 0;
     }
+
+    public KhachHang findByName(String Name) {
+        String query = "SELECT idKH, maKH, tenKH, diaChi, sdt, cccd, gioiTinh "
+                + "FROM KhachHang WHERE tenKH = ? ";
+        try {
+            Connection con = DBConnection.getConnection();
+            PreparedStatement ps = con.prepareStatement(query);
+            ps.setObject(1, Name);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                KhachHang Kh = new KhachHang(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getBoolean(7), null);
+                return Kh;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
+

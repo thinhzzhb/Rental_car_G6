@@ -15,14 +15,16 @@ public class CTHDViewModel {
     private String tenSp;
     private int soLuong;
     private BigDecimal donGia;
+    private String bienSo;
 
     public CTHDViewModel() {
     }
 
-    public CTHDViewModel(String tenSp, int soLuong, BigDecimal donGia) {
+    public CTHDViewModel(String tenSp, int soLuong, BigDecimal donGia, String bienSo) {
         this.tenSp = tenSp;
         this.soLuong = soLuong;
         this.donGia = donGia;
+        this.bienSo = bienSo;
     }
 
     public String getTenSp() {
@@ -48,5 +50,20 @@ public class CTHDViewModel {
     public void setDonGia(BigDecimal donGia) {
         this.donGia = donGia;
     }
+
+    public String getBienSo() {
+        return bienSo;
+    }
+
+    public void setBienSo(String bienSo) {
+        this.bienSo = bienSo;
+    }
+
+    @Override
+    public String toString() {
+        return "CTHDViewModel{" + "tenSp=" + tenSp + ", soLuong=" + soLuong + ", donGia=" + donGia + ", bienSo=" + bienSo + '}';
+    }
+
+    
     
 }

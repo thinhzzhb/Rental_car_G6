@@ -13,24 +13,19 @@ import java.util.Date;
  */
 public class PhieuGiao {
     private int idPG;
-    private String tinhTrangXe;
     private String maPG;
+    private String bienSo;
     private Date ngayTao;
-    private String tenKhach;
-    private BigDecimal tienCoc;
-    private BigDecimal tongTienTamTinh;
+    
 
     public PhieuGiao() {
     }
 
-    public PhieuGiao(int idPG, String tinhTrangXe, String maPG, Date ngayTao, String tenKhach, BigDecimal tienCoc, BigDecimal tongTienTamTinh) {
+    public PhieuGiao(int idPG, String maPG, String bienSo, Date ngayTao) {
         this.idPG = idPG;
-        this.tinhTrangXe = tinhTrangXe;
         this.maPG = maPG;
+        this.bienSo = bienSo;
         this.ngayTao = ngayTao;
-        this.tenKhach = tenKhach;
-        this.tienCoc = tienCoc;
-        this.tongTienTamTinh = tongTienTamTinh;
     }
 
     public int getIdPG() {
@@ -41,20 +36,20 @@ public class PhieuGiao {
         this.idPG = idPG;
     }
 
-    public String getTinhTrangXe() {
-        return tinhTrangXe;
-    }
-
-    public void setTinhTrangXe(String tinhTrangXe) {
-        this.tinhTrangXe = tinhTrangXe;
-    }
-
     public String getMaPG() {
         return maPG;
     }
 
     public void setMaPG(String maPG) {
         this.maPG = maPG;
+    }
+
+    public String getBienSo() {
+        return bienSo;
+    }
+
+    public void setBienSo(String bienSo) {
+        this.bienSo = bienSo;
     }
 
     public Date getNgayTao() {
@@ -65,35 +60,10 @@ public class PhieuGiao {
         this.ngayTao = ngayTao;
     }
 
-    public String getTenKhach() {
-        return tenKhach;
-    }
-
-    public void setTenKhach(String tenKhach) {
-        this.tenKhach = tenKhach;
-    }
-
-    public BigDecimal getTienCoc() {
-        return tienCoc;
-    }
-
-    public void setTienCoc(BigDecimal tienCoc) {
-        this.tienCoc = tienCoc;
-    }
-
-    public BigDecimal getTongTienTamTinh() {
-        return tongTienTamTinh;
-    }
-
-    public void setTongTienTamTinh(BigDecimal tongTienTamTinh) {
-        this.tongTienTamTinh = tongTienTamTinh;
-    }
-
     @Override
     public String toString() {
-        return "PhieuGiao{" + "idPG=" + idPG + ", tinhTrangXe=" + tinhTrangXe + ", maPG=" + maPG + ", ngayTao=" + ngayTao + ", tenKhach=" + tenKhach + ", tienCoc=" + tienCoc + ", tongTienTamTinh=" + tongTienTamTinh + '}';
+        return "PhieuGiao{" + "idPG=" + idPG + ", maPG=" + maPG + ", bienSo=" + bienSo + ", ngayTao=" + ngayTao + '}';
     }
-    
-    
+
     
 }

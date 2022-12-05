@@ -21,5 +21,10 @@ public class ChiTietXeIMPL implements ChiTietXeService{
     public List<ChiTietXe> getAll() {
         return ctSer.getAll();
     }
+
+    @Override
+    public ChiTietXe findBS(String bs) {
+        return ctSer.findBS(bs);
+    }
     
 }

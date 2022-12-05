@@ -14,25 +14,29 @@ import java.util.Date;
 public class ChiTietXe {
     private int idXe;
     private int idMS;
-    private String tenhang;
-    private String soKm;
+    private String tenXe;
     private String tinhTrang;
+    private String soKm;
     private Date ngayBaoDuong;
     private byte[] anh;
+    private String bienSo;
     private BigDecimal giaThue;
-
+    private int trangThai;
+    
     public ChiTietXe() {
     }
 
-    public ChiTietXe(int idXe, int idMS, String tenhang, String soKm, String tinhTrang, Date ngayBaoDuong, byte[] anh, BigDecimal giaThue) {
+    public ChiTietXe(int idXe, int idMS, String tenXe, String tinhTrang, String soKm, Date ngayBaoDuong, byte[] anh, String bienSo, BigDecimal giaThue, int trangThai) {
         this.idXe = idXe;
         this.idMS = idMS;
-        this.tenhang = tenhang;
-        this.soKm = soKm;
+        this.tenXe = tenXe;
         this.tinhTrang = tinhTrang;
+        this.soKm = soKm;
         this.ngayBaoDuong = ngayBaoDuong;
         this.anh = anh;
+        this.bienSo = bienSo;
         this.giaThue = giaThue;
+        this.trangThai = trangThai;
     }
 
     public int getIdXe() {
@@ -51,20 +55,12 @@ public class ChiTietXe {
         this.idMS = idMS;
     }
 
-    public String getTenhang() {
-        return tenhang;
+    public String getTenXe() {
+        return tenXe;
     }
 
-    public void setTenhang(String tenhang) {
-        this.tenhang = tenhang;
-    }
-
-    public String getSoKm() {
-        return soKm;
-    }
-
-    public void setSoKm(String soKm) {
-        this.soKm = soKm;
+    public void setTenXe(String tenXe) {
+        this.tenXe = tenXe;
     }
 
     public String getTinhTrang() {
@@ -73,6 +69,14 @@ public class ChiTietXe {
 
     public void setTinhTrang(String tinhTrang) {
         this.tinhTrang = tinhTrang;
+    }
+
+    public String getSoKm() {
+        return soKm;
+    }
+
+    public void setSoKm(String soKm) {
+        this.soKm = soKm;
     }
 
     public Date getNgayBaoDuong() {
@@ -91,6 +95,14 @@ public class ChiTietXe {
         this.anh = anh;
     }
 
+    public String getBienSo() {
+        return bienSo;
+    }
+
+    public void setBienSo(String bienSo) {
+        this.bienSo = bienSo;
+    }
+
     public BigDecimal getGiaThue() {
         return giaThue;
     }
@@ -99,12 +111,19 @@ public class ChiTietXe {
         this.giaThue = giaThue;
     }
 
+    public int getTrangThai() {
+        return trangThai;
+    }
+
+    public void setTrangThai(int trangThai) {
+        this.trangThai = trangThai;
+    }
+
     @Override
     public String toString() {
-        return "ChiTietXe{" + "idXe=" + idXe + ", idMS=" + idMS + ", tenhang=" + tenhang + ", soKm=" + soKm + ", tinhTrang=" + tinhTrang + ", ngayBaoDuong=" + ngayBaoDuong + ", anh=" + anh + ", giaThue=" + giaThue + '}';
+        return "ChiTietXe{" + "idXe=" + idXe + ", idMS=" + idMS + ", tenXe=" + tenXe + ", tinhTrang=" + tinhTrang + ", soKm=" + soKm + ", ngayBaoDuong=" + ngayBaoDuong + ", anh=" + anh + ", bienSo=" + bienSo + ", giaThue=" + giaThue + ", trangThai=" + trangThai + '}';
     }
 
     
-    
-    
+
 }
