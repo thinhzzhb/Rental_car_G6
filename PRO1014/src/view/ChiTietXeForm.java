@@ -4,17 +4,58 @@
  */
 package view;
 
+import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+import model.ChiTietXe;
+import model.HangXe;
+import model.MauSac;
+import model.Xe;
+import service.ChiTietXeService;
+import service.HangXeService;
+import service.Impl.ChiTietXeIMPL;
+import service.Impl.HangXeServiceImpl;
+import service.Impl.MauSacServiceImpl;
+import service.Impl.XeServiceImpl;
+import service.MauSacService;
+import service.XeService_interface;
+
 /**
  *
  * @author Admin
  */
 public class ChiTietXeForm extends javax.swing.JPanel {
 
+    private DefaultTableModel dtm = new DefaultTableModel();
+    private List<ChiTietXe> listctx = new ArrayList<>();
+    private List<Xe> listxe = new ArrayList<>();
+    private List<HangXe> listhx = new ArrayList<>();
+    private List<MauSac> listsms = new ArrayList<>();
+    private ChiTietXeService chiTietXeService = new ChiTietXeIMPL();
+    private XeService_interface xeService_interface = new XeServiceImpl();
+    private MauSacService mauSacService = new MauSacServiceImpl();
+    private HangXeService hangXeService = new HangXeServiceImpl();
+
     /**
      * Creates new form ChiTietXeForm
      */
     public ChiTietXeForm() {
         initComponents();
+        tblCTXe.setModel(dtm);
+        String[] headers = {"Mã Xe", "Màu Sắc", "Tên Hãng", "Tình Trạng", "Số Km", "Ngày Bảo Dưỡng", "Hình ảnh", "Biển Số Xe", "Giá thuê"};
+        dtm.setColumnIdentifiers(headers);
+        showDatatb(listctx);
+        listctx = chiTietXeService.getAll();
+    }
+
+    private void showDatatb(List<ChiTietXe> lists) {
+        dtm.setRowCount(0);
+        for (ChiTietXe x : lists) {
+            dtm.addRow(x.todataRow());
+        }
     }
 
     /**
@@ -44,6 +85,14 @@ public class ChiTietXeForm extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         lblHinhanhct = new javax.swing.JLabel();
+        txtSoKm = new javax.swing.JTextField();
+        txtMauSac = new javax.swing.JTextField();
+        txtTT = new javax.swing.JTextField();
+        txtNgayBaoDuong = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        txtBienSoXe = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        txtGiaThue = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(23, 35, 51));
 
@@ -156,13 +205,23 @@ public class ChiTietXeForm extends javax.swing.JPanel {
         lblHinhanhct.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
         lblHinhanhct.setText("Hình ảnh");
 
+        jLabel5.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel5.setText("Bien so xe");
+
+        jLabel6.setFont(new java.awt.Font("Monospaced", 1, 12)); // NOI18N
+        jLabel6.setText("Gia thue");
+
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtBienSoXe))
                     .addGroup(jPanel13Layout.createSequentialGroup()
                         .addComponent(jLabel22)
                         .addGap(18, 18, 18)
@@ -171,39 +230,63 @@ public class ChiTietXeForm extends javax.swing.JPanel {
                         .addComponent(jLabel23)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txtTenHangctXe, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel3))
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtSoKm)))
                 .addGap(53, 53, 53)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(56, 56, 56)
+                        .addComponent(txtMauSac))
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtTT))
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel6))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtNgayBaoDuong, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
+                            .addComponent(txtGiaThue))))
+                .addGap(18, 18, 18)
                 .addComponent(lblHinhanhct, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(103, 103, 103))
+                .addGap(46, 46, 46))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addContainerGap()
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel22)
+                    .addComponent(lblmaCTxe)
+                    .addComponent(jLabel1)
+                    .addComponent(txtMauSac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblHinhanhct, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel22)
-                            .addComponent(lblmaCTxe)
-                            .addComponent(jLabel1))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel23)
-                            .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtTenHangctXe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel2)))
-                        .addGap(22, 22, 22)
-                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
-                        .addGap(0, 43, Short.MAX_VALUE)))
-                .addContainerGap())
+                    .addComponent(jLabel23)
+                    .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtTenHangctXe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel2)
+                        .addComponent(txtTT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(19, 19, 19)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4)
+                    .addComponent(txtSoKm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNgayBaoDuong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5)
+                    .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtBienSoXe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel6)
+                        .addComponent(txtGiaThue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(8, Short.MAX_VALUE))
+            .addComponent(lblHinhanhct, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -237,12 +320,21 @@ public class ChiTietXeForm extends javax.swing.JPanel {
                     .addComponent(btnClear1)
                     .addComponent(btnSua1)
                     .addComponent(btnThem1))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnThem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThem1ActionPerformed
         // TODO add your handling code here:
+        Xe ma = new XeServiceImpl().getOne(lblmaCTxe.getText());
+        MauSac ms = new MauSacServiceImpl().getOne(txtMauSac.getText());
+        HangXe hx = new HangXeServiceImpl().getOne(txtTenHangctXe.getText());
+        String ttx = txtTT.getText();
+        String Sokm = txtSoKm.getText();
+        Date ngaybd = new Date();
+        String bienSoXe = txtBienSoXe.getText();
+        BigDecimal giathue = BigDecimal.valueOf(Double.valueOf(txtGiaThue.getText()));
+        ChiTietXe ctx = new ChiTietXe(ma, ms, hx, ttx, Sokm, ngaybd, null, bienSoXe, giathue);
     }//GEN-LAST:event_btnThem1ActionPerformed
 
     private void btnSua1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSua1ActionPerformed
@@ -251,6 +343,15 @@ public class ChiTietXeForm extends javax.swing.JPanel {
 
     private void btnClear1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClear1ActionPerformed
         // TODO add your handling code here:
+        lblmaCTxe.setText("");
+        txtBienSoXe.setText("");
+        txtGiaThue.setText("");
+        txtMauSac.setText("");
+        txtNgayBaoDuong.setText("");
+        txtSearch1.setText("");
+        txtSoKm.setText("");
+        txtTT.setText("");
+        txtTenHangctXe.setText("");
     }//GEN-LAST:event_btnClear1ActionPerformed
 
     private void tblCTXeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblCTXeMouseClicked
@@ -269,13 +370,21 @@ public class ChiTietXeForm extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblHinhanhct;
     private javax.swing.JLabel lblmaCTxe;
     private javax.swing.JTable tblCTXe;
+    private javax.swing.JTextField txtBienSoXe;
+    private javax.swing.JTextField txtGiaThue;
+    private javax.swing.JTextField txtMauSac;
+    private javax.swing.JTextField txtNgayBaoDuong;
     private javax.swing.JTextField txtSearch1;
+    private javax.swing.JTextField txtSoKm;
+    private javax.swing.JTextField txtTT;
     private javax.swing.JTextField txtTenHangctXe;
     // End of variables declaration//GEN-END:variables
 }

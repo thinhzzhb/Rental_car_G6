@@ -12,13 +12,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import model.HangXe;
 
 /**
  *
  * @author Acer
  */
 public class MauSacRespository {
-
+    
     public List<MauSac> getAll() {
         String query = "SELECT [idMS]\n"
                 + "      ,[maMS]\n"
@@ -32,6 +33,23 @@ public class MauSacRespository {
                 listms.add(ms);
             }
             return listms;
+        } catch (SQLException e) {
+            e.printStackTrace(System.out);
+        }
+        return null;
+    }
+    
+    public MauSac getOne(String MaMs) {
+        String query = "SELECT [idMS]"
+                + "      ,[maMS]"
+                + "      ,[tenMS]"
+                + "  FROM [dbo].[MauSac] WHERE [maMS]=?";
+        try ( Connection con = DBConnection.getConnection();  PreparedStatement ps = con.prepareStatement(query);) {
+            ps.setObject(1, MaMs);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                return new MauSac(rs.getInt(1), rs.getString(2), rs.getString(3));
+            }
         } catch (SQLException e) {
             e.printStackTrace(System.out);
         }

@@ -5,17 +5,15 @@
 package service;
 
 import java.util.List;
-import model.ChiTietXe;
+import model.MauSac;
 
 /**
  *
- * @author Admin
+ * @author Acer
  */
-public interface ChiTietXeService {
+public interface MauSacService {
 
-    public List<ChiTietXe> getAll();
+    List<MauSac> getAll();
 
-    String them(ChiTietXe ctx);
-
-    String ZenMa();
+    MauSac getOne(String MaMs);
 }

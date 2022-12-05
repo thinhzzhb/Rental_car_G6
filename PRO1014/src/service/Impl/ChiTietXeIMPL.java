@@ -6,6 +6,7 @@ package service.Impl;
 
 import Respository.ChiTietXeRepository;
 import java.util.List;
+import java.util.Random;
 import model.ChiTietXe;
 import service.ChiTietXeService;
 
@@ -13,13 +14,30 @@ import service.ChiTietXeService;
  *
  * @author Admin
  */
-public class ChiTietXeIMPL implements ChiTietXeService{
-    
-   private ChiTietXeRepository ctSer = new ChiTietXeRepository();
-    
+public class ChiTietXeIMPL implements ChiTietXeService {
+
+    private ChiTietXeRepository ctSer = new ChiTietXeRepository();
+
     @Override
     public List<ChiTietXe> getAll() {
         return ctSer.getAll();
     }
-    
+
+    @Override
+    public String them(ChiTietXe ctx) {
+        boolean them = ctSer.them(ctx);
+        if (them) {
+            return "Them thanh cong";
+        } else {
+            return "Them that bai";
+        }
+    }
+
+    @Override
+    public String ZenMa() {
+        Random rd = new Random();
+        int ranNub = rd.nextInt(999999);
+        return "X" + ranNub;
+    }
+
 }

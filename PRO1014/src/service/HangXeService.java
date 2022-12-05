@@ -21,4 +21,6 @@ public interface HangXeService {
 
     String ZenMa();
 
+    HangXe getOne(String MaHx);
+
 }

@@ -12,19 +12,21 @@ import java.util.Date;
  * @author Admin
  */
 public class ChiTietXe {
-    private int idXe;
-    private int idMS;
-    private String tenhang;
+
+    private Xe idXe;
+    private MauSac idMS;
+    private HangXe tenhang;
     private String soKm;
     private String tinhTrang;
     private Date ngayBaoDuong;
     private byte[] anh;
+    private String BienSoXe;
     private BigDecimal giaThue;
 
     public ChiTietXe() {
     }
 
-    public ChiTietXe(int idXe, int idMS, String tenhang, String soKm, String tinhTrang, Date ngayBaoDuong, byte[] anh, BigDecimal giaThue) {
+    public ChiTietXe(Xe idXe, MauSac idMS, HangXe tenhang, String soKm, String tinhTrang, Date ngayBaoDuong, byte[] anh, String BienSoXe, BigDecimal giaThue) {
         this.idXe = idXe;
         this.idMS = idMS;
         this.tenhang = tenhang;
@@ -32,30 +34,31 @@ public class ChiTietXe {
         this.tinhTrang = tinhTrang;
         this.ngayBaoDuong = ngayBaoDuong;
         this.anh = anh;
+        this.BienSoXe = BienSoXe;
         this.giaThue = giaThue;
     }
 
-    public int getIdXe() {
+    public Xe getIdXe() {
         return idXe;
     }
 
-    public void setIdXe(int idXe) {
+    public void setIdXe(Xe idXe) {
         this.idXe = idXe;
     }
 
-    public int getIdMS() {
+    public MauSac getIdMS() {
         return idMS;
     }
 
-    public void setIdMS(int idMS) {
+    public void setIdMS(MauSac idMS) {
         this.idMS = idMS;
     }
 
-    public String getTenhang() {
+    public HangXe getTenhang() {
         return tenhang;
     }
 
-    public void setTenhang(String tenhang) {
+    public void setTenhang(HangXe tenhang) {
         this.tenhang = tenhang;
     }
 
@@ -91,6 +94,14 @@ public class ChiTietXe {
         this.anh = anh;
     }
 
+    public String getBienSoXe() {
+        return BienSoXe;
+    }
+
+    public void setBienSoXe(String BienSoXe) {
+        this.BienSoXe = BienSoXe;
+    }
+
     public BigDecimal getGiaThue() {
         return giaThue;
     }
@@ -99,12 +110,8 @@ public class ChiTietXe {
         this.giaThue = giaThue;
     }
 
-    @Override
-    public String toString() {
-        return "ChiTietXe{" + "idXe=" + idXe + ", idMS=" + idMS + ", tenhang=" + tenhang + ", soKm=" + soKm + ", tinhTrang=" + tinhTrang + ", ngayBaoDuong=" + ngayBaoDuong + ", anh=" + anh + ", giaThue=" + giaThue + '}';
-    }
+    public Object[] todataRow() {
+        return new Object[]{idXe.getMaXe(), tenhang.getTenHangXe(), idMS.getTenMs(), tinhTrang, soKm, ngayBaoDuong, anh, BienSoXe, giaThue};
 
-    
-    
-    
+    }
 }

@@ -27,6 +27,10 @@ public class Xe {
         this.hinhAnh = hinhAnh;
     }
 
+    public Xe(String MaXe) {
+        this.MaXe = MaXe;
+    }
+
     public int getIdXe() {
         return IdXe;
     }
@@ -72,5 +76,4 @@ public class Xe {
         return "Xe{" + "IdXe=" + IdXe + ", MaXe=" + MaXe + ", IdHangXe=" + IdHangXe + ", soGhe=" + soGhe + ", hinhAnh=" + hinhAnh + '}';
     }
 
-    
 }

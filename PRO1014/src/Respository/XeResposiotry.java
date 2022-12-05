@@ -29,7 +29,7 @@ public class XeResposiotry {
             ResultSet rs = ps.executeQuery();
             List<Xe> listxe = new ArrayList<>();
             while (rs.next()) {
-                Xe xe = new Xe(rs.getInt(1), rs.getString(2), rs.getInt(3),rs.getInt(4), rs.getBytes(5));
+                Xe xe = new Xe(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getBytes(5));
                 listxe.add(xe);
             }
             return listxe;
@@ -58,6 +58,7 @@ public class XeResposiotry {
         }
         return null;
     }
+
     public Boolean update(int id, Xe x) {
         int checkUpdate = 0;
         String query = "UPDATE Xe SET idHangXe = ?, soGhe = ?, hinhAnh = ?"
@@ -76,6 +77,7 @@ public class XeResposiotry {
         }
         return null;
     }
+
     public Boolean delete(int id) {
         int checkUpdate = 0;
         String query = "DELETE FROM Xe WHERE idXe =?";
@@ -87,6 +89,26 @@ public class XeResposiotry {
             return checkUpdate > 0;
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+        return null;
+    }
+
+    public Xe getOne(String MaXe) {
+        String query = "SELECT [idXe]"
+                + "      ,[maXe]"
+                + "      ,[tenXe]"
+                + "      ,[idHangXe]"
+                + "      ,[soGhe]"
+                + "      ,[hinhAnh]"
+                + "  FROM [dbo].[Xe] WHERE [maXe]=?";
+        try ( Connection con = DBConnection.getConnection();  PreparedStatement ps = con.prepareStatement(query);) {
+            ps.setObject(1, MaXe);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                return new Xe(rs.getString(1));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(System.out);
         }
         return null;
     }
