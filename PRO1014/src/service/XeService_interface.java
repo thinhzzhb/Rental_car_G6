@@ -12,7 +12,7 @@ import model.Xe;
  * @author Admin
  */
 public interface XeService_interface {
-    
+
     List<Xe> getAll();
 
     String add(Xe x);
@@ -20,5 +20,6 @@ public interface XeService_interface {
     String update(Xe x, int idHang);
 
     String delete(int id);
-    
+
+    Xe getOne(String MaXe);
 }

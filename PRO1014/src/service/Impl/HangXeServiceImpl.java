@@ -61,4 +61,9 @@ public class HangXeServiceImpl implements HangXeService {
         return HangXeRespository.getIdFormName(name);
     }
 
+    @Override
+    public HangXe getOne(String MaHx) {
+        return HangXeRespository.getOne(MaHx);
+    }
+
 }

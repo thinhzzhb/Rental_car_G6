@@ -73,6 +73,7 @@ public class HangXeRespository {
         }
         return check > 0;
     }
+
     public HangXe getNameById(int id) {
         String query = "SELECT tenHangXe "
                 + "FROM Xe x JOIN HangXe hx "
@@ -89,6 +90,7 @@ public class HangXeRespository {
         }
         return null;
     }
+
     public int getIdFormName(String name) {
         int idHang = 0;
         for (int i = 0; i < getAll().size(); i++) {
@@ -98,4 +100,22 @@ public class HangXeRespository {
         }
         return idHang;
     }
+
+    public HangXe getOne(String MaHx) {
+        String query = "SELECT [idHangXe]"
+                + "      ,[maHangXe]"
+                + "      ,[tenHangXe]"
+                + "  FROM [dbo].[HangXe] WHERE [maHangXe]=?";
+        try ( Connection con = DBConnection.getConnection();  PreparedStatement ps = con.prepareStatement(query);) {
+            ps.setObject(1, MaHx);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                return new HangXe(rs.getInt(1), rs.getString(2), rs.getString(3));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(System.out);
+        }
+        return null;
+    }
+
 }

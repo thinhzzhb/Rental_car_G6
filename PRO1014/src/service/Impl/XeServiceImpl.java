@@ -64,4 +64,9 @@ public class XeServiceImpl implements XeService_interface {
         }
     }
 
+    @Override
+    public Xe getOne(String MaXe) {
+        return _xeRep.getOne(MaXe);
+    }
+
 }

@@ -5,22 +5,15 @@
 package service;
 
 import java.util.List;
-import model.HangXe;
+import model.MauSac;
 
 /**
  *
- * @author GALAXY
+ * @author Acer
  */
-public interface HangXeService {
+public interface MauSacService {
 
-    List<HangXe> getAll();
+    List<MauSac> getAll();
 
-    String add(HangXe hx);
-
-    String update(HangXe hx, String tenHangXe);
-
-    String ZenMa();
-
-    HangXe getOne(String MaHx);
-
+    MauSac getOne(String MaMs);
 }
